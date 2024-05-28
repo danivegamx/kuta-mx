@@ -9,16 +9,16 @@ export default function TwoColumns({ data }: any) {
     {
       imagen_a_la_derecha ? (
         <>
-          <article>
-            <h3>{title}</h3>
-            <p>{descripcion}</p>
-            <div className="cta-group">
+          <article className="py-12 md:py-32">
+            <h3 className="text-3xl md:text-5xl text-center md:text-start leading-10 md:leading-tight mx-4">{title}</h3>
+            <p className="text-lg md:text-3xl text-center md:text-start mt-4 md:mt-8 mx-4">{descripcion}</p>
+            <div className="cta-group text-lg md:text-2xl text-center md:text-start mx-4">
               {
                 boton && (<Button data={boton} />)
               }
             </div>
           </article>
-          <article className="text-center">
+          <article className="text-center pb-12 md:py-32">
             <figure>
               <Image
                 src={imagen?.imgix_url}
@@ -31,7 +31,7 @@ export default function TwoColumns({ data }: any) {
         </>
       ) : (
         <>
-          <article className="text-center">
+          <article className="text-center py-12 md:py-32">
             <figure>
               <Image
                 src={imagen?.imgix_url}
@@ -41,10 +41,10 @@ export default function TwoColumns({ data }: any) {
               />
             </figure>
           </article>
-          <article>
-            <h3>{title}</h3>
-            <p>{descripcion}</p>
-            <div className="cta-group">
+          <article className="py-12 md:py-32">
+            <h3 className="text-3xl md:text-5xl text-center md:text-start leading-10 md:leading-tight mx-4">{title}</h3>
+            <p className="text-lg md:text-3xl text-center md:text-start mt-4 md:mt-8 mx-4">{descripcion}</p>
+            <div className="cta-group text-lg md:text-2xl text-center md:text-start mx-4">
               {
                 boton && (<Button data={boton} />)
               }
