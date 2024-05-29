@@ -18,7 +18,7 @@ async function Adopciones() {
       <header>
         <Navigation />
       </header>
-      <section className="adoptions-section container mx-auto">
+      <section className="adoptions-section container mx-auto relative">
         <div className="adoptions-header grid grid-cols-12 gap-4">
           <div className="col-span-12 md:col-span-6"><h1>{ titulo }</h1></div>
           <div className="col-span-12 md:col-span-6"><p className="adoptions description">{ descripcion }</p></div>

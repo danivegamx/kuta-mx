@@ -1,4 +1,5 @@
 @import '../../styles/colors'
+@import '../../styles/mixins'
 
 .adoptions-main
   background-color: #ecf0f1
@@ -8,13 +9,20 @@
       margin-bottom: 5rem
       h1
         font-size: 2.5rem
+        +for-size(phone-only)
+          text-align: center
       p
         color: $purple
+        +for-size(phone-only)
+          text-align: center
 .mascot-card
   background-color: white
   position: relative
+  +for-size(phone-only)
+    margin: 0 1rem
   .mascot-image
     height: 500px
+    background-size: cover !important
   .mascot-data
     padding: .8rem 1rem .5rem
     h2

@@ -1,11 +1,56 @@
+@import '../../styles/colors'
+
 .questionnaire-main
   background-color: #ecf0f1
   .questionnaire-wrapper
     align-content: center
     min-height: 65vh
     .questionnaire-section
+      display: none
+      &.current
+        display: block
       background-color: #fff
       padding: 3rem
       h1
         font-size: 2rem
         margin-bottom: 1rem
+      h2
+        font-size: 1.5rem
+        margin-bottom: 2rem
+      .mascot-data
+        h2
+          font-size: 1.5rem
+          margin-bottom: 0
+      .questions
+        label
+          font-weight: bold
+          display: block
+          width: 100%
+        input
+          margin-bottom: 1rem
+          width: 100%
+          padding: .7rem
+          border: 1px solid #ccc
+          border-radius: 5px
+          &:focus
+            outline: none
+            border: 1px solid $purple
+    .mascot-indicator-banner
+      background-color: $yellow
+      .info
+        padding: 1rem
+        h2
+          font-size: 1.5rem
+          margin: 0
+          font-weight: bold
+          span
+            font-weight: normal
+.start-wrapper
+  margin-top: 2rem
+.main-primary
+  background-color: $purple
+  color: white
+  padding: 1rem
+  width: 100%
+.main-secondary
+  border: 2px solid $purple

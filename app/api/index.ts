@@ -24,7 +24,7 @@ const getQuestionnaireData = async () => await cosmic.objects
 .find({
   type: 'cuestionario',
   slug: "cuestionario"
-}).depth(2);
+}).depth(5);
 
 const getMascotData = async (slug: string) => await cosmic.objects
 .find({
