@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/no-async-client-component */
 "use client";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from 'react';
 import moment from "moment";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -9,12 +10,10 @@ import './styles.sass';
 import '../adopciones/styles.sass';
 import { getQuestionnaireData, getMascotData } from '../api';
 
-function Cuestionario({
-  searchParams
-}: {
-  searchParams?: { [key: string]: string | string[] | undefined };
-}) {
-  const { mascotId } = searchParams || {};
+const Cuestionario = () => {
+  const searchParams = useSearchParams();
+  const mascotId = searchParams.get('mascotId');
+
   const [metadata, setMetadata] = useState({
     titulo: '',
     introduccion: '',
@@ -51,20 +50,24 @@ function Cuestionario({
   }
 
   useEffect(() => {
-    const getMetadata = async () => {
+    const fetchMetadata = async () => {
       const data = await getQuestionnaireData();
       const { objects } = data;
       const { metadata } = objects[0];
       setMetadata(metadata);
     };
-    const getMascotdata = async (slug: string) => {
-      const data = await getMascotData(`${slug}`);
+
+    const fetchMascotData = async (id: string) => {
+      const data = await getMascotData(id);
       const { objects } = data;
       const { metadata, title } = objects[0];
-      setMascotdata({...metadata, title});
+      setMascotdata({ ...metadata, title });
     };
-    getMetadata();
-    getMascotdata(`${mascotId}`);
+
+    if (mascotId) {
+      fetchMetadata();
+      fetchMascotData(mascotId);
+    }
   }, [mascotId]);
 
   const startQ = (index: number) => {
@@ -94,6 +97,7 @@ function Cuestionario({
 
   const { titulo, introduccion, secciones } = metadata;
   const { foto_mascota_1, edad, raza, fecha_de_resguardo, title } = mascotData;
+
   return (
     <main className="questionnaire-main">
       <header>
@@ -168,6 +172,6 @@ function Cuestionario({
       <Footer />
     </main>
   );
-}
+};
 
 export default Cuestionario;
