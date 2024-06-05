@@ -1,0 +1,54 @@
+@import '../../../styles/colors'
+
+.loading-wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 65vh
+  width: 100%
+  .loading
+    color: $purple
+    font-size: 5rem
+    animation: animate 2s infinite
+.sending-wrapper
+  display: flex
+  justify-content: center
+  align-items: center
+  .sending
+    color: white
+    font-size: 1rem
+    animation: animate 2s infinite
+.journey-wrapper
+  span
+    display: inline-flex
+    justify-content: center
+  .stage
+    background-color: gray
+    color: white
+    height: 3rem
+    width: 3rem
+    border-radius: 50%
+    align-items: center
+    position: relative
+    &::after
+      content: ''
+      display: block
+      width: 220%
+      height: 2px
+      background-color: gray
+      margin: 0 auto
+      position: absolute
+      left: 100%
+    &.done
+      background-color: $yellow
+      &::after
+        background-color: $yellow
+    &.last
+      &::after
+        display: none
+
+@keyframes animate
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(720deg)

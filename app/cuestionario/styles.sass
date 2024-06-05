@@ -12,21 +12,45 @@
       background-color: #fff
       padding: 3rem
       h1
+        color: black
         font-size: 2rem
         margin-bottom: 1rem
       h2
         font-size: 1.5rem
         margin-bottom: 2rem
       .mascot-data
+        .mascot-icon
+          align-content: center
+          text-align: center
+        .mascot-basic
+          h2
+            padding: .5rem 0 0 1rem
+            font-size: 1.4rem
+            font-weight: bold
+            span
+              font-weight: normal
+              font-size: .9rem
+          p
+            padding-left: 1rem
         h2
           font-size: 1.5rem
           margin-bottom: 0
+          color: black
+        .guarded
+          margin: 2rem 0
       .questions
-        label
+        color: black
+        .label
+          font-size: .9rem
           font-weight: bold
           display: block
+          margin-bottom: .3rem
           width: 100%
-        input
+          span
+            color: red
+            display: inline-block
+            margin-left: .2rem
+        input:not([type=radio])
           margin-bottom: 1rem
           width: 100%
           padding: .7rem
@@ -35,16 +59,40 @@
           &:focus
             outline: none
             border: 1px solid $purple
+          &.error
+            border: 1px solid red
+        textarea
+          resize: none
+          margin-bottom: 1rem
+          width: 100%
+          padding: .7rem
+          border: 1px solid #ccc
+          border-radius: 5px
+          &:focus
+            outline: none
+            border: 1px solid $purple
+          &.error
+            border: 1px solid red
     .mascot-indicator-banner
       background-color: $yellow
+      .mascot-icon
+        color: black
+        align-content: center
+        text-align: center
       .info
-        padding: 1rem
+        padding: .6rem 1rem
+        color: black
         h2
-          font-size: 1.5rem
+          font-size: 1rem
           margin: 0
           font-weight: bold
           span
             font-weight: normal
+            font-size: .9rem
+        p
+          font-size: .9rem
+          margin: 0
+          color: black
 .start-wrapper
   margin-top: 2rem
 .main-primary
@@ -54,3 +102,30 @@
   width: 100%
 .main-secondary
   border: 2px solid $purple
+.option-wrapper
+  display: inline-flex
+  padding: .75rem
+  &.error
+    border: 1px solid red
+  label
+    display: inline-block
+    margin-left: .7rem
+.timer
+  margin-top: 2rem
+.intro
+  color: black
+
+.adoptions-header
+  position: relative
+.mascot-card
+  background-color: $yellow
+  position: absolute
+  right: -1rem
+  top: -5rem
+  min-width: 300px
+  .mascot-data
+    .grid
+      margin-bottom: 1rem
+      p
+        color: black !important
+        font-size: .9rem !important

@@ -28,3 +28,38 @@ export const getContentType = (type: string): (({ data }: any) => React.JSX.Elem
   }
   return Component;
 };
+
+export const metadataInitialState = {
+  titulo: '',
+  gracias: {},
+  introduccion: '',
+  secciones: [{
+    title: '',
+    metadata: {
+      preguntas: [{
+        pregunta: [{
+          id: '-1',
+          metadata: {
+            etiqueta_de_pregunta: '',
+            requerido: false,
+            opciones: []
+          },
+          type: '',
+          slug: ''
+        }]
+      }],
+      texto_opcional: ''
+    }
+  }]
+};
+
+export const mascotdataInitialState = {
+  title: '',
+  foto_mascota_1: {
+    imgix_url: ''
+  },
+  edad: '',
+  raza: '',
+  fecha_de_resguardo: '',
+  genero: ''
+};

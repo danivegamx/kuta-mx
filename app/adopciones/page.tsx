@@ -1,4 +1,6 @@
+"use client";
 
+import { useState, useEffect } from "react";
 import moment from "moment";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -7,10 +9,19 @@ import Button from '../components/Button';
 import './styles.sass';
 import { getAdoptionsData } from '../api';
 
-async function Adopciones() {
-  const data = (await getAdoptionsData()) || [];
-  const { objects } = data;
-  const { metadata } = objects[0];
+function Adopciones() {
+  const [metadata, setMetadata] = useState({ titulo: '', descripcion: '', mascotas: [] });
+
+  useEffect(() => {
+    const fetchMetadata = async () => {
+      const data = (await getAdoptionsData()) || [];
+      const { objects } = data;
+      const { metadata } = objects[0];
+      setMetadata(metadata);
+    };
+    fetchMetadata();
+  }, []);
+
   const { titulo, descripcion, mascotas } = metadata;
 
   return (
@@ -29,7 +40,7 @@ async function Adopciones() {
               const { title, metadata, slug } = mascota;
               const { raza, foto_mascota_1, fecha_de_resguardo, edad } = metadata;
               return (
-                <div key={index} className="mascot-card">
+                <div key={index} className="mascot-card-adoption">
                   <span className="date">{`${moment(new Date(fecha_de_resguardo)).fromNow()}`}</span>
                   <div className="mascot-image" style={{ background: `url(${foto_mascota_1.imgix_url})`, backgroundSize: 'cover' }}></div>
                   <div className="mascot-data grid grid-cols-2">
