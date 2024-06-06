@@ -11,6 +11,7 @@ import Sending from './sending';
 // import Journey from './journey';
 import { getQuestionnaireData, getMascotData, postForm } from '../../api';
 import { metadataInitialState, mascotdataInitialState } from '../../../utils';
+import { useLocalStorage } from "@/app/context/useLocalStorage";
 
 const Questionnaire = () => {
   const ref = useRef(null);
@@ -20,6 +21,7 @@ const Questionnaire = () => {
   // * State handling
   const [metadata, setMetadata] = useState(metadataInitialState);
   const [mascotData, setMascotdata] = useState(mascotdataInitialState);
+  const { item: mascot, saveItem: saveMascot } = useLocalStorage('mascot-id', mascotId);
   // * Section handling
   const [currentSection, setCurrentSection] = useState(0);
   const [hasChildren, setHasChildren] = useState(false);
@@ -27,8 +29,25 @@ const Questionnaire = () => {
   const [sent, setSent] = useState(false);
   const [redirectSeconds, setRedirectSeconds] = useState(10);
   // * Form handling
-  const [validations, setValidations] = useState([{},{},{},{},{},{},{}]);
-  const [answers, setAnswers] = useState({
+  const [validations, setValidations] = useState([{}, {}, {}, {}, {}, {}, {}]);
+
+  // const [answers, setAnswers] = useState({
+  //   seccion1: {},
+  //   seccion2: {},
+  //   seccion3: {},
+  //   seccion4: {},
+  //   seccion5: {},
+  //   seccion6: {},
+  //   seccion7: {},
+  // });
+
+  // * Using useLocalStorage hook
+
+  type Answers = {
+    [key: string]: any | string | null | undefined;
+  };
+
+  const { item: answers, saveItem: saveAnswers, loading: loadingAnswers } = useLocalStorage<Answers>('adoption-answers', {
     seccion1: {},
     seccion2: {},
     seccion3: {},
@@ -58,6 +77,7 @@ const Questionnaire = () => {
     if (mascotId) {
       fetchMetadata();
       fetchMascotData(mascotId);
+      saveMascot(mascotId);
     }
   }, [mascotId]);
 
@@ -78,9 +98,11 @@ const Questionnaire = () => {
 
   const handleChanges = (event: any, section: number, question: string, displayQuestion: string) => {
     let currentSection: any = answers[`seccion${section}` as keyof typeof answers];
-    currentSection[question] = {question: displayQuestion, response: event.target.value};
+    currentSection[question] = { question: displayQuestion, response: event.target.value };
 
-    setAnswers({...answers, [`seccion${section}`]: currentSection});
+    //setAnswers({ ...answers, [`seccion${section}`]: currentSection });
+    const updatedAnswers = { ...answers, [`seccion${section}`]: currentSection };
+    saveAnswers(updatedAnswers);
   }
 
   const validateSection = (section: number) => {
@@ -97,11 +119,11 @@ const Questionnaire = () => {
 
   const startQuestionnaire = () => {
     setCurrentSection(1);
-    (ref.current as unknown as HTMLElement)?.scrollIntoView({behavior: 'smooth'});
+    (ref.current as unknown as HTMLElement)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handlePhaseChange = (index: number) => {
-    (ref.current as unknown as HTMLElement)?.scrollIntoView({behavior: 'smooth'});
+    (ref.current as unknown as HTMLElement)?.scrollIntoView({ behavior: 'smooth' });
     document.querySelectorAll('.questions input').forEach((input: any) => {
       input.classList.remove('error');
     });
@@ -138,10 +160,11 @@ const Questionnaire = () => {
 
   const renderMultiOptions: any = (options: any, slug: string, required: boolean, index: number, displayQuestion: string) => {
     return options.map((option: any) => {
+      const isChecked = answers[`seccion${index}`]?.[slug]?.response === option.slug;
       return (
         <fieldset key={option.id} className={`option-wrapper ${slug}`}>
-          <input data-required={required} type="radio" id={option.slug} name={slug} value={option.slug} onChange={(e: any) => handleChanges(e, index, slug, displayQuestion)} />
-          <label htmlFor={option.slug}>{ option.title }</label>
+          <input checked={isChecked} data-required={required} type="radio" id={option.slug} name={slug} value={option.slug} onChange={(e: any) => handleChanges(e, index, slug, displayQuestion)} />
+          <label htmlFor={option.slug}>{option.title}</label>
         </fieldset>
       );
     });
@@ -149,18 +172,19 @@ const Questionnaire = () => {
 
   const renderInput: any = (type: string, index: number, slug: string, options: any, required: boolean, displayQuestion: string) => {
     let input = null;
+    let answer = answers[`seccion${index}`]?.[slug]?.response || '';
     switch (type) {
       case 'preguntas-texto-largos':
-          input = <textarea id={slug} data-required={required} onChange={(e: any) => handleChanges(e, index, slug, displayQuestion)} placeholder="Respuesta" />;
+        input = <textarea id={slug} data-required={required} value={answer} onChange={(e: any) => handleChanges(e, index, slug, displayQuestion)} placeholder="Respuesta" />;
         break;
       case 'preguntas-texto-sencillos':
-          input = <input id={slug} data-required={required} type="text" onChange={(e: any) => handleChanges(e, index, slug, displayQuestion)} placeholder="Respuesta" />;
+        input = <input id={slug} data-required={required} value={answer} type="text" onChange={(e: any) => handleChanges(e, index, slug, displayQuestion)} placeholder="Respuesta" />;
         break;
       case 'pregunta-fechas':
-          input = <input id={slug} data-required={required} type="date" onChange={(e: any) => handleChanges(e, index, slug, displayQuestion)} placeholder="Respuesta" />;
+        input = <input id={slug} data-required={required} value={answer} type="date" onChange={(e: any) => handleChanges(e, index, slug, displayQuestion)} placeholder="Respuesta" />;
         break;
       case 'preguntas-multiopcion':
-          input = <form className="grid grid-cols-3 gap-2">{ renderMultiOptions(options, slug, required, index, displayQuestion) }</form>;
+        input = <form className="grid grid-cols-3 gap-2">{renderMultiOptions(options, slug, required, index, displayQuestion)}</form>;
         break;
     }
     return input;
@@ -173,30 +197,30 @@ const Questionnaire = () => {
       <div className="questionnaire-wrapper container mx-auto relative">
         <div ref={ref} className="mascot-indicator-banner grid grid-cols-12 block md:hidden">
           <div className="col-span-10 info">
-            <h2>{ title }<span>{` · ${edad} años`}</span></h2>
-            <p>{ raza }</p>
+            <h2>{title}<span>{` · ${edad} años`}</span></h2>
+            <p>{raza}</p>
           </div>
           <div className="col-span-2 mascot-icon"><FontAwesomeIcon icon={byPrefixAndName.fas['dog']} size="xl" /></div>
         </div>
         {/* <Journey sections={secciones} currentSection={currentSection} /> */}
         <section className={`questionnaire-section ${currentSection === 0 ? 'current' : 'md:my-4'}`}>
-          <h1>{ titulo }</h1>
+          <h1>{titulo}</h1>
           <article className="adoptions-header grid grid-cols-1 gap-4">
-            <div className="intro" dangerouslySetInnerHTML={{__html: introduccion}} />
+            <div className="intro" dangerouslySetInnerHTML={{ __html: introduccion }} />
 
             <div className="mascot-card col-span-12 md:col-span-3 hidden md:block">
               <div className="mascot-data">
                 <div className="grid grid-cols-10">
                   <div className="mascot-basic col-span-8">
-                    <h2>{ title }<span>{` · ${edad} años`}</span></h2>
-                    <p>{ raza }</p>
+                    <h2>{title}<span>{` · ${edad} años`}</span></h2>
+                    <p>{raza}</p>
                   </div>
                   <div className="col-span-2 mascot-icon"><FontAwesomeIcon icon={byPrefixAndName.fas['dog']} size="xl" /></div>
                 </div>
                 <div className="buttons">
-                <button onClick={startQuestionnaire} className="main-primary" >
-                  Comenzar
-                </button>
+                  <button onClick={startQuestionnaire} className="main-primary" >
+                    Comenzar
+                  </button>
                 </div>
               </div>
             </div>
@@ -216,8 +240,8 @@ const Questionnaire = () => {
             if (!hasChildren && currentSection === 5) {
               return (
                 <section key={index} className={`md:my-8 questionnaire-section ${currentSection === index ? 'current' : ''}`}>
-                  <h2>{ title }</h2>
-                  <p>{ texto_opcional }</p>
+                  <h2>{title}</h2>
+                  <p>{texto_opcional}</p>
                   <div className="buttons grid grid-cols-2 gap-4 mt-8">
                     <button onClick={() => handlePhaseChange(index + 1)} className="main-secondary" >
                       No
@@ -231,13 +255,16 @@ const Questionnaire = () => {
             } else if (currentSection === 8) {
               return (
                 <section key={index} className={`md:my-8 questionnaire-section ${currentSection === index ? 'current' : ''}`}>
-                  <h2>{ title }</h2>
-                  <p>{ texto_opcional }</p>
+                  <h2>{title}</h2>
+                  <p>{texto_opcional}</p>
                   <div className="buttons grid grid-cols-2 gap-4 mt-8">
                     <button onClick={() => handlePhaseChange(index - 1)} className="main-secondary" >
                       Atrás
                     </button>
-                    <button onClick={() => sendForm()} className="main-primary" >
+                    <button onClick={() => {
+                      sendForm()
+                      localStorage.clear();
+                    }} className="main-primary" >
                       {!sent ? 'Acepto, Enviar' : <Sending />}
                     </button>
                   </div>
@@ -246,14 +273,14 @@ const Questionnaire = () => {
             } else {
               return (
                 <section key={index} className={`md:my-8 questionnaire-section ${currentSection === index ? 'current' : ''}`}>
-                  <h2>{ title }</h2>
+                  <h2>{title}</h2>
                   <div className="questions grid grid-cols-2 gap-4">
                     {
                       questions.map((question) => {
                         return (
                           <div key={question.id} className={question.type === 'preguntas-texto-largos' ? 'col-span-2' : 'col-span-2 md:col-span-1'}>
-                            <label className="label">{ question.metadata.etiqueta_de_pregunta }<span>{!question.metadata.requerido || '*'}</span></label>
-                            { renderInput(question.type, index, question.slug, question.metadata.opciones, question.metadata.requerido, question.metadata.etiqueta_de_pregunta) }
+                            <label className="label">{question.metadata.etiqueta_de_pregunta}<span>{!question.metadata.requerido || '*'}</span></label>
+                            {renderInput(question.type, index, question.slug, question.metadata.opciones, question.metadata.requerido, question.metadata.etiqueta_de_pregunta)}
                           </div>
                         )
                       })
