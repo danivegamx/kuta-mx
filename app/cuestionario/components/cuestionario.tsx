@@ -22,6 +22,7 @@ const Questionnaire = () => {
   const [metadata, setMetadata] = useState(metadataInitialState);
   const [mascotData, setMascotdata] = useState(mascotdataInitialState);
   const { item: mascot, saveItem: saveMascot } = useLocalStorage('mascot-id', mascotId);
+  const { item: yesNo, saveItem: saveYesNo } = useLocalStorage('yes-no', '');
   // * Section handling
   const [currentSection, setCurrentSection] = useState(0);
   const [hasChildren, setHasChildren] = useState(false);
@@ -78,7 +79,14 @@ const Questionnaire = () => {
       fetchMetadata();
       fetchMascotData(mascotId);
       saveMascot(mascotId);
+      if (localStorage.getItem("adoption-answers")) {
+        saveAnswers(JSON.parse(localStorage.getItem("adoption-answers") || '{}'))
+      }
+      if (localStorage.getItem("yes-no")) {
+        saveYesNo(JSON.parse(localStorage.getItem("yes-no") || ''))
+      }
     }
+
   }, [mascotId]);
 
   const { titulo, introduccion, secciones, gracias } = metadata;
@@ -237,16 +245,22 @@ const Questionnaire = () => {
             const index = i + 1;
             const { title, metadata: { preguntas, texto_opcional } } = seccion;
             const questions = preguntas[0].pregunta;
-            if (!hasChildren && currentSection === 5) {
+            if (!hasChildren && currentSection === 5 && (yesNo === '')) {
               return (
                 <section key={index} className={`md:my-8 questionnaire-section ${currentSection === index ? 'current' : ''}`}>
                   <h2>{title}</h2>
                   <p>{texto_opcional}</p>
                   <div className="buttons grid grid-cols-2 gap-4 mt-8">
-                    <button onClick={() => handlePhaseChange(index + 1)} className="main-secondary" >
+                    <button onClick={() => {
+                      handlePhaseChange(index + 1)
+                      saveYesNo('no')
+                    }} className="main-secondary" >
                       No
                     </button>
-                    <button onClick={() => setHasChildren(true)} className="main-primary" >
+                    <button onClick={() => {
+                      setHasChildren(true)
+                      saveYesNo('yes')
+                    }} className="main-primary" >
                       Si
                     </button>
                   </div>
@@ -287,10 +301,24 @@ const Questionnaire = () => {
                     }
                   </div>
                   <div className="buttons grid grid-cols-2 gap-4 mt-8">
-                    <button onClick={() => handlePhaseChange(index - 1)} className="main-secondary" >
+                    <button onClick={() => {
+                      if (yesNo === 'no' && index === 6) {
+                        handlePhaseChange(index - 2)
+                      }
+                      else {
+                        handlePhaseChange(index - 1)
+                      }
+                    }} className="main-secondary" >
                       Atrás
                     </button>
-                    <button onClick={() => handlePhaseChange(index + 1)} className="main-primary" >
+                    <button onClick={() => {
+                      if (yesNo === 'no' && index === 4) {
+                        handlePhaseChange(index + 2)
+                      }
+                      else {
+                        handlePhaseChange(index + 1)
+                      }
+                    }} className="main-primary" >
                       Siguiente
                     </button>
                   </div>

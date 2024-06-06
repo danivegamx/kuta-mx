@@ -49,10 +49,9 @@ function Adopciones() {
                       <p>{raza}</p>
                     </div>
                     <div onClick={() => {
-                      console.log(slug)
                       if (localStorage.getItem("mascot-id")?.replace(/"/g, '') !== slug) {
                         localStorage.removeItem("adoption-answers");
-                        console.log(localStorage.getItem("mascot-id")?.replace(/"/g, ''))
+                        localStorage.removeItem("yes-no");
                       }
                     }} className="buttons"><Button data={{ title: 'Aplicar', type: 'botones-primarios', metadata: { url: `/cuestionario?mascotId=${slug}`, color: 'rgb(89,76,129)', sin_border: false } }} /></div>
                   </div>
