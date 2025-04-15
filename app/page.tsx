@@ -1,12 +1,14 @@
-
 import qs from "../assets/qs.svg";
-import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
+import Navigation from "./components/Navigation";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
 
-import '../styles/styles.sass';
-import { getHomePageData } from './api';
-import { getContentType } from '../utils';
+import "../styles/styles.sass";
+import { getHomePageData } from "./api";
+import { getContentType } from "../utils";
+import Image from "next/image";
+import dog from "../assets/three-step-dog.png";
+import LandingHero from "./components/Home/Hero";
 
 async function Home() {
   const data = (await getHomePageData()) || [];
@@ -23,16 +25,15 @@ async function Home() {
       <header>
         <Navigation />
       </header>
-      <Hero data={objects[0]?.metadata?.hero} />
-      {
-        sections.map((section: any, index: number) => {
-          if (section) {
-            const { type } = section;
-            const Component = getContentType(type);
-            return (<Component key={index} data={section}/>)
-          }
-        })
-      }
+      <LandingHero/>
+      {/* <Hero data={objects[0]?.metadata?.hero} /> */}
+      {sections.map((section: any, index: number) => {
+        if (section) {
+          const { type } = section;
+          const Component = getContentType(type);
+          return <Component key={index} data={section} />;
+        }
+      })}
       <Footer />
     </main>
   );

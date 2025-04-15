@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-build-id={buildId}>
+    <html lang="en" data-build-id={buildId} className={`${inter.variable} ${kulim.variable}`}>
       <body className={gotham.className}>{children}</body>
     </html>
   );
