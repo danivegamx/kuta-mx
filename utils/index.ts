@@ -5,10 +5,9 @@ import ThreeColumns from '../app/components/ThreeColumns';
 import InfoBanner from '../app/components/InfoBanner';
 
 export const navigation = [
-  { label: 'Inicio', link: '/' },
   { label: 'Nosotros', link: '/nosotros' },
   { label: 'Historias', link: '/historias' },
-  { label: 'Contacto', link: '/contacto' },
+  { label: 'Adopciones', link: '/contacto' },
 ];
 
 export const getContentType = (type: string): (({ data }: any) => React.JSX.Element) => {

@@ -1,13 +1,20 @@
 @import '../../../styles/colors'
 
 header
-  position: sticky
-  top: 0
+  position: absolute
+  right: 0
+  left: 0
+  top: 28px
   z-index: 999
 
 nav
-  background-color: $purple
-  padding: .5rem 0
+  background-color: white
+  padding: .5rem 1rem
+  border-radius: 100px
+  height: 70px
+  display: flex
+  align-items: center
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25))
   img
     margin-right: 1rem
     display: inline-flex
@@ -16,13 +23,12 @@ nav
     list-style: none
     margin: 0
     padding: 0
-    text-transform: uppercase
     li
       a
-        color: white
+        color: $text
         font-size: 1rem
         font-weight: bold
-        padding: 1rem 1.3rem
+        padding: 0px 1rem 
         transition: all 0.3s ease-in
         &:hover
           text-shadow: 1px 0 rgba(255,255,255,.2), -1px 0 rgba(255,255,255,.2), 0 -1px rgba(255,255,255,.2), 0 1px rgba(255,255,255,.2)

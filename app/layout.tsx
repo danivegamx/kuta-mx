@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Inter, Kulim_Park } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const kulim = Kulim_Park({ subsets: ['latin'], weight: ['400'], variable: '--font-kulim' })
 
 const gotham = localFont({ src: [
   {path: '../styles/gotham-light.otf', weight: '200', style: 'normal'},
