@@ -1,0 +1,78 @@
+import { content } from "../../../assets/Content/content";
+import yellowPerson from "../../../assets/yellowPersonDog.png";
+import Image from "next/image";
+import Requirements from "../Requirements/requirements";
+
+const steps = [
+  {
+    title: content.step1Title,
+    content: content.step1Content,
+  },
+  {
+    title: content.step2Title,
+    content: content.step2Content,
+  },
+  {
+    title: content.step3Title,
+    content: content.step3Content,
+  },
+];
+
+export default function AdoptionSteps() {
+  return (
+    <>
+      {
+        <section>
+          <div className="md:px-12 md:py-20">
+            <div className="bg-gradient-to-br from-lightYellow to-lightPink rounded-lg px-10 py-10 flex flex-col gap-y-10 max-w-6xl mx-auto">
+              <div className="flex flex-row justify-between max-w-6xl mx-auto items-center gap-x-20">
+                <div className="w-1/2">
+                  <Image src={yellowPerson} alt={"Person with dog"} />
+                </div>
+                <div className="w-1/2 flex flex-col gap-y-11">
+                  <div className="kulim font-semibold text-4xl text-slate-800">
+                    Pasos Para <span className="text-yellow">Adoptar</span> En
+                    Kuta
+                  </div>
+                  <div className="relative">
+                    {steps.map((step, index) => (
+                      <div
+                        key={index}
+                        className={`flex flex-row gap-x-6 relative z-10 ${
+                            index !== steps.length - 1 ? 'pb-6' : ''
+                          }`}
+                      >
+                        <div>
+                          <div className="rounded-full flex justify-center items-center bg-slate-800 w-11 h-11 text-white">
+                            {index + 1}
+                          </div>
+                        </div>
+                        <div className="flex flex-col">
+                          <div className="text-lg font-semibold inter text-slate-800">
+                            {step.title}
+                          </div>
+                          <div className="text-base font-normal inter text-slate-800">
+                            {step.content}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    <div
+                      style={{ width: "2px" }}
+                      className=" absolute top-0 bottom-5 left-5 bg-slate-500 z-0"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <Requirements />
+            </div>
+          </div>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
+            rel="stylesheet"
+          />
+        </section>
+      }
+    </>
+  );
+}

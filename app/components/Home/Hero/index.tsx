@@ -1,7 +1,11 @@
 import Image from "next/image";
 import dog from "../../../../assets/three-step-dog.png";
 import golden from "../../../../assets/goldenRetriever.png";
+import yellowPerson from "../../../../assets/yellowPersonDog.png";
 import { content } from "../../../../assets/Content/content";
+import { MaterialSymbol } from "react-material-symbols";
+import Requirements from "../../Requirements/requirements";
+import AdoptionSteps from "../../AdoptionSteps/adoptionSteps";
 
 export default function LandingHero() {
   return (
@@ -36,14 +40,17 @@ export default function LandingHero() {
             </div>
           </div>
           {/* section 1 */}
-          <div className="md:px-12 md:py-20">
+          <section className="md:px-12 md:py-20">
             <div className="w-full flex flex-row justify-between max-w-6xl mx-auto items-center gap-x-20">
               <div className="w-1/2 gap-y-8 flex flex-col">
                 <div className="kulim font-semibold text-4xl text-slate-800">
                   Un <span className="text-blue">Hogar</span> Para Cada Patita
                 </div>
-                <div className="inter text-base text-slate-800 font-regular" style={{ whiteSpace: 'pre-line' }} dangerouslySetInnerHTML={{ __html: content.landingS1Content }}>
-                </div>
+                <div
+                  className="inter text-base text-slate-800 font-regular"
+                  style={{ whiteSpace: "pre-line" }}
+                  dangerouslySetInnerHTML={{ __html: content.landingS1Content }}
+                ></div>
                 <div>
                   <button className="bg-white text-blue border border-blue font-medium text-sm py-3 px-4 rounded-lg hover:bg-blue hover:text-white hover:border-transparent transition duration-300 ease-in-out">
                     Conocer Más
@@ -51,10 +58,12 @@ export default function LandingHero() {
                 </div>
               </div>
               <div className="w-1/2">
-                <Image src={golden} alt={"Golden Retrieveer"} className="" />
+                <Image src={golden} alt={"Golden Retrieveer"} />
               </div>
             </div>
-          </div>
+          </section>
+          {/* section 2 */}
+          <AdoptionSteps/>
         </div>
       }
     </>
