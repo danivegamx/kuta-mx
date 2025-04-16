@@ -12,5 +12,6 @@ Nuestra misión es simple pero poderosa: <strong>ayudar a que más animales encu
   requirement2: `Contar con una camita cómoda para su descanso`,
   requirement3: `Tener una placa de identificación`,
   requirement4: `Y lo más importante: mucho amor y compromiso`,
+  adoptionDesc: `Explora perfiles de perros y gatos que esperan un hogar lleno de amor. Adoptar es fácil, ¡empieza aquí!`
 };
  

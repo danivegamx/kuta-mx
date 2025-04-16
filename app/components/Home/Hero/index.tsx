@@ -1,11 +1,12 @@
 import Image from "next/image";
 import dog from "../../../../assets/three-step-dog.png";
 import golden from "../../../../assets/goldenRetriever.png";
-import yellowPerson from "../../../../assets/yellowPersonDog.png";
+import purpePawsLeft from "../../../../assets/purplePawsLeft.png";
+import purpePawsRight from "../../../../assets/purplePawsRight.png";
 import { content } from "../../../../assets/Content/content";
-import { MaterialSymbol } from "react-material-symbols";
-import Requirements from "../../Requirements/requirements";
 import AdoptionSteps from "../../AdoptionSteps/adoptionSteps";
+import emphasis from "../../../../assets/emphasis1.png";
+import Pet from "../../Pet/pet";
 
 export default function LandingHero() {
   return (
@@ -63,7 +64,47 @@ export default function LandingHero() {
             </div>
           </section>
           {/* section 2 */}
-          <AdoptionSteps/>
+          <AdoptionSteps />
+          {/* section 3 */}
+          <section className="md:px-12 md:py-20 relative">
+            <div className="max-w-6xl mx-auto flex justify-center flex-col gap-y-14 relative z-10">
+              <div>
+                <div className="flex flex-row justify-center">
+                  <Image
+                    src={emphasis}
+                    alt={"Emphasis"}
+                    className="w-7 h-7 mr-3"
+                  />
+                  <text className="kulim font-semibold text-4xl text-slate-800">
+                    Mascotas En <span className="text-purple">Adopción</span>
+                  </text>
+                  <Image
+                    src={emphasis}
+                    alt={"Emphasis"}
+                    className="w-7 h-7 ml-3 scale-x-[-1]"
+                  />
+                </div>
+                <text className="flex justify-center inter text-slate-800">
+                  {content.adoptionDesc}
+                </text>
+              </div>
+              <div className="flex justify-center">
+                <Pet></Pet>
+              </div>
+              <div className="flex justify-center">
+                <button className="bg-purple text-white font-medium text-sm py-3 px-4 rounded-lg ">
+                    Conoce Más
+                  </button>
+              </div>
+              
+            </div>
+            <div className="absolute left-0 top-10 bottom-10 z-0">
+                <Image src={purpePawsLeft} alt={"Purple Paws"} className="" style={{width: '246px', height: '725px'}} />
+              </div>
+              <div className="absolute right-0 top-10 bottom-10 z-0">
+                <Image src={purpePawsRight} alt={"Purple Paws"} className="" style={{width: '280px', height: '841px'}} />
+              </div>
+          </section>
         </div>
       }
     </>
