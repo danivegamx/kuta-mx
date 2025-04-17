@@ -27,13 +27,13 @@ async function Home() {
       </header>
       <LandingHero/>
       {/* <Hero data={objects[0]?.metadata?.hero} /> */}
-      {sections.map((section: any, index: number) => {
+      {/* {sections.map((section: any, index: number) => {
         if (section) {
           const { type } = section;
           const Component = getContentType(type);
           return <Component key={index} data={section} />;
         }
-      })}
+      })} */}
       <Footer />
     </main>
   );

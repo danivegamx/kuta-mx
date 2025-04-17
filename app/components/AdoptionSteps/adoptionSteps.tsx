@@ -30,10 +30,10 @@ export default function AdoptionSteps() {
                   <Image src={yellowPerson} alt={"Person with dog"} />
                 </div>
                 <div className="w-1/2 flex flex-col gap-y-11">
-                  <div className="kulim font-semibold text-4xl text-slate-800">
+                  <h3 className="kulim font-semibold text-4xl text-slate-800">
                     Pasos Para <span className="text-yellow">Adoptar</span> En
                     Kuta
-                  </div>
+                  </h3>
                   <div className="relative">
                     {steps.map((step, index) => (
                       <div
@@ -48,19 +48,19 @@ export default function AdoptionSteps() {
                           </div>
                         </div>
                         <div className="flex flex-col">
-                          <div className="text-lg font-semibold inter text-slate-800">
+                          <h4 className="text-lg font-semibold inter text-slate-800">
                             {step.title}
-                          </div>
-                          <div className="text-base font-normal inter text-slate-800">
+                          </h4>
+                          <p className="text-base font-normal inter text-slate-800">
                             {step.content}
-                          </div>
+                          </p>
                         </div>
                       </div>
                     ))}
-                    <div
+                    <p
                       style={{ width: "2px" }}
                       className=" absolute top-0 bottom-5 left-5 bg-slate-500 z-0"
-                    ></div>
+                    ></p>
                   </div>
                 </div>
               </div>

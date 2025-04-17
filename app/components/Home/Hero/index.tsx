@@ -6,6 +6,8 @@ import purpePawsRight from "../../../../assets/purplePawsRight.png";
 import blueEmphasis from "../../../../assets/blueEmphasis.png";
 import bluePaws from "../../../../assets/bluePaws.png";
 import catPhone from "../../../../assets/catPhone.png";
+import facebook from "../../../../assets/facebook.png";
+import instagram from "../../../../assets/instagram.png";
 import { content } from "../../../../assets/Content/content";
 import AdoptionSteps from "../../AdoptionSteps/adoptionSteps";
 import emphasis from "../../../../assets/emphasis1.png";
@@ -23,18 +25,18 @@ export default function LandingHero() {
             <div className="flex flex-row justify-center items-end pt-[100px] h-full max-w-6xl mx-auto">
               <div className="w-[500px] gap-6 flex flex-col h-full justify-center">
                 <div>
-                  <div className="text-purple font-extrabold uppercase inter">
+                  <h4 className="text-purple font-extrabold uppercase inter">
                     Kuta
-                  </div>
-                  <div className="text-purple uppercase font-bold text-7xl text-white kulim">
+                  </h4>
+                  <h3 className="text-purple uppercase font-bold text-7xl text-white kulim">
                     Mi raza favorita es{" "}
                     <span className="text-purple">adoptada</span>
-                  </div>
+                  </h3>
                 </div>
-                <div className="text-white font-medium text-base inter w-3/4">
+                <p className="text-white font-medium text-base inter w-3/4">
                   Explora mascotas en busca de un hogar lleno de amor, como el
                   tuyo.
-                </div>
+                </p>
                 <div>
                   <button className="bg-purple text-white font-normal text-sm py-3 px-4 rounded-lg ">
                     Adopta Hoy
@@ -50,14 +52,14 @@ export default function LandingHero() {
           <section className="md:px-12 md:py-20">
             <div className="w-full flex flex-row justify-between max-w-6xl mx-auto items-center gap-x-20">
               <div className="w-1/2 gap-y-8 flex flex-col">
-                <div className="kulim font-semibold text-4xl text-slate-800">
+                <h3 className="kulim font-semibold text-4xl text-slate-800">
                   Un <span className="text-blue">Hogar</span> Para Cada Patita
-                </div>
-                <div
+                </h3>
+                <p
                   className="inter text-base text-slate-800 font-regular"
                   style={{ whiteSpace: "pre-line" }}
                   dangerouslySetInnerHTML={{ __html: content.landingS1Content }}
-                ></div>
+                ></p>
                 <div>
                   <button className="bg-white text-blue border border-blue font-medium text-sm py-3 px-4 rounded-lg hover:bg-blue hover:text-white hover:border-transparent transition duration-300 ease-in-out">
                     Conocer Más
@@ -188,6 +190,30 @@ export default function LandingHero() {
                 </p>
               </div>
               <BehindKuta></BehindKuta>
+            </div>
+          </section>
+          {/* section 7 */}
+          <section className="md:px-12 md:py-20 relative">
+            <div className="flex flex-row max-w-6xl mx-auto justify-between">
+              <div>
+                <h3 className="kulim font-semibold text-4xl text-slate-800">
+                  Siguenos en{" "}
+                  <span className="text-purple">Redes Sociales!</span>
+                </h3>
+              </div>
+              <div className="flex flex-row gap-x-3">
+                <Image
+                  src={facebook}
+                  alt={"Facebook"}
+                  className=""
+                  style={{ width: "52px", height: "52px" }}
+                />
+                <Image
+                  src={instagram}
+                  alt={"Instagram"}
+                  style={{ width: "52px", height: "52px" }}
+                />
+              </div>
             </div>
           </section>
         </div>
