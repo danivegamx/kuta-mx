@@ -16,7 +16,7 @@ export default function Navigation({ data }: any) {
 
   return (
     <>
-      <nav className="md:mx-12 sm:mx-7">
+      <nav className="md:mx-12 sm:mx-7 mx-5">
         <div className="flex justify-between w-full">
           <div className="flex items-center align-left">
             <Link href="/" passHref>
