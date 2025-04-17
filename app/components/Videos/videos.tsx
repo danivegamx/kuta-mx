@@ -51,7 +51,7 @@ export default function Videos() {
                 className="w-full h-full relative cursor-pointer"
                 onClick={() => setActiveVideo(index)}
               >
-                <img src={video.image.src} alt={video.name} className="w-full h-full object-cover" />
+                <img src={video.image.src} alt={video.name} className="w-full h-40 object-cover" />
                 {/* Name in top left */}
                 <div className="absolute top-2 left-2 bg-black bg-opacity-60 text-white text-sm px-2 py-1 rounded">
                   {video.name}
