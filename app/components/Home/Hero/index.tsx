@@ -12,6 +12,7 @@ import emphasis from "../../../../assets/emphasis1.png";
 import Pet from "../../Pet/pet";
 import Process from "../../Process/process";
 import Videos from "../../Videos/videos";
+import BehindKuta from "../../BehindKuta/behindKuta";
 
 export default function LandingHero() {
   return (
@@ -162,11 +163,31 @@ export default function LandingHero() {
                 <h3 className="kulim font-semibold text-4xl text-slate-800">
                   Historias de <span className="text-purple">Éxito</span>
                 </h3>
-                <p className="inter text-slate-800 font-normal" style={{ whiteSpace: "pre-line" }}>{content.successStory}</p>
+                <p
+                  className="inter text-slate-800 font-normal"
+                  style={{ whiteSpace: "pre-line" }}
+                >
+                  {content.successStory}
+                </p>
                 <div>
                   <Videos></Videos>
                 </div>
               </div>
+            </div>
+          </section>
+          {/* section 6 */}
+          <section className="md:px-12 md:py-20 relative">
+            <div className="flex flex-col max-w-6xl mx-auto gap-y-16">
+              <div className="flex flex-col gap-y-3 justify-center items-center">
+                <h3 className="kulim font-semibold text-4xl text-slate-800">
+                  ¿Quiénes están detrás de{" "}
+                  <span className="text-yellow">Kuta</span>?
+                </h3>
+                <p className="w-2/3 text-center text-slate-800">
+                  {content.behindKuta}
+                </p>
+              </div>
+              <BehindKuta></BehindKuta>
             </div>
           </section>
         </div>

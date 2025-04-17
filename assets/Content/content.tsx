@@ -1,7 +1,7 @@
 export const content = {
   landingS1Content: `Creemos que cada mascota merece una segunda oportunidad y un hogar donde sea amada. Detrás de cada mirada hay una historia, y con tu ayuda, puede tener un nuevo comienzo.\n
-Trabajamos junto a refugios y rescatistas para conectar a perros y gatos con personas dispuestas a darles una vida llena de cariño. Adoptar no solo cambia la vida de una mascota, también transforma la tuya.\n
-Nuestra misión es simple pero poderosa: <strong>ayudar a que más animales encuentren un hogar lleno de amor.</strong>`,
+  Trabajamos junto a refugios y rescatistas para conectar a perros y gatos con personas dispuestas a darles una vida llena de cariño. Adoptar no solo cambia la vida de una mascota, también transforma la tuya.\n
+  Nuestra misión es simple pero poderosa: <strong>ayudar a que más animales encuentren un hogar lleno de amor.</strong>`,
   step1Title: "Llena el cuestionario de adopción",
   step1Content: `Cuéntanos sobre ti y tu entorno para asegurarnos de que la mascota se adapte a tu estilo de vida.`,
   step2Title: `Primera cita con la mascota`,
@@ -20,5 +20,9 @@ Nuestra misión es simple pero poderosa: <strong>ayudar a que más animales encu
   successStory: `Cada mascota tiene una personalidad única, y encontrar a la persona adecuada puede marcar la diferencia entre una simple adopción y una conexión para toda la vida.\n
   Nos aseguramos de que cada historia de adopción sea especial, buscando familias que entiendan, respeten y amen a cada animal tal como es. El verdadero éxito no es solo dar en adopción, sino crear la combinación perfecta entre mascota y humano.\n
   Porque cuando se encuentran, lo que empieza es mucho más que una compañía: es una historia de amor, de lealtad y de segundas oportunidades.`,
+  behindKuta: `Conoce a las personas y los roles que hacen posible esta misión. Cada integrante aporta su amor, tiempo y compromiso para cambiar vidas — una mascota a la vez.`,
+  rescue: `Héroes valientes que están en el frente, salvando vidas y alejando a los animales del maltrato y el abandono.`,
+  halfwayHouse: `Voluntarios amorosos que ofrecen un hogar temporal, brindando cuidado y cariño mientras las mascotas esperan a su familia definitiva.`,
+  volunteers: `Personas comprometidas que apoyan en cada paso: desde el rescate hasta el cuidado y la adopción. Sin ellos, nada sería posible.`,
 };
  
