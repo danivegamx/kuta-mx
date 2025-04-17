@@ -17,5 +17,8 @@ Nuestra misión es simple pero poderosa: <strong>ayudar a que más animales encu
   process1: `Alejamos a los animales de situaciones de maltrato, abandono o condiciones inadecuadas, brindándoles una nueva oportunidad de vida.`,
   process2: `Ofrecemos atención médica, cuidado emocional y tratamientos especiales a los animales que lo necesitan, para que puedan sanar y volver a confiar.`,
   process3: `Acompañamos el proceso de adopción, conectando a cada mascota con una familia responsable que esté lista para darle un hogar lleno de amor.`,
+  successStory: `Cada mascota tiene una personalidad única, y encontrar a la persona adecuada puede marcar la diferencia entre una simple adopción y una conexión para toda la vida.\n
+  Nos aseguramos de que cada historia de adopción sea especial, buscando familias que entiendan, respeten y amen a cada animal tal como es. El verdadero éxito no es solo dar en adopción, sino crear la combinación perfecta entre mascota y humano.\n
+  Porque cuando se encuentran, lo que empieza es mucho más que una compañía: es una historia de amor, de lealtad y de segundas oportunidades.`,
 };
  

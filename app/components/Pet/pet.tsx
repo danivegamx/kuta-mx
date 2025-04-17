@@ -22,7 +22,6 @@ export default function Pet() {
       const { objects } = data;
       const { metadata } = objects[0];
       setMetadata(metadata);
-      console.log(metadata);
     };
     fetchMetadata();
   }, []);

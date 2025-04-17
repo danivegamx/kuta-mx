@@ -5,11 +5,13 @@ import purpePawsLeft from "../../../../assets/purplePawsLeft.png";
 import purpePawsRight from "../../../../assets/purplePawsRight.png";
 import blueEmphasis from "../../../../assets/blueEmphasis.png";
 import bluePaws from "../../../../assets/bluePaws.png";
+import catPhone from "../../../../assets/catPhone.png";
 import { content } from "../../../../assets/Content/content";
 import AdoptionSteps from "../../AdoptionSteps/adoptionSteps";
 import emphasis from "../../../../assets/emphasis1.png";
 import Pet from "../../Pet/pet";
 import Process from "../../Process/process";
+import Videos from "../../Videos/videos";
 
 export default function LandingHero() {
   return (
@@ -141,7 +143,7 @@ export default function LandingHero() {
               <div className="z-10">
                 <Process></Process>
               </div>
-              
+
               <div className="absolute left top-0 bottom-0 z-0">
                 <Image
                   src={bluePaws}
@@ -149,6 +151,21 @@ export default function LandingHero() {
                   className=""
                   style={{ width: "978px", height: "690px" }}
                 />
+              </div>
+            </div>
+          </section>
+          {/* section 5 */}
+          <section className="md:px-12 md:py-20 relative">
+            <div className="flex flex-row max-w-6xl mx-auto gap-x-20">
+              <Image src={catPhone} alt={"Cat Phone"} className="w-1/2" />
+              <div className="flex flex-col w-1/2 gap-y-5">
+                <h3 className="kulim font-semibold text-4xl text-slate-800">
+                  Historias de <span className="text-purple">Éxito</span>
+                </h3>
+                <p className="inter text-slate-800 font-normal" style={{ whiteSpace: "pre-line" }}>{content.successStory}</p>
+                <div>
+                  <Videos></Videos>
+                </div>
               </div>
             </div>
           </section>
