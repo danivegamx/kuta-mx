@@ -8,7 +8,7 @@ import { getHomePageData } from "./api";
 import { getContentType } from "../utils";
 import Image from "next/image";
 import dog from "../assets/three-step-dog.png";
-import LandingHero from "./components/Home/Hero";
+import Landing from "./components/Home";
 
 async function Home() {
   const data = (await getHomePageData()) || [];
@@ -25,7 +25,7 @@ async function Home() {
       <header>
         <Navigation />
       </header>
-      <LandingHero/>
+      <Landing/>
       {/* <Hero data={objects[0]?.metadata?.hero} /> */}
       {/* {sections.map((section: any, index: number) => {
         if (section) {

@@ -68,25 +68,31 @@ export default function Footer() {
             </div>
             <div>
               <p className="md:text-lg kulim text-bold mb-3">Siguenos</p>
-              <div >
-                <ul className="flex flex-row gap-x-2 mt-0 justify-end">
-                <li>
-                    <Image
-                      src={facebook}
-                      alt={"Facebook"}
-                      className="invert saturation-0"
-                      style={{ width: "30px", height: "30px" }}
-                    />
-                  </li>
-                  <li>
-                    <Image
-                      src={instagram}
-                      alt={"Instagram"}
-                      className="invert saturation-0"
-                      style={{ width: "30px", height: "30px" }}
-                    />
-                  </li>
-                </ul>
+              <div className="flex flex-row gap-x-2 mt-0 justify-end">
+                <a
+                  href="https://www.facebook.com/people/Kuta-Mx/61556841081748/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={facebook}
+                    alt={"Facebook"}
+                    className="invert saturation-0"
+                    style={{ width: "30px", height: "30px" }}
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/kutamx?igsh=MXNvb2V5ZGF1N3lpaQ%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={instagram}
+                    alt={"Instagram"}
+                    className="invert saturation-0"
+                    style={{ width: "30px", height: "30px" }}
+                  />
+                </a>
               </div>
             </div>
           </div>
