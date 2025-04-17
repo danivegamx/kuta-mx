@@ -12,6 +12,10 @@ Nuestra misión es simple pero poderosa: <strong>ayudar a que más animales encu
   requirement2: `Contar con una camita cómoda para su descanso`,
   requirement3: `Tener una placa de identificación`,
   requirement4: `Y lo más importante: mucho amor y compromiso`,
-  adoptionDesc: `Explora perfiles de perros y gatos que esperan un hogar lleno de amor. Adoptar es fácil, ¡empieza aquí!`
+  adoptionDesc: `Explora perfiles de perros y gatos que esperan un hogar lleno de amor. Adoptar es fácil, ¡empieza aquí!`,
+  btsDesc: `Somos un grupo de personas apasionadas por los animales, comprometidas con construir para ellos un mundo más justo, compasivo y lleno de amor.`,
+  process1: `Alejamos a los animales de situaciones de maltrato, abandono o condiciones inadecuadas, brindándoles una nueva oportunidad de vida.`,
+  process2: `Ofrecemos atención médica, cuidado emocional y tratamientos especiales a los animales que lo necesitan, para que puedan sanar y volver a confiar.`,
+  process3: `Acompañamos el proceso de adopción, conectando a cada mascota con una familia responsable que esté lista para darle un hogar lleno de amor.`,
 };
  

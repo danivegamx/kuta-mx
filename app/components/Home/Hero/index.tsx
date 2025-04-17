@@ -3,10 +3,13 @@ import dog from "../../../../assets/three-step-dog.png";
 import golden from "../../../../assets/goldenRetriever.png";
 import purpePawsLeft from "../../../../assets/purplePawsLeft.png";
 import purpePawsRight from "../../../../assets/purplePawsRight.png";
+import blueEmphasis from "../../../../assets/blueEmphasis.png";
+import bluePaws from "../../../../assets/bluePaws.png";
 import { content } from "../../../../assets/Content/content";
 import AdoptionSteps from "../../AdoptionSteps/adoptionSteps";
 import emphasis from "../../../../assets/emphasis1.png";
 import Pet from "../../Pet/pet";
+import Process from "../../Process/process";
 
 export default function LandingHero() {
   return (
@@ -93,17 +96,61 @@ export default function LandingHero() {
               </div>
               <div className="flex justify-center">
                 <button className="bg-purple text-white font-medium text-sm py-3 px-4 rounded-lg ">
-                    Conoce Más
-                  </button>
+                  Conoce Más
+                </button>
               </div>
-              
             </div>
             <div className="absolute left-0 top-10 bottom-10 z-0">
-                <Image src={purpePawsLeft} alt={"Purple Paws"} className="" style={{width: '246px', height: '725px'}} />
+              <Image
+                src={purpePawsLeft}
+                alt={"Purple Paws"}
+                className=""
+                style={{ width: "246px", height: "725px" }}
+              />
+            </div>
+            <div className="absolute right-0 top-10 bottom-10 z-0">
+              <Image
+                src={purpePawsRight}
+                alt={"Purple Paws"}
+                className=""
+                style={{ width: "280px", height: "841px" }}
+              />
+            </div>
+          </section>
+          {/* section 4 */}
+          <section className="md:px-12 md:py-20 relative">
+            <div className="bg-lightBlue rounded-lg p-20 flex flex-col max-w-6xl mx-auto gap-y-16 relative overflow-hidden">
+              <div className="flex flex-col gap-y-4 z-10">
+                <div className="flex flex-row justify-center items-center">
+                  <text className="kulim font-semibold text-4xl text-slate-800">
+                    Descubre Lo Que Hay{" "}
+                    <span className="text-blue">Detrás</span>
+                  </text>
+                  <Image
+                    src={blueEmphasis}
+                    alt={"blue emphasis"}
+                    className="w-7 h-7 ml-1 mb-6 "
+                  />
+                </div>
+                <div className="flex justify-center">
+                  <text className="flex justify-center inter text-slate-800 text-center w-2/3">
+                    {content.btsDesc}
+                  </text>
+                </div>
               </div>
-              <div className="absolute right-0 top-10 bottom-10 z-0">
-                <Image src={purpePawsRight} alt={"Purple Paws"} className="" style={{width: '280px', height: '841px'}} />
+              <div className="z-10">
+                <Process></Process>
               </div>
+              
+              <div className="absolute left top-0 bottom-0 z-0">
+                <Image
+                  src={bluePaws}
+                  alt={"Blue Paws"}
+                  className=""
+                  style={{ width: "978px", height: "690px" }}
+                />
+              </div>
+            </div>
           </section>
         </div>
       }
