@@ -17,7 +17,7 @@ export default function Pictures() {
   useEffect(() => {
     const updateVisibleCount = () => {
       const width = window.innerWidth;
-      if (width < 640) {
+      if (width < 430) {
         setVisibleCount(2); // phone
       } else if (width < 768) {
         setVisibleCount(4); // tablet
