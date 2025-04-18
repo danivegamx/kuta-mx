@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-build-id={buildId} className={`${inter.variable} ${kulim.variable}`}>
-      <body className={gotham.className}>{children}</body>
+      <body className="font-inter">{children}</body>
     </html>
   );
 }

@@ -5,9 +5,6 @@ import Footer from "./components/Footer";
 
 import "../styles/styles.sass";
 import { getHomePageData } from "./api";
-import { getContentType } from "../utils";
-import Image from "next/image";
-import dog from "../assets/three-step-dog.png";
 import Landing from "./components/Home";
 
 async function Home() {

@@ -18,8 +18,13 @@ const config: Config = {
         yellow: '#DFA43E',
         blue:'#338EAF',
         lightYellow: '#FFEAC4',
+        bgYellow: '#FFE7A7',
         lightPink: '#FCF3F3',
         lightBlue: '#D0E8F1',
+      },
+      fontFamily: {
+        inter: 'var(--font-inter)',
+        kulim: 'var(--font-kulim)',
       },
     },
   },
