@@ -8,6 +8,7 @@ import "./styles.sass";
 import "moment/locale/es";
 
 export default function Pet() {
+  const [visibleCount, setVisibleCount] = useState(0);
   const [metadata, setMetadata] = useState({
     titulo: "",
     descripcion: "",
@@ -26,27 +27,43 @@ export default function Pet() {
     fetchMetadata();
   }, []);
 
+  useEffect(() => {
+    const updateVisibleCount = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setVisibleCount(3); // phone
+      } else if (width < 768) {
+        setVisibleCount(4); // tablet
+      } else {
+        setVisibleCount(6); // desktop
+      }
+    };
+  
+    updateVisibleCount(); // initial check
+    window.addEventListener("resize", updateVisibleCount);
+  
+    return () => window.removeEventListener("resize", updateVisibleCount);
+  }, []);
+
   const { titulo, descripcion, mascotas } = metadata;
 
   return (
     <>
-      <div className="flex flex-row flex-wrap gap-5 justify-center">
-        {mascotas.map((mascota: any, index: number) => {
+      <div className="grid grid-cols-1 grid-rows-3 overflow-hidden gap-5 justify-center sm:grid-cols-2 sm:grid-rows-2 md:flex md:flex-row md:flex-wrap">
+        {mascotas.slice(0, Math.min(visibleCount, mascotas.length)).map((mascota: any, index: number) => {
           const { title, metadata, slug } = mascota;
           const { raza, foto_mascota_1, fecha_de_resguardo, edad } = metadata;
 
           return (
             <div
               key={index}
-              className="rounded-lg border border-1 border-slate-300 "
+              className={`rounded-lg border border-1 border-slate-300 overflow-hidden`}
             >
               <div
-                className="mascot-image h-100 W-100 bg-cover rounded-t-lg"
+                className="mascot-image h-[300px] w-[300px] bg-cover rounded-t-lg md:w-[300px] md:h-[300px]"
                 style={{
                   background: `url(${foto_mascota_1.imgix_url})`,
                   backgroundSize: "cover",
-                  height: "300px",
-                  width: "300px",
                 }}
               />
               <div className="mascot-data p-5 gap-y-2 flex flex-col bg-white rounded-lg">

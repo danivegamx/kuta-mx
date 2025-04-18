@@ -54,10 +54,11 @@ export default function Landing() {
             </div>
           </section>
           {/* section 1 */}
-          <section className="md:px-12 md:py-20">
-            <div className="w-full flex flex-row justify-between max-w-6xl mx-auto items-center gap-x-20">
-              <div className="w-1/2 gap-y-8 flex flex-col">
-                <h3 className="kulim font-semibold text-4xl text-slate-800">
+          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
+            <div className="w-full flex flex-col justify-between max-w-6xl mx-auto items-center gap-y-10
+            md:flex-row md:gap-x-20">
+              <div className="gap-y-8 flex flex-col md:w-1/2">
+                <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
                   Un <span className="text-blue">Hogar</span> Para Cada Patita
                 </h3>
                 <p
@@ -71,7 +72,7 @@ export default function Landing() {
                   </button>
                 </div>
               </div>
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <Image src={golden} alt={"Golden Retrieveer"} />
               </div>
             </div>
@@ -79,7 +80,7 @@ export default function Landing() {
           {/* section 2 */}
           <AdoptionSteps />
           {/* section 3 */}
-          <section className="md:px-12 md:py-20 relative">
+          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
             <div className="max-w-6xl mx-auto flex justify-center flex-col gap-y-14 relative z-10">
               <div>
                 <div className="flex flex-row justify-center">
@@ -88,7 +89,7 @@ export default function Landing() {
                     alt={"Emphasis"}
                     className="w-7 h-7 mr-3"
                   />
-                  <text className="kulim font-semibold text-4xl text-slate-800">
+                  <text className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
                     Mascotas En <span className="text-purple">Adopción</span>
                   </text>
                   <Image
@@ -97,7 +98,7 @@ export default function Landing() {
                     className="w-7 h-7 ml-3 scale-x-[-1]"
                   />
                 </div>
-                <text className="flex justify-center inter text-slate-800">
+                <text className="flex justify-center inter text-slate-800 text-center">
                   {content.adoptionDesc}
                 </text>
               </div>
@@ -114,36 +115,34 @@ export default function Landing() {
               <Image
                 src={purpePawsLeft}
                 alt={"Purple Paws"}
-                className=""
-                style={{ width: "246px", height: "725px" }}
+                className="invisible sm:visible sm:w-[153px] sm:h-[567px] md:w-[246px] md:h-[725px]"
               />
             </div>
             <div className="absolute right-0 top-10 bottom-10 z-0">
               <Image
                 src={purpePawsRight}
                 alt={"Purple Paws"}
-                className=""
-                style={{ width: "280px", height: "841px" }}
+                className="invisible sm:visible sm:w-[187px] sm:h-[660px] md:w-[280px] md:h-[841px]"
               />
             </div>
           </section>
           {/* section 4 */}
-          <section className="md:px-12 md:py-20 relative">
-            <div className="bg-lightBlue rounded-lg p-20 flex flex-col max-w-6xl mx-auto gap-y-16 relative overflow-hidden">
-              <div className="flex flex-col gap-y-4 z-10">
+          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
+            <div className="bg-lightBlue rounded-lg p-5 flex flex-col max-w-6xl mx-auto gap-y-5 relative overflow-hidden sm:p-12 md:p-20 md:gap-y-16">
+              <div className="flex flex-col gap-y-2 z-10 md:gap-y-4">
                 <div className="flex flex-row justify-center items-center">
-                  <text className="kulim font-semibold text-4xl text-slate-800">
+                  <text className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
                     Descubre Lo Que Hay{" "}
                     <span className="text-blue">Detrás</span>
                   </text>
                   <Image
                     src={blueEmphasis}
                     alt={"blue emphasis"}
-                    className="w-7 h-7 ml-1 mb-6 "
+                    className="w-5 h-5 ml-1 mb-6 "
                   />
                 </div>
                 <div className="flex justify-center">
-                  <text className="flex justify-center inter text-slate-800 text-center w-2/3">
+                  <text className="flex justify-center inter text-slate-800 text-center md:w-2/3">
                     {content.btsDesc}
                   </text>
                 </div>
@@ -152,7 +151,7 @@ export default function Landing() {
                 <Process></Process>
               </div>
 
-              <div className="absolute left top-0 bottom-0 z-0">
+              <div className="absolute left-0 top-0 bottom-0 z-0 invisible md:visible">
                 <Image
                   src={bluePaws}
                   alt={"Blue Paws"}
@@ -163,11 +162,11 @@ export default function Landing() {
             </div>
           </section>
           {/* section 5 */}
-          <section className="md:px-12 md:py-20 relative">
+          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
             <div className="flex flex-row max-w-6xl mx-auto gap-x-20">
-              <Image src={catPhone} alt={"Cat Phone"} className="w-1/2" />
-              <div className="flex flex-col w-1/2 gap-y-5">
-                <h3 className="kulim font-semibold text-4xl text-slate-800">
+              <Image src={catPhone} alt={"Cat Phone"} className="hidden md:w-1/2 md:block" />
+              <div className="flex flex-col gap-y-5 md:w-1/2">
+                <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
                   Historias de <span className="text-purple">Éxito</span>
                 </h3>
                 <p
@@ -183,14 +182,14 @@ export default function Landing() {
             </div>
           </section>
           {/* section 6 */}
-          <section className="md:px-12 md:py-20 relative">
-            <div className="flex flex-col max-w-6xl mx-auto gap-y-16">
+          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
+            <div className="flex flex-col max-w-6xl mx-auto gap-y-6">
               <div className="flex flex-col gap-y-3 justify-center items-center">
-                <h3 className="kulim font-semibold text-4xl text-slate-800">
+                <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
                   ¿Quiénes están detrás de{" "}
                   <span className="text-yellow">Kuta</span>?
                 </h3>
-                <p className="w-2/3 text-center text-slate-800">
+                <p className="text-center text-slate-800 md:w-2/3">
                   {content.behindKuta}
                 </p>
               </div>
@@ -198,15 +197,15 @@ export default function Landing() {
             </div>
           </section>
           {/* section 7 */}
-          <section className="md:px-12 md:py-20 relative">
+          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
             <div className="flex flex-row max-w-6xl mx-auto justify-between">
               <div>
-                <h3 className="kulim font-semibold text-4xl text-slate-800">
+                <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
                   Siguenos en{" "}
                   <span className="text-purple">Redes Sociales!</span>
                 </h3>
               </div>
-              <div className="flex flex-row gap-x-3">
+              <div className="flex flex-row gap-x-3 invisible md:visible">
                 <a
                   href="https://www.facebook.com/people/Kuta-Mx/61556841081748/"
                   target="_blank"

@@ -27,7 +27,7 @@ export default function Requirements() {
     return (
       <>
         {
-          <div className="flex flex-row gap-x-4">
+          <div className="grid grid-cols-2 gap-4 md:flex md:flex-row md:gap-x-4">
           {requirements.map((item, index) => (
             <div
               key={index}

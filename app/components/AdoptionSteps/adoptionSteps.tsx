@@ -23,14 +23,15 @@ export default function AdoptionSteps() {
     <>
       {
         <section>
-          <div className="md:px-12 md:py-20">
+          <div className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
             <div className="bg-gradient-to-br from-lightYellow to-lightPink rounded-lg px-10 py-10 flex flex-col gap-y-10 max-w-6xl mx-auto">
-              <div className="flex flex-row justify-between max-w-6xl mx-auto items-center gap-x-20">
-                <div className="w-1/2">
+              <div className="flex flex-col justify-between max-w-6xl mx-auto items-center gap-y-14
+              md:flex-row md:gap-x-20">
+                <div className="md:w-1/2">
                   <Image src={yellowPerson} alt={"Person with dog"} />
                 </div>
-                <div className="w-1/2 flex flex-col gap-y-11">
-                  <h3 className="kulim font-semibold text-4xl text-slate-800">
+                <div className="md:w-1/2 flex flex-col gap-y-11">
+                  <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl text-center md:text-left">
                     Pasos Para <span className="text-yellow">Adoptar</span> En
                     Kuta
                   </h3>

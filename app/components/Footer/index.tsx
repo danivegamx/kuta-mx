@@ -35,19 +35,19 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer>
-      <div className="bg-purple px-12 md:pt-14 md:pb-8">
+      <div className="bg-purple px-5 py-10 sm:px-7 md:pt-14 md:pb-8 md:px-12">
         <div className=" max-w-6xl mx-auto">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-col gap-y-5 justify-between sm:flex-row">
             <div>
               <Image
                 src={kutaLogoWhite}
                 alt={"Kuta"}
-                style={{ width: "100px", height: "100px" }}
+                className="w-[70px] h-[70px] md:w-[100px] md:h-[100px]"
               />
             </div>
-            <div className="flex flex-row w-3/4">
+            <div className="flex flex-col gap-y-5 w-3/4 sm:flex-row">
               {footerElements.map((item, index) => (
-                <div key={index} className="mx-4 flex-1">
+                <div key={index} className="mr-4 flex-1">
                   <p className="md:text-lg kulim text-bold mb-3">
                     {item.Title}
                   </p>
@@ -68,7 +68,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="md:text-lg kulim text-bold mb-3">Siguenos</p>
-              <div className="flex flex-row gap-x-2 mt-0 justify-end">
+              <div className="flex flex-row gap-x-2 mt-0 justify-start md:justify-end">
                 <a
                   href="https://www.facebook.com/people/Kuta-Mx/61556841081748/"
                   target="_blank"
