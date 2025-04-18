@@ -89,18 +89,18 @@ export default function Landing() {
                     alt={"Emphasis"}
                     className="w-7 h-7 mr-3 hidden sm:block"
                   />
-                  <text className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
+                  <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
                     Mascotas En <span className="text-purple">Adopción</span>
-                  </text>
+                  </h3>
                   <Image
                     src={emphasis}
                     alt={"Emphasis"}
                     className="w-7 h-7 ml-3 scale-x-[-1] hidden sm:block"
                   />
                 </div>
-                <text className="flex justify-center inter text-slate-800 text-center">
+                <p className="flex justify-center inter text-slate-800 text-center">
                   {content.adoptionDesc}
-                </text>
+                </p>
               </div>
               <div className="flex justify-center">
                 <Pet></Pet>
@@ -131,10 +131,10 @@ export default function Landing() {
             <div className="bg-lightBlue rounded-lg p-5 flex flex-col max-w-6xl mx-auto gap-y-5 relative overflow-hidden sm:p-12 md:p-20 md:gap-y-16">
               <div className="flex flex-col gap-y-2 z-10 md:gap-y-4">
                 <div className="flex flex-row justify-center items-center">
-                  <text className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
+                  <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
                     Descubre Lo Que Hay{" "}
                     <span className="text-blue">Detrás</span>
-                  </text>
+                  </h3>
                   <Image
                     src={blueEmphasis}
                     alt={"blue emphasis"}
@@ -142,9 +142,9 @@ export default function Landing() {
                   />
                 </div>
                 <div className="flex justify-center">
-                  <text className="flex justify-center inter text-slate-800 text-center md:w-2/3">
+                  <p className="flex justify-center inter text-slate-800 text-center md:w-2/3">
                     {content.btsDesc}
-                  </text>
+                  </p>
                 </div>
               </div>
               <div className="z-10">

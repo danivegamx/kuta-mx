@@ -44,9 +44,9 @@ export default function Requirements() {
                   {item.icon}
                 </span>
               </div>
-              <text className="inter text-slate-800 font-medium text-sm text-center">
+              <p className="inter text-slate-800 font-medium text-sm text-center">
                 {item.text}
-              </text>
+              </p>
             </div>
           ))}
         </div>

@@ -35,12 +35,12 @@ export default function Process() {
             </span>
           </div>
           <div className="flex flex-col gap-y-4">
-            <text className="kulim text-slate-800 font-semibold text-xl">
+            <h4 className="kulim text-slate-800 font-semibold text-xl">
               {item.title}
-            </text>
-            <text className="inter text-slate-800 font-normal text-base">
+            </h4>
+            <p className="inter text-slate-800 font-normal text-base">
               {item.text}
-            </text>
+            </p>
           </div>
         </div>
       ))}

@@ -101,9 +101,9 @@ export default function Pet() {
                     >
                       cake
                     </span>
-                    <text className="inter font-medium text-slate-600">{`${edad} ${
+                    <p className="inter font-medium text-slate-600">{`${edad} ${
                       edad !== 1 ? "años" : "año"
-                    }`}</text>
+                    }`}</p>
                   </div>
                   <div className="flex items-center gap-x-2">
                     <span
@@ -112,11 +112,11 @@ export default function Pet() {
                     >
                       calendar_month
                     </span>
-                    <text className="inter font-medium text-slate-600">
+                    <p className="inter font-medium text-slate-600">
                       <span className="date">{`${moment(
                         new Date(fecha_de_resguardo)
                       ).fromNow()}`}</span>
-                    </text>
+                    </p>
                   </div>
                 </div>
                 
