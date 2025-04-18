@@ -87,15 +87,15 @@ export default function Landing() {
                   <Image
                     src={emphasis}
                     alt={"Emphasis"}
-                    className="w-7 h-7 mr-3"
+                    className="w-7 h-7 mr-3 hidden sm:block"
                   />
-                  <text className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
+                  <text className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
                     Mascotas En <span className="text-purple">Adopción</span>
                   </text>
                   <Image
                     src={emphasis}
                     alt={"Emphasis"}
-                    className="w-7 h-7 ml-3 scale-x-[-1]"
+                    className="w-7 h-7 ml-3 scale-x-[-1] hidden sm:block"
                   />
                 </div>
                 <text className="flex justify-center inter text-slate-800 text-center">
@@ -131,14 +131,14 @@ export default function Landing() {
             <div className="bg-lightBlue rounded-lg p-5 flex flex-col max-w-6xl mx-auto gap-y-5 relative overflow-hidden sm:p-12 md:p-20 md:gap-y-16">
               <div className="flex flex-col gap-y-2 z-10 md:gap-y-4">
                 <div className="flex flex-row justify-center items-center">
-                  <text className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
+                  <text className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
                     Descubre Lo Que Hay{" "}
                     <span className="text-blue">Detrás</span>
                   </text>
                   <Image
                     src={blueEmphasis}
                     alt={"blue emphasis"}
-                    className="w-5 h-5 ml-1 mb-6 "
+                    className="w-5 h-5 ml-1 mb-6 hidden md:block"
                   />
                 </div>
                 <div className="flex justify-center">
@@ -164,7 +164,7 @@ export default function Landing() {
           {/* section 5 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
             <div className="flex flex-row max-w-6xl mx-auto gap-x-20">
-              <Image src={catPhone} alt={"Cat Phone"} className="hidden md:w-1/2 md:block" />
+              <Image src={catPhone} alt={"Cat Phone"} className="hidden md:w-1/2 md:block h-auto shrink-0" />
               <div className="flex flex-col gap-y-5 md:w-1/2">
                 <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
                   Historias de <span className="text-purple">Éxito</span>
@@ -185,7 +185,7 @@ export default function Landing() {
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
             <div className="flex flex-col max-w-6xl mx-auto gap-y-6">
               <div className="flex flex-col gap-y-3 justify-center items-center">
-                <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
+                <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
                   ¿Quiénes están detrás de{" "}
                   <span className="text-yellow">Kuta</span>?
                 </h3>
