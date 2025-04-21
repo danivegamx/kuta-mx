@@ -5,6 +5,7 @@ import purplePaws from "../../../assets/purplePaws.png";
 import steps from "../../../assets/steps-triangle.png";
 import stepsLine from "../../../assets/steps-line.png";
 import Image from "next/image";
+import Pet from "../Pet/pet";
 
 export default function Adoptions() {
   return (
@@ -49,37 +50,43 @@ export default function Adoptions() {
           </div>
         </div>
         <div className="absolute bottom-0 right-0 z-0 sm:w-2/3 md:w-1/2 ">
-          <Image
-                src={purplePaws}
-                alt={"Purple Paws"}
-                className=""
-              />
+          <Image src={purplePaws} alt={"Purple Paws"} className="" />
         </div>
         <div className="absolute top-0 left-0 z-0 sm:w-2/3 md:w-1/2 hidden md:block">
           <Image
-                src={purplePaws}
-                alt={"Purple Paws"}
-                className="scale-x-[-1] scale-y-[-1]"
-              />
+            src={purplePaws}
+            alt={"Purple Paws"}
+            className="scale-x-[-1] scale-y-[-1]"
+          />
         </div>
       </section>
       {/* section 2 */}
       <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
-        <div className="w-full flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-10
-            md:flex-row md:gap-x-20">
-                <Image
-                src={steps}
-                alt={"Kuta Steps"}
-                className="sm:hidden"
-              />
-              <Image
-                src={stepsLine}
-                alt={"Kuta Steps"}
-                className="hidden sm:block"
-              />
+        <div
+          className="w-full flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-10
+            md:flex-row md:gap-x-20"
+        >
+          <Image src={steps} alt={"Kuta Steps"} className="sm:hidden" />
+          <Image
+            src={stepsLine}
+            alt={"Kuta Steps"}
+            className="hidden sm:block"
+          />
         </div>
-
       </section>
+      {/* section 3 */}
+      <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
+        <div className="w-full flex flex-col items-start max-w-7xl mx-auto gap-y-8">
+          <h3 className="font-kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
+            Mascotas en <span className="text-purple">Resguardo</span>
+          </h3>
+          <Pet></Pet>
+        </div>
+      </section>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
+        rel="stylesheet"
+      />
     </>
   );
 }

@@ -7,7 +7,11 @@ import Button from "../../components/Button";
 import "./styles.sass";
 import "moment/locale/es";
 
-export default function Pet() {
+type PetProps = {
+  isLanding?: boolean; // Optional, defaults to false (light background)
+};
+
+export default function Pet({ isLanding = false }: PetProps) {
   const [visibleCount, setVisibleCount] = useState(0);
   const [metadata, setMetadata] = useState({
     titulo: "",
@@ -47,10 +51,14 @@ export default function Pet() {
 
   const { titulo, descripcion, mascotas } = metadata;
 
+  const mascotasToRender = isLanding
+  ? mascotas.slice(0, Math.min(visibleCount, mascotas.length))
+  : mascotas;
+
   return (
     <>
-      <div className="grid grid-cols-1 grid-rows-3 overflow-hidden gap-5 justify-center sm:grid-cols-2 sm:grid-rows-2 md:flex md:flex-row md:flex-wrap">
-        {mascotas.slice(0, Math.min(visibleCount, mascotas.length)).map((mascota: any, index: number) => {
+      <div className={`grid grid-cols-1 grid-rows-3 overflow-hidden gap-5  ${!isLanding ? "items-center" :"justify-center"} sm:grid-cols-2 sm:grid-rows-2 md:flex md:flex-row md:flex-wrap`}>
+        {mascotasToRender.map((mascota: any, index: number) => {
           const { title, metadata, slug } = mascota;
           const { raza, foto_mascota_1, fecha_de_resguardo, edad } = metadata;
 
@@ -60,7 +68,7 @@ export default function Pet() {
               className={`rounded-lg border border-1 border-slate-300 overflow-hidden`}
             >
               <div
-                className="mascot-image h-[300px] w-[300px] bg-cover rounded-t-lg md:w-[300px] md:h-[300px]"
+                className="mascot-image bg-cover rounded-t-lg h-[300px] w-full md:w-[300px] md:h-[300px]"
                 style={{
                   background: `url(${foto_mascota_1.imgix_url})`,
                   backgroundSize: "cover",

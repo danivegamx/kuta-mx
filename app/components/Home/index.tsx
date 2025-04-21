@@ -103,7 +103,7 @@ export default function Landing() {
                 </p>
               </div>
               <div className="flex justify-center">
-                <Pet></Pet>
+                <Pet isLanding></Pet>
               </div>
               <div className="flex justify-center">
                 <button className="bg-purple text-white font-medium text-sm py-3 px-4 rounded-lg ">
