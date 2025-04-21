@@ -1,7 +1,9 @@
 import starEmphasis from "../../../assets/star-emphasis.png";
 import yellowPaws from "../../../assets/yellowPaws.png";
+import yellowWomanDog from "../../../assets/yellow-woman-dog.png";
 import Image from "next/image";
 import Pictures from "../Pictures/pictures";
+import {content} from "../../../assets/Content/content";
 
 export default function AboutUs() {
   return (
@@ -43,6 +45,24 @@ export default function AboutUs() {
         <div className="max-w-6xl mx-auto flex justify-center items-center relative z-30 md:px-12 sm:px-7 px-5">
             <Pictures/>
         </div>
+      </section>
+      {/* section 2 */}
+      <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
+      <div className="w-full flex flex-col justify-between max-w-6xl mx-auto items-center gap-y-10
+            md:flex-row md:gap-x-20">
+              <div className="gap-y-8 flex flex-col md:w-1/2">
+                <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
+                  Quienes <span className="text-yellow">Somos</span>
+                </h3>
+                <p
+                  className="inter text-base text-slate-800 font-regular"
+                  style={{ whiteSpace: "pre-line" }}
+                >{content.whoWeAre}</p>
+              </div>
+              <div className="md:w-1/2">
+                <Image src={yellowWomanDog} alt={"Woman with dog against yellow background"} />
+              </div>
+            </div>
       </section>
     </main>
   );

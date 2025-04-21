@@ -24,5 +24,8 @@ export const content = {
   rescue: `Héroes valientes que están en el frente, salvando vidas y alejando a los animales del maltrato y el abandono.`,
   halfwayHouse: `Voluntarios amorosos que ofrecen un hogar temporal, brindando cuidado y cariño mientras las mascotas esperan a su familia definitiva.`,
   volunteers: `Personas comprometidas que apoyan en cada paso: desde el rescate hasta el cuidado y la adopción. Sin ellos, nada sería posible.`,
+  whoWeAre: `Somos Kuta, una comunidad de personas apasionadas por el bienestar animal. Nos mueve el amor, la empatía y el compromiso con cada vida que rescatamos.\n
+  Desde nuestros inicios, hemos trabajado para ofrecer una segunda oportunidad a perros y gatos que han sido víctimas del abandono o el maltrato. Creemos que cada uno merece un hogar donde sea valorado, cuidado y amado.\n
+  En Kuta, rescatamos, rehabilitamos y acompañamos a cada mascota en su proceso de recuperación física y emocional, hasta encontrar la familia ideal que le brinde una nueva vida. No somos solo un puente entre animales y personas: somos una red de corazones unidos por una causa.`
 };
  
