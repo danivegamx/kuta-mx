@@ -32,7 +32,7 @@ export default function Navigation({ data }: any) {
             <ul className="hidden md:inline-flex md:flex-row md:gap-2">
               {navigation.map((item: any, index: number) => (
                 <li key={index}>
-                  <a className="landing-text block px-4 py-2" href={item.link}>
+                  <a className="landing-text block px-4 py-2 font-inter font-normal" href={item.link}>
                     {item.label}
                   </a>
                 </li>
