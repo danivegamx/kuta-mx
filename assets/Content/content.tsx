@@ -42,5 +42,6 @@ export const content = {
   howToHelp3: `Tu contribución nos ayuda a cubrir gastos médicos, alimento, esterilizaciones y más. Cada peso cuenta para seguir salvando vidas.`,
   howToHelp4: `Únete a nuestro equipo y apóyanos en rescates, cuidados, eventos o difusión. Siempre hay algo que puedes hacer por ellos.`,
   howToHelp5: `Comparte nuestra labor en redes, habla con tus amigos, invita a otros a adoptar. Cuantas más personas se sumen, más lejos llegamos`,
+  adoptions: `¡Conoce a tu próximo mejor amigo! Explora las opciones de mascotas que están actualmente en rehabilitación y listas para un hogar lleno de amor`,
 };
  

@@ -7,7 +7,7 @@ import InfoBanner from '../app/components/InfoBanner';
 export const navigation = [
   { label: 'Nosotros', link: '/nosotros' },
   { label: 'Historias', link: '/historias' },
-  { label: 'Adopciones', link: '/contacto' },
+  { label: 'Adopciones', link: '/adopciones' },
 ];
 
 export const getContentType = (type: string): (({ data }: any) => React.JSX.Element) => {

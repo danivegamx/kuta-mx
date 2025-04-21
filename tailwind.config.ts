@@ -19,6 +19,7 @@ const config: Config = {
         blue:'#338EAF',
         lightYellow: '#FFEAC4',
         bgYellow: '#FFE7A7',
+        bgPurple: '#CEC8DF',
         lightPink: '#FCF3F3',
         lightBlue: '#D0E8F1',
         gradientBlue: '#D5EBF3',
