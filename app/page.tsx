@@ -31,7 +31,7 @@ async function Home() {
           return <Component key={index} data={section} />;
         }
       })} */}
-      <Footer />
+      <Footer isPurple/>
     </main>
   );
 }
