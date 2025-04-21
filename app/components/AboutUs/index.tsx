@@ -42,6 +42,13 @@ export default function AboutUs() {
             </p>
           </div>
         </div>
+        <div className="absolute top-0 z-0 hidden sm:w-2/3 sm:block md:w-1/2">
+        <Image
+                src={yellowPaws}
+                alt={"Yellow Paws"}
+                className="scale-x-[-1] scale-y-[-1]"
+              />
+        </div>
         <div className="bg-white h-[100px] w-full absolute bottom-0 z-20"></div>
         <div className="max-w-7xl mx-auto flex justify-center items-center relative z-30 md:px-12 sm:px-7 px-5">
           <Pictures />
