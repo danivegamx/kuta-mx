@@ -21,6 +21,8 @@ const config: Config = {
         bgYellow: '#FFE7A7',
         lightPink: '#FCF3F3',
         lightBlue: '#D0E8F1',
+        gradientBlue: '#D5EBF3',
+        gradientPurple: '#D2C5F9',
       },
       fontFamily: {
         inter: 'var(--font-inter)',

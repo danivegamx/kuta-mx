@@ -26,6 +26,12 @@ export const content = {
   volunteers: `Personas comprometidas que apoyan en cada paso: desde el rescate hasta el cuidado y la adopción. Sin ellos, nada sería posible.`,
   whoWeAre: `Somos Kuta, una comunidad de personas apasionadas por el bienestar animal. Nos mueve el amor, la empatía y el compromiso con cada vida que rescatamos.\n
   Desde nuestros inicios, hemos trabajado para ofrecer una segunda oportunidad a perros y gatos que han sido víctimas del abandono o el maltrato. Creemos que cada uno merece un hogar donde sea valorado, cuidado y amado.\n
-  En Kuta, rescatamos, rehabilitamos y acompañamos a cada mascota en su proceso de recuperación física y emocional, hasta encontrar la familia ideal que le brinde una nueva vida. No somos solo un puente entre animales y personas: somos una red de corazones unidos por una causa.`
+  En Kuta, rescatamos, rehabilitamos y acompañamos a cada mascota en su proceso de recuperación física y emocional, hasta encontrar la familia ideal que le brinde una nueva vida. No somos solo un puente entre animales y personas: somos una red de corazones unidos por una causa.`,
+  reasons1: `Cada perro o gato que rescatamos tiene una historia, un pasado difícil, pero también un futuro lleno de posibilidades. No vemos animales callejeros: vemos vidas que merecen ser respetadas.`,
+  reasons2: `Miles de animales viven en condiciones de maltrato, negligencia o abandono. Trabajamos para cambiar esa realidad, ofreciendo segundas oportunidades y generando conciencia en nuestra comunidad.`,
+  reasons3: `Adoptar no es solo llevar una mascota a casa, es comprometerse con una vida. Promovemos adopciones responsables, donde el bienestar del animal y la preparación de la familia van de la mano.`,
+  reasons4: `Ya sea adoptando, donando, siendo voluntario o simplemente compartiendo esta causa, cada acción cuenta. Creemos en una sociedad más consciente, solidaria y amorosa con los animales.`,
+  reasonsDesc: `En Kuta, creemos que todos los animales merecen vivir con dignidad, seguridad y amor. Nuestra labor nace del corazón, pero también de una necesidad urgente. Estas son las razones que nos inspiran cada día:`,
+  
 };
  
