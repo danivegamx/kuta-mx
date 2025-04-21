@@ -32,6 +32,9 @@ export const content = {
   reasons3: `Adoptar no es solo llevar una mascota a casa, es comprometerse con una vida. Promovemos adopciones responsables, donde el bienestar del animal y la preparación de la familia van de la mano.`,
   reasons4: `Ya sea adoptando, donando, siendo voluntario o simplemente compartiendo esta causa, cada acción cuenta. Creemos en una sociedad más consciente, solidaria y amorosa con los animales.`,
   reasonsDesc: `En Kuta, creemos que todos los animales merecen vivir con dignidad, seguridad y amor. Nuestra labor nace del corazón, pero también de una necesidad urgente. Estas son las razones que nos inspiran cada día:`,
-  
+  whatWeDo: `En Kuta trabajamos por el bienestar de perros y gatos en situación vulnerable. Nuestro proceso comienza con el rescate, brindando una segunda oportunidad a animales que han sido abandonados o maltratados.\n
+  Una vez a salvo, los acompañamos en su rehabilitación, dándoles atención médica, cuidados especiales y mucho cariño para que recuperen su salud y confianza.\n
+  Cuando están listos, iniciamos el proceso de adopción, conectando a cada mascota con una familia responsable que les ofrezca un hogar seguro, lleno de amor y compromiso.\n
+  Cada etapa es un paso hacia una nueva vida. En Kuta, no solo rescatamos animales: construimos historias con finales felices.`,
 };
  

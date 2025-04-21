@@ -1,6 +1,8 @@
 import starEmphasis from "../../../assets/star-emphasis.png";
 import yellowPaws from "../../../assets/yellowPaws.png";
 import yellowWomanDog from "../../../assets/yellow-woman-dog.png";
+import stepsTriangle from "../../../assets/steps-triangle.png";
+import stepsLine from "../../../assets/steps-line.png";
 import Image from "next/image";
 import Pictures from "../Pictures/pictures";
 import { content } from "../../../assets/Content/content";
@@ -10,10 +12,7 @@ export default function AboutUs() {
   return (
     <main>
       <section className="w-full overflow-hidden relative bg-bgYellow relative">
-        <div
-          className="flex flex-col justify-center items-center pt-[100px] pb-[60px] h-full max-w-6xl mx-auto md:px-12 sm:px-7 px-5 relative overflow-hidden
-              "
-        >
+        <div className="flex flex-col justify-center items-center pt-[100px] pb-[60px] h-full max-w-6xl mx-auto md:px-12 sm:px-7 px-5 relative overflow-hidden">
           <div
             className="w-full gap-2 flex flex-col h-full justify-center items-center pt-10 z-10
              md:w-[500px] "
@@ -74,6 +73,37 @@ export default function AboutUs() {
       </section>
       {/* section 3 */}
       <Reasons></Reasons>
+      {/* section 4 */}
+      <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
+        <div
+          className="w-full flex flex-col justify-between max-w-6xl mx-auto items-center gap-y-10
+            md:flex-row md:gap-x-20"
+        >
+          <div className="md:w-1/2">
+            <Image
+              src={stepsTriangle}
+              alt={"Kuta Steps"}
+              className="block sm:hidden md:block "
+            />
+            <Image
+              src={stepsLine}
+              alt={"Kuta Steps"}
+              className="hidden sm:block md:hidden"
+            />
+          </div>
+          <div className="gap-y-8 flex flex-col md:w-1/2">
+            <h3 className="font-kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
+            ¿Qué <span className="text-blue">Hacemos</span>?
+            </h3>
+            <p
+              className="inter text-base text-slate-800 font-regular"
+              style={{ whiteSpace: "pre-line" }}
+            >
+              {content.whatWeDo}
+            </p>
+          </div>
+        </div>
+      </section>
       <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
         rel="stylesheet"
