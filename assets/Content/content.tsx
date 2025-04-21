@@ -36,5 +36,11 @@ export const content = {
   Una vez a salvo, los acompañamos en su rehabilitación, dándoles atención médica, cuidados especiales y mucho cariño para que recuperen su salud y confianza.\n
   Cuando están listos, iniciamos el proceso de adopción, conectando a cada mascota con una familia responsable que les ofrezca un hogar seguro, lleno de amor y compromiso.\n
   Cada etapa es un paso hacia una nueva vida. En Kuta, no solo rescatamos animales: construimos historias con finales felices.`,
+  howToHelpDec: `En Kuta, creemos que todos podemos ser parte del cambio. No importa si tienes mucho tiempo, poco espacio o recursos limitados: hay muchas formas de sumar.`,
+  howToHelp1: `Dale a un perro o gato rescatado la oportunidad de formar parte de tu familia. Adoptar es un acto de amor que cambia vidas.`,
+  howToHelp2: `Brinda un hogar temporal a una mascota mientras encuentra a su familia definitiva. Tu apoyo puede marcar la diferencia en su proceso de recuperación.`,
+  howToHelp3: `Tu contribución nos ayuda a cubrir gastos médicos, alimento, esterilizaciones y más. Cada peso cuenta para seguir salvando vidas.`,
+  howToHelp4: `Únete a nuestro equipo y apóyanos en rescates, cuidados, eventos o difusión. Siempre hay algo que puedes hacer por ellos.`,
+  howToHelp5: `Comparte nuestra labor en redes, habla con tus amigos, invita a otros a adoptar. Cuantas más personas se sumen, más lejos llegamos`,
 };
  

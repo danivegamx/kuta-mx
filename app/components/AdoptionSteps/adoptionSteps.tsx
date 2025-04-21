@@ -24,8 +24,8 @@ export default function AdoptionSteps() {
       {
         <section>
           <div className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
-            <div className="bg-gradient-to-br from-lightYellow to-lightPink rounded-lg px-5 py-7  sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-6xl mx-auto">
-              <div className="flex flex-col justify-between max-w-6xl mx-auto items-center gap-y-14
+            <div className="bg-gradient-to-br from-lightYellow to-lightPink rounded-lg px-5 py-7  sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-7xl mx-auto">
+              <div className="flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-14
               md:flex-row md:gap-x-20">
                 <div className="md:w-1/2">
                   <Image src={yellowPerson} alt={"Person with dog"} />

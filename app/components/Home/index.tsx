@@ -23,7 +23,7 @@ export default function Landing() {
         <div>
           <section className="w-full md:px-12 sm:px-7 px-5 bg-[url('/assets/yellow-paw-bg.png')] bg-cover bg-no-repeat bg-top  overflow-hidden
           md:h-[720px]">
-            <div className="flex flex-col justify-center items-center pt-[100px] h-full max-w-6xl mx-auto
+            <div className="flex flex-col justify-center items-center pt-[100px] h-full max-w-7xl mx-auto
               md:flex-row md:items-end">
               <div className="w-full gap-6 flex flex-col h-full justify-center items-center pt-10
               md:items-start md:w-[500px] md:pt-0">
@@ -55,7 +55,7 @@ export default function Landing() {
           </section>
           {/* section 1 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
-            <div className="w-full flex flex-col justify-between max-w-6xl mx-auto items-center gap-y-10
+            <div className="w-full flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-10
             md:flex-row md:gap-x-20">
               <div className="gap-y-8 flex flex-col md:w-1/2">
                 <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
@@ -81,7 +81,7 @@ export default function Landing() {
           <AdoptionSteps />
           {/* section 3 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
-            <div className="max-w-6xl mx-auto flex justify-center flex-col gap-y-14 relative z-10">
+            <div className="max-w-7xl mx-auto flex justify-center flex-col gap-y-14 relative z-10">
               <div>
                 <div className="flex flex-row justify-center">
                   <Image
@@ -128,7 +128,7 @@ export default function Landing() {
           </section>
           {/* section 4 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
-            <div className="bg-lightBlue rounded-lg p-5 flex flex-col max-w-6xl mx-auto gap-y-5 relative overflow-hidden sm:p-12 md:p-20 md:gap-y-16">
+            <div className="bg-lightBlue rounded-lg p-5 flex flex-col max-w-7xl mx-auto gap-y-5 relative overflow-hidden sm:p-12 md:p-20 md:gap-y-16">
               <div className="flex flex-col gap-y-2 z-10 md:gap-y-4">
                 <div className="flex flex-row justify-center items-center">
                   <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
@@ -163,7 +163,7 @@ export default function Landing() {
           </section>
           {/* section 5 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
-            <div className="flex flex-row max-w-6xl mx-auto gap-x-20">
+            <div className="flex flex-row max-w-7xl mx-auto gap-x-20">
               <Image src={catPhone} alt={"Cat Phone"} className="hidden md:w-1/2 md:block h-auto shrink-0" />
               <div className="flex flex-col gap-y-5 md:w-1/2">
                 <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
@@ -183,7 +183,7 @@ export default function Landing() {
           </section>
           {/* section 6 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
-            <div className="flex flex-col max-w-6xl mx-auto gap-y-6">
+            <div className="flex flex-col max-w-7xl mx-auto gap-y-6">
               <div className="flex flex-col gap-y-3 justify-center items-center">
                 <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
                   ¿Quiénes están detrás de{" "}
@@ -198,7 +198,7 @@ export default function Landing() {
           </section>
           {/* section 7 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
-            <div className="flex flex-row max-w-6xl mx-auto justify-between">
+            <div className="flex flex-row max-w-7xl mx-auto justify-between">
               <div>
                 <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
                   Siguenos en{" "}

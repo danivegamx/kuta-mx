@@ -33,7 +33,7 @@ export default function Pictures() {
   }, []);
 
   return (
-    <div className="flex flex-row items-center justify-center gap-5 max-w-6xl overflow-x-auto">
+    <div className="flex flex-row items-center justify-center gap-5 max-w-7xl overflow-x-auto">
         {pictures.slice(0, visibleCount).map((picture, index) => (
           <div key={index} className="rounded-lg overflow-hidden">
             <Image

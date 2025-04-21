@@ -32,7 +32,7 @@ export default function Reasons() {
   return (
     <>
     <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
-        <div className="bg-gradient-to-br from-gradientBlue to-gradientPurple rounded-lg px-5 py-7 sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-6xl mx-auto">
+        <div className="bg-gradient-to-br from-gradientBlue to-gradientPurple rounded-lg px-5 py-7 sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-7xl mx-auto">
         <div className="flex flex-col gap-y-14">
           <div className="flex flex-col gap-y-3 justify-center items-center">
             <h3 className="font-kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl text-center">

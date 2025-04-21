@@ -36,7 +36,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="bg-purple px-5 py-10 sm:px-7 md:pt-14 md:pb-8 md:px-12">
-        <div className=" max-w-6xl mx-auto">
+        <div className=" max-w-7xl mx-auto">
           <div className="flex flex-col gap-y-5 justify-between sm:flex-row">
             <div>
               <Image
