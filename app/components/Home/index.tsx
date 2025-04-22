@@ -78,7 +78,7 @@ export default function Landing() {
             </div>
           </section>
           {/* section 2 */}
-          <AdoptionSteps />
+          <AdoptionSteps isLanding/>
           {/* section 3 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
             <div className="max-w-7xl mx-auto flex justify-center flex-col gap-y-14 relative z-10">

@@ -6,6 +6,7 @@ import steps from "../../../assets/steps-triangle.png";
 import stepsLine from "../../../assets/steps-line.png";
 import Image from "next/image";
 import Pet from "../Pet/pet";
+import AdoptionSteps from "../AdoptionSteps/adoptionSteps";
 
 export default function Adoptions() {
   return (
@@ -83,6 +84,8 @@ export default function Adoptions() {
           <Pet></Pet>
         </div>
       </section>
+      {/* section 4 */}
+      <AdoptionSteps></AdoptionSteps>
       <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
         rel="stylesheet"
