@@ -29,6 +29,9 @@ const config: Config = {
         inter: 'var(--font-inter)',
         kulim: 'var(--font-kulim)',
       },
+      screens:{
+        lg: '1024px',
+      }
     },
   },
   plugins: [],

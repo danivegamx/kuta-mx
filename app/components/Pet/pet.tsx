@@ -57,7 +57,10 @@ export default function Pet({ isLanding = false }: PetProps) {
 
   return (
     <>
-      <div className={`grid grid-cols-1 grid-rows-3 overflow-hidden gap-5  ${!isLanding ? "items-center" :"justify-center"} sm:grid-cols-2 sm:grid-rows-2 md:flex md:flex-row md:flex-wrap`}>
+      <div className={`${isLanding ? "md:flex md:flex-row md:flex-wrap" : 
+      "w-full md:grid-cols-3 lg:grid-cols-4"} 
+      overflow-hidden gap-5 grid grid-cols-1 sm:grid-cols-2
+      ${!isLanding ? "items-center" :"justify-center"}`}>
         {mascotasToRender.map((mascota: any, index: number) => {
           const { title, metadata, slug } = mascota;
           const { raza, foto_mascota_1, fecha_de_resguardo, edad } = metadata;
@@ -65,13 +68,14 @@ export default function Pet({ isLanding = false }: PetProps) {
           return (
             <div
               key={index}
-              className={`rounded-lg border border-1 border-slate-300 overflow-hidden`}
+              className={`rounded-lg border border-1 border-slate-300 overflow-hidden shrink-0`}
             >
               <div
-                className="mascot-image bg-cover rounded-t-lg h-[300px] w-full md:w-[300px] md:h-[300px]"
+                className={`rounded-t-lg h-[300px] w-full ${isLanding ? "md:w-[300px] md:h-[300px]" : ""} `}
                 style={{
                   background: `url(${foto_mascota_1.imgix_url})`,
                   backgroundSize: "cover",
+                  backgroundPosition: "top",
                 }}
               />
               <div className="mascot-data p-5 gap-y-2 flex flex-col bg-white rounded-lg">
