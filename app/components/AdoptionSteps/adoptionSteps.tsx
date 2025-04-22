@@ -20,24 +20,26 @@ const steps = [
 ];
 
 type AdoptionProps = {
-  isLanding?: boolean; // Optional, defaults to false (light background)
+  isLanding?: boolean; 
+  isAdoption?: boolean;
 };
 
-export default function AdoptionSteps({ isLanding = false }: AdoptionProps) {
+export default function AdoptionSteps({ isLanding = false, isAdoption = false }: AdoptionProps) {
   return (
     <>
       {
         <section>
-          <div className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
-            <div className={`bg-gradient-to-br ${isLanding ? "from-lightYellow to-lightPink" : "from-gradientBlue to-gradientPurple"}  rounded-lg px-5 py-7  sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-7xl mx-auto`}>
-              <div className="flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-14
+          <div className={`${!isAdoption ? "px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20" : "h-full"}`}>
+            <div className={`bg-gradient-to-br ${isLanding || isAdoption ? "from-lightYellow to-lightPink" : "from-gradientBlue to-gradientPurple"}  
+            rounded-lg px-5 py-7 sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-7xl mx-auto ${isAdoption ? "h-full" : ""}`}>
+              <div className="flex flex-col justify-between  items-center gap-y-14
               md:flex-row md:gap-x-20">
-                <div className="sm:w-1/2">
+                <div className={`sm:w-1/2 ${isAdoption ? "hidden" : ""}`}>
                   <Image src={isLanding ? yellowPerson : purplePerson} alt={"Person with dog"} />
                 </div>
-                <div className="md:w-1/2 flex flex-col gap-y-11">
+                <div className={`flex flex-col gap-y-11 ${isAdoption ? "":"md:w-1/2"}`}>
                   <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl text-center md:text-left">
-                    Pasos Para <span className={`${isLanding ? "text-yellow" : "text-purple"}`}>Adoptar</span> En
+                    Pasos Para <span className={`${isLanding || isAdoption  ? "text-yellow" : "text-purple"}`}>Adoptar</span> En
                     Kuta
                   </h3>
                   <div className="relative">
@@ -70,7 +72,10 @@ export default function AdoptionSteps({ isLanding = false }: AdoptionProps) {
                   </div>
                 </div>
               </div>
-              <Requirements />
+              <div className={`${isAdoption ? "hidden" : ""}`}>
+                <Requirements />
+              </div>
+              
             </div>
           </div>
           <link

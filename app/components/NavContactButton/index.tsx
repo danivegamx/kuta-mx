@@ -1,6 +1,10 @@
 import "./styles.sass";
 
-export default function NavContactButton() {
+type NavContactButtonProps = {
+  isAdoption?: boolean;
+}
+
+export default function NavContactButton({isAdoption = false}: NavContactButtonProps) {
   return (
     <>
       {
@@ -9,7 +13,8 @@ export default function NavContactButton() {
             href="https://www.instagram.com/direct/t/17842540389169007"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-transparent hover:bg-purple text-purple font-normal hover:text-white py-3 px-4 border border-purple hover:border-transparent rounded-full "
+            className={`bg-transparent  font-normal  py-3 px-4 border hover:border-transparent rounded-full
+              ${isAdoption ? "border-white text-white hover:bg-white hover:text-purple":"border-purple text-purple hover:bg-purple hover:text-white"}`} 
           >
             Contáctanos
           </a>

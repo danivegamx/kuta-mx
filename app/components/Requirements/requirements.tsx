@@ -23,15 +23,19 @@ const requirements = [
     },
   ];
 
-export default function Requirements() {
+type RequirementsProps = {
+    isAdoption?: boolean;
+}
+
+export default function Requirements({isAdoption = false }: RequirementsProps) {
     return (
       <>
         {
-          <div className="flex flex-col gap-4 sm:grid sm:grid-cols-2 md:flex md:flex-row md:gap-x-4">
+          <div className={`flex flex-col gap-4 sm:grid sm:grid-cols-2 md:flex md:flex-row md:gap-x-4 `}>
           {requirements.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg p-4 gap-y-6 flex flex-col items-center flex-1"
+              className={`bg-white rounded-lg p-4 gap-y-6 flex flex-col items-center flex-1 ${isAdoption ? "border border-slate-300" : ""}`}
             >
               <div
                 className="w-16 h-16 rounded-full flex justify-center items-center"

@@ -12,7 +12,7 @@ export default function Adoptions() {
   return (
     <>
       <section className="w-full overflow-hidden relative bg-bgPurple relative">
-        <div className="flex flex-col justify-center items-center pt-[100px]  h-full max-w-7xl mx-auto md:px-12 sm:px-7  px-5 relative overflow-hidden z-10">
+        <div className="flex flex-col justify-center items-center pt-[100px] h-full max-w-7xl mx-auto md:px-12 sm:px-7  px-5 relative overflow-hidden z-10">
           <div className="flex flex-col items-center py-20 gap-y-8 sm:flex-row">
             <Image
               src={purpleCat}
