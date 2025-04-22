@@ -307,7 +307,7 @@ const Questionnaire = () => {
         {/* <Journey sections={secciones} currentSection={currentSection} /> */}
         <section
           className={`pt-[120px]  px-5 sm:px-7 md:px-12 ${
-            currentSection === 0 ? "current" : "md:my-4"
+            currentSection !== 0 ? "hidden" : "block"
           }`}
         >
           <article className="flex flex-col sm:flex-row gap-y-6 gap-x-6 max-w-7xl mx-auto">
@@ -392,12 +392,16 @@ const Questionnaire = () => {
             </div>
           </article>
         </section>
-        <section className="px-5 py-6 sm:px-7 md:px-12 ">
+        <section className={`px-5 py-6 sm:px-7 md:px-12 ${
+            currentSection !== 0 ? "hidden" : "block"
+          }`} >
           <div className="max-w-7xl mx-auto">
             <Requirements isAdoption></Requirements>
           </div>
         </section>
-        <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
+        <section className={`px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 ${
+            currentSection !== 0 ? "hidden" : "block"
+          }`}>
           <div className="flex flex-col md:flex-row gap-x-20 gap-y-20 max-w-7xl mx-auto">
             <div className="flex flex-col w-full sm:flex-col gap-y-8 md:w-1/2">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-kulim">
@@ -421,7 +425,7 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`md:my-8 questionnaire-section ${
+                className={`md:my-8 pt-[120px] questionnaire-section ${
                   currentSection === index ? "current" : ""
                 }`}
               >
