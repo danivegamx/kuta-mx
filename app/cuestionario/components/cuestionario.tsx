@@ -303,7 +303,7 @@ const Questionnaire = () => {
     return <Loading />;
   } else {
     return (
-      <div className={`questionnaire-wrapper mx-auto relative bg-[url('/assets/paw-pattern.png')] bg-repeat bg-top bg-white ${currentSection !== 0 ? "flex justify-center" : ""}`}>
+      <div className={`questionnaire-wrapper mx-auto relative md:bg-[url('/assets/paw-pattern.png')] bg-repeat bg-top bg-white ${currentSection !== 0 ? "flex justify-center" : ""}`}>
         {/* <Journey sections={secciones} currentSection={currentSection} /> */}
         <section
           className={`pt-[120px]  px-5 sm:px-7 md:px-12 ${
@@ -425,7 +425,7 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`md:my-8 px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 w-full questionnaire-section ${
+                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${
                   currentSection === index ? "current" : ""
                 }`}
               >
@@ -457,7 +457,7 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`md:my-8 px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 w-full questionnaire-section ${
+                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${
                   currentSection === index ? "current" : ""
                 }`}
               >
@@ -486,7 +486,7 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`md:my-8 px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 w-full questionnaire-section ${
+                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${
                   currentSection === index ? "current" : ""
                 }`}
               >
