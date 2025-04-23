@@ -231,37 +231,50 @@ export default function Landing() {
           </section>
           {/* section 7 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
-            <div className="flex flex-row max-w-7xl mx-auto justify-between">
-              <div>
-                <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
-                  Siguenos en{" "}
-                  <span className="text-purple">Redes Sociales!</span>
-                </h3>
+            <div className="max-w-7xl mx-auto">
+              <div className="flex flex-row justify-between mb-6">
+                <div>
+                  <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
+                    Siguenos en{" "}
+                    <span className="text-purple">Redes Sociales!</span>
+                  </h3>
+                </div>
+                <div className="flex flex-row gap-x-3 invisible md:visible">
+                  <a
+                    href="https://www.facebook.com/people/Kuta-Mx/61556841081748/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={facebook}
+                      alt="Facebook"
+                      style={{ width: "52px", height: "52px" }}
+                    />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/kutamx?igsh=MXNvb2V5ZGF1N3lpaQ%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={instagram}
+                      alt={"Instagram"}
+                      style={{ width: "52px", height: "52px" }}
+                    />
+                  </a>
+                </div>
               </div>
-              <div className="flex flex-row gap-x-3 invisible md:visible">
-                <a
-                  href="https://www.facebook.com/people/Kuta-Mx/61556841081748/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={facebook}
-                    alt="Facebook"
-                    style={{ width: "52px", height: "52px" }}
-                  />
-                </a>
-                <a
-                  href="https://www.instagram.com/kutamx?igsh=MXNvb2V5ZGF1N3lpaQ%3D%3D"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src={instagram}
-                    alt={"Instagram"}
-                    style={{ width: "52px", height: "52px" }}
-                  />
-                </a>
+              <div className="max-w-7xl mx-auto">
+                <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
+              <iframe
+                src="//lightwidget.com/widgets/01fcf8ec6f92559c9ce696951cb59318.html"
+                scrolling="no"
+                allowtransparency="true"
+                class="lightwidget-widget"
+                style={{ width: "100%", border: 0, overflow: "hidden" }}
+              ></iframe>
               </div>
+              
             </div>
           </section>
         </div>
