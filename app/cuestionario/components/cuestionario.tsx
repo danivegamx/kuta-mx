@@ -303,7 +303,7 @@ const Questionnaire = () => {
     return <Loading />;
   } else {
     return (
-      <div className="questionnaire-wrapper mx-auto relative bg-white">
+      <div className={`questionnaire-wrapper mx-auto relative bg-white ${currentSection !== 0 ? "flex justify-center" : ""}`}>
         {/* <Journey sections={secciones} currentSection={currentSection} /> */}
         <section
           className={`pt-[120px]  px-5 sm:px-7 md:px-12 ${
@@ -425,7 +425,7 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`md:my-8 pt-[120px] questionnaire-section ${
+                className={`md:my-8 px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 w-full questionnaire-section ${
                   currentSection === index ? "current" : ""
                 }`}
               >
@@ -457,7 +457,7 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`md:my-8 questionnaire-section ${
+                className={`md:my-8 px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 w-full questionnaire-section ${
                   currentSection === index ? "current" : ""
                 }`}
               >
@@ -466,7 +466,7 @@ const Questionnaire = () => {
                 <div className="buttons grid grid-cols-2 gap-4 mt-8">
                   <button
                     onClick={() => handlePhaseChange(index - 1)}
-                    className="main-secondary"
+                    className="main-secondary rounded-lg"
                   >
                     Atrás
                   </button>
@@ -486,7 +486,7 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`md:my-8 questionnaire-section ${
+                className={`md:my-8 px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 w-full questionnaire-section ${
                   currentSection === index ? "current" : ""
                 }`}
               >
@@ -527,7 +527,7 @@ const Questionnaire = () => {
                         handlePhaseChange(index - 1);
                       }
                     }}
-                    className="main-secondary"
+                    className="main-secondary rounded-lg"
                   >
                     Atrás
                   </button>
@@ -539,7 +539,7 @@ const Questionnaire = () => {
                         handlePhaseChange(index + 1);
                       }
                     }}
-                    className="main-primary"
+                    className="main-primary rounded-lg"
                   >
                     Siguiente
                   </button>
