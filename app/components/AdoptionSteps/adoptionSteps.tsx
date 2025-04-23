@@ -28,7 +28,7 @@ export default function AdoptionSteps({ isLanding = false, isAdoption = false }:
   return (
     <>
       {
-        <section>
+        <section id="adoptionSteps">
           <div className={`${!isAdoption ? "px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20" : "h-full"}`}>
             <div className={`bg-gradient-to-br ${isLanding || isAdoption ? "from-lightYellow to-lightPink" : "from-gradientBlue to-gradientPurple"}  
             rounded-lg px-5 py-7 sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-7xl mx-auto ${isAdoption ? "h-full" : ""}`}>

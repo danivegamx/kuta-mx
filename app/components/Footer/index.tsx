@@ -4,29 +4,30 @@ import kutaLogoPurple from "../../../assets/kuta-logo-py.png"
 import instagram from "../../../assets/instagram.png";
 import facebook from "../../../assets/facebook.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const footerElements = [
   {
     Title: "Kuta",
     Links: [
-      { name: "Misión", url: "#" },
-      { name: "Detras de Kuta", url: "#" },
-      { name: "Proceso", url: "#" },
+      { name: "Misión", url: "/#mision" },
+      { name: "Detras de Kuta", url: "/#behindKuta" },
+      { name: "Proceso", url: "/#process" },
     ],
   },
   {
     Title: "Nosotros",
     Links: [
-      { name: "Conoce Kuta", url: "#" },
-      { name: "¿Quiénes somos?", url: "#" },
-      { name: "¿Qué hacemos?", url: "#" },
-      { name: "Historias", url: "#" },
+      { name: "Conoce Kuta", url: "/nosotros" },
+      { name: "¿Quiénes somos?", url: "/nosotros#whoWeAre" },
+      { name: "¿Qué hacemos?", url: "/nosotros#whatWeDo" },
+      { name: "Historias", url: "/#stories" },
     ],
   },
   {
     Title: "Adopción",
     Links: [
-      { name: "Requerimientos", url: "/adopciones" },
+      { name: "Requerimientos", url: "/#adoptionSteps" },
       { name: "Adopciones", url: "/adopciones" },
     ],
   },
@@ -59,12 +60,9 @@ export default function Footer({ isPurple = false }: FooterProps) {
                   <ul className="mt-0">
                     {item.Links.map((link, index) => (
                       <li key={index}>
-                        <a
-                          href={link.url}
-                          className="text-nowrap text-sm inter"
-                        >
+                        <Link href={link.url} className="text-nowrap text-sm inter">
                           {link.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

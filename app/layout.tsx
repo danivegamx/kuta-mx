@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-build-id={buildId} className={`${inter.variable} ${kulim.variable}`}>
+    <html lang="en" data-build-id={buildId} className={`${inter.variable} ${kulim.variable} scroll-smooth`}>
       <body className="font-inter">{children}</body>
     </html>
   );

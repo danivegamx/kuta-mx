@@ -55,7 +55,7 @@ export default function AboutUs() {
         </div>
       </section>
       {/* section 2 */}
-      <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
+      <section id="whoWeAre" className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
         <div
           className="w-full flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-10
             md:flex-row md:gap-x-20"
@@ -82,7 +82,7 @@ export default function AboutUs() {
       {/* section 3 */}
       <Reasons></Reasons>
       {/* section 4 */}
-      <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
+      <section id="whatWeDo" className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
         <div
           className="w-full flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-10
             md:flex-row md:gap-x-20"

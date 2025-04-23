@@ -15,25 +15,34 @@ import Pet from "../Pet/pet";
 import Process from "../Process/process";
 import Videos from "../Videos/videos";
 import BehindKuta from "../BehindKuta/behindKuta";
+import Link from "next/link";
 
 export default function Landing() {
   return (
     <>
       {
         <div>
-          <section className="w-full md:px-12 sm:px-7 px-5 bg-[url('/assets/yellow-paw-bg.png')] bg-cover bg-no-repeat bg-top  overflow-hidden
-          md:h-[720px]">
-            <div className="flex flex-col justify-center items-center pt-[100px] h-full max-w-7xl mx-auto
-              md:flex-row md:items-end">
-              <div className="w-full gap-6 flex flex-col h-full justify-center items-center pt-10
-              md:items-start md:w-[500px] md:pt-0">
+          <section
+            className="w-full md:px-12 sm:px-7 px-5 bg-[url('/assets/yellow-paw-bg.png')] bg-cover bg-no-repeat bg-top  overflow-hidden
+          md:h-[720px]"
+          >
+            <div
+              className="flex flex-col justify-center items-center pt-[100px] h-full max-w-7xl mx-auto
+              md:flex-row md:items-end"
+            >
+              <div
+                className="w-full gap-6 flex flex-col h-full justify-center items-center pt-10
+              md:items-start md:w-[500px] md:pt-0"
+              >
                 <div>
                   <h4 className="text-purple font-extrabold uppercase inter text-center md:text-start">
                     Kuta
                   </h4>
-                  <h3 className="text-purple uppercase font-bold text-5xl text-white kulim text-center md:text-start
+                  <h3
+                    className="text-purple uppercase font-bold text-5xl text-white kulim text-center md:text-start
                   sm:text-6xl
-                  md:text-7xl">
+                  md:text-7xl"
+                  >
                     Mi raza favorita es{" "}
                     <span className="text-purple">adoptada</span>
                   </h3>
@@ -43,9 +52,11 @@ export default function Landing() {
                   tuyo.
                 </p>
                 <div>
-                  <button className="bg-purple text-white font-normal text-sm py-3 px-4 rounded-lg ">
-                    Adopta Hoy
-                  </button>
+                  <Link href={"/adopciones"}>
+                    <button className="bg-purple text-white font-normal text-sm py-3 px-4 rounded-lg ">
+                      Adopta Hoy
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div className="flex justify-right items-bottom">
@@ -54,9 +65,14 @@ export default function Landing() {
             </div>
           </section>
           {/* section 1 */}
-          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
-            <div className="w-full flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-10
-            md:flex-row md:gap-x-20">
+          <section
+            id="mision"
+            className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20"
+          >
+            <div
+              className="w-full flex flex-col justify-between max-w-7xl mx-auto items-center gap-y-10
+            md:flex-row md:gap-x-20"
+            >
               <div className="gap-y-8 flex flex-col md:w-1/2">
                 <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
                   Un <span className="text-blue">Hogar</span> Para Cada Patita
@@ -78,7 +94,7 @@ export default function Landing() {
             </div>
           </section>
           {/* section 2 */}
-          <AdoptionSteps isLanding/>
+          <AdoptionSteps isLanding />
           {/* section 3 */}
           <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
             <div className="max-w-7xl mx-auto flex justify-center flex-col gap-y-14 relative z-10">
@@ -127,7 +143,10 @@ export default function Landing() {
             </div>
           </section>
           {/* section 4 */}
-          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
+          <section
+            id="process"
+            className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative"
+          >
             <div className="bg-lightBlue rounded-lg p-5 flex flex-col max-w-7xl mx-auto gap-y-5 relative overflow-hidden sm:p-12 md:p-20 md:gap-y-16">
               <div className="flex flex-col gap-y-2 z-10 md:gap-y-4">
                 <div className="flex flex-row justify-center items-center">
@@ -162,9 +181,16 @@ export default function Landing() {
             </div>
           </section>
           {/* section 5 */}
-          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
+          <section
+            id="stories"
+            className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative"
+          >
             <div className="flex flex-row max-w-7xl mx-auto gap-x-20">
-              <Image src={catPhone} alt={"Cat Phone"} className="hidden md:w-1/2 md:block h-auto shrink-0" />
+              <Image
+                src={catPhone}
+                alt={"Cat Phone"}
+                className="hidden md:w-1/2 md:block h-auto shrink-0"
+              />
               <div className="flex flex-col gap-y-5 md:w-1/2">
                 <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
                   Historias de <span className="text-purple">Éxito</span>
@@ -182,7 +208,10 @@ export default function Landing() {
             </div>
           </section>
           {/* section 6 */}
-          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
+          <section
+            id="behindKuta"
+            className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative"
+          >
             <div className="flex flex-col max-w-7xl mx-auto gap-y-6">
               <div className="flex flex-col gap-y-3 justify-center items-center">
                 <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl text-center">
@@ -223,12 +252,11 @@ export default function Landing() {
                   rel="noopener noreferrer"
                 >
                   <Image
-                  src={instagram}
-                  alt={"Instagram"}
-                  style={{ width: "52px", height: "52px" }}
-                />
+                    src={instagram}
+                    alt={"Instagram"}
+                    style={{ width: "52px", height: "52px" }}
+                  />
                 </a>
-                
               </div>
             </div>
           </section>

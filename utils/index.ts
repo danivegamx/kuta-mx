@@ -6,7 +6,7 @@ import InfoBanner from '../app/components/InfoBanner';
 
 export const navigation = [
   { label: 'Nosotros', link: '/nosotros' },
-  { label: 'Historias', link: '/historias' },
+  { label: 'Historias', link: '/#stories' },
   { label: 'Adopciones', link: '/adopciones' },
 ];
 
