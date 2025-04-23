@@ -83,9 +83,11 @@ export default function Landing() {
                   dangerouslySetInnerHTML={{ __html: content.landingS1Content }}
                 ></p>
                 <div>
-                  <button className="bg-white text-blue border border-blue font-medium text-sm py-3 px-4 rounded-lg hover:bg-blue hover:text-white hover:border-transparent transition duration-300 ease-in-out">
-                    Conocer Más
-                  </button>
+                  <Link href={"/nosotros"}>
+                    <button className="bg-white text-blue border border-blue font-medium text-sm py-3 px-4 rounded-lg hover:bg-blue hover:text-white hover:border-transparent transition duration-300 ease-in-out">
+                      Conocer Más
+                    </button>
+                  </Link>
                 </div>
               </div>
               <div className="md:w-1/2">
@@ -122,9 +124,11 @@ export default function Landing() {
                 <Pet isLanding></Pet>
               </div>
               <div className="flex justify-center">
-                <button className="bg-purple text-white font-medium text-sm py-3 px-4 rounded-lg ">
-                  Conoce Más
-                </button>
+                <Link href={"/adopciones"}>
+                  <button className="bg-purple text-white font-medium text-sm py-3 px-4 rounded-lg ">
+                    Conocer Más
+                  </button>
+                </Link>
               </div>
             </div>
             <div className="absolute left-0 top-10 bottom-10 z-0">
