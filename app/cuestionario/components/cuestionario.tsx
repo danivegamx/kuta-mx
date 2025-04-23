@@ -19,7 +19,7 @@ import Requirements from "@/app/components/Requirements/requirements";
 
 const Questionnaire = () => {
   const ref = useRef(null);
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams(); 
   const router = useRouter();
   const mascotId = searchParams.get("mascotId");
   // * State handling
@@ -303,7 +303,7 @@ const Questionnaire = () => {
     return <Loading />;
   } else {
     return (
-      <div className={`questionnaire-wrapper mx-auto relative bg-white ${currentSection !== 0 ? "flex justify-center" : ""}`}>
+      <div className={`questionnaire-wrapper mx-auto relative bg-[url('/assets/paw-pattern.png')] bg-repeat bg-top bg-white ${currentSection !== 0 ? "flex justify-center" : ""}`}>
         {/* <Journey sections={secciones} currentSection={currentSection} /> */}
         <section
           className={`pt-[120px]  px-5 sm:px-7 md:px-12 ${
@@ -437,7 +437,7 @@ const Questionnaire = () => {
                       handlePhaseChange(index + 1);
                       saveYesNo("no");
                     }}
-                    className="main-secondary"
+                    className="main-secondary rounded-lg"
                   >
                     No
                   </button>
@@ -446,7 +446,7 @@ const Questionnaire = () => {
                       setHasChildren(true);
                       saveYesNo("yes");
                     }}
-                    className="main-primary"
+                    className="main-primary rounded-lg"
                   >
                     Si
                   </button>
@@ -475,7 +475,7 @@ const Questionnaire = () => {
                       sendForm();
                       localStorage.clear();
                     }}
-                    className="main-primary"
+                    className="main-primary rounded-lg"
                   >
                     {!sent ? "Acepto, Enviar" : <Sending />}
                   </button>
