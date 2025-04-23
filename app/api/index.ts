@@ -30,8 +30,6 @@ const getHomePageData = async () => {
     type: 'homepage',
     slug: "homepage"
   }).depth(2);
-  
-  console.log("home page:", response); // 👈 You can view it here
   return response;
 };
 
