@@ -57,7 +57,7 @@ export default function Navigation({ isAdoption = false }: NavigationProps) {
               <FontAwesomeIcon icon={byPrefixAndName.fas["bars"]} size="xl" />
             </button>
             {openMenu && (
-              <ul className="fixed top-20 right-1 left-1 flex flex-col rounded-sm bg-[rgb(223,163,62)] w-full md:hidden">
+              <ul className="fixed top-20 right-1 left-1 flex flex-col rounded-lg bg-white w-full md:hidden">
                 {navigation.map((item: any, index: number) => (
                   <li key={index} className="my-2">
                     <a
