@@ -407,7 +407,7 @@ const Questionnaire = () => {
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-kulim">
                 Importante
               </h3>
-              <p style={{ whiteSpace: "pre-line" }} className="text-inter">{content.importantNote}</p>
+              <p style={{ whiteSpace: "pre-line" }} className="text-inter" dangerouslySetInnerHTML={{ __html: content.importantNote}}></p>
             </div>
             <div className="md:w-1/2 flex items-center justify-end">
                 <Image src={benchDog} alt={"Dog on a bench"} />

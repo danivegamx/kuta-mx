@@ -44,6 +44,6 @@ export const content = {
   howToHelp5: `Comparte nuestra labor en redes, habla con tus amigos, invita a otros a adoptar. Cuantas más personas se sumen, más lejos llegamos`,
   adoptions: `¡Conoce a tu próximo mejor amigo! Explora las opciones de mascotas que están actualmente en rehabilitación y listas para un hogar lleno de amor`,
   importantNote: `Es importante mencionar que el periodo en el que fue rescatado el  perro/gato , se le proporcionaron atenciones de primer momento como  desparasitación, vacuna, baño y esterilización con la finalidad de  comenzar de manera inmediata el proceso de cuidado que merece. Es por  ello; que se requiere del apoyo de tales gastos, por nuestra parte  comprobando el costo de los mismos. Nuestra intención es entregar a la  mascota esterilizada, desparasitada y con cartilla de vacunación vigente.\n
-  Los datos proporcionados en este cuestionario serán utilizados única y exclusivamente para la evaluación de adopción de la mascota solicitada y no se divulgarán o se hará mal uso de ellos. Para más información, consulta nuestro aviso de privacidad y uso de datos.`,
+  Los datos proporcionados en este cuestionario serán utilizados única y exclusivamente para la evaluación de adopción de la mascota solicitada y no se divulgarán o se hará mal uso de ellos. Para más información, consulta nuestro <a href="https://www.quantumstudios.dev/privacy-policy"><strong>aviso de privacidad y uso de datos.<strong></a>`,
 };
  
