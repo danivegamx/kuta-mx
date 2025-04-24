@@ -8,6 +8,7 @@ import Pictures from "../Pictures/pictures";
 import { content } from "../../../assets/Content/content";
 import Reasons from "../Reasons/reasons";
 import Help from "../Help/help";
+import SocialMedia from "../Social Media/socialMedia";
 
 export default function AboutUs() {
   return (
@@ -114,6 +115,8 @@ export default function AboutUs() {
       </section>
       {/* section 5 */}
       <Help></Help>
+      {/* section 6 */}
+      <SocialMedia></SocialMedia>
       <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400"
         rel="stylesheet"
