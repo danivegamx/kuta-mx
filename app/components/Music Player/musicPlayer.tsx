@@ -35,7 +35,7 @@ const MusicPlayer = () => {
   }, []);
 
   return (
-    <div className="flex items-center gap-4 bg-gradient-to-r from-yellow to-purple p-3 rounded-lg w-full justify-between">
+    <div className="flex items-center gap-4 bg-white border border-slate-300 p-3 rounded-lg w-full justify-between">
         <div className="flex flex-row gap-x-4 items-center">
             <Image src={songCover} alt="Song cover" width={52} height={52} className="rounded"/>
             <div>
@@ -56,7 +56,7 @@ const MusicPlayer = () => {
       </button>
       <div className=" hidden sm:block flex-grow h-2 bg-slate-300 rounded overflow-hidden">
         <div
-          className="h-full bg-purple transition-all duration-100"
+          className="h-full bg-gradient-to-r from-yellow to-purple transition-all duration-100"
           style={{ width: `${progress}%` }}
         />
       </div>

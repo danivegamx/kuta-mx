@@ -69,7 +69,7 @@ export default function Landing() {
           {/* music */}
           <section className="px-5 pt-6 sm:px-7 md:px-12">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-x-6 gap-y-6">
-              <h4 className="font-caveat text-[26px] text-wrap text-slate-800">Experiencia con música</h4>
+              <h4 className="font-caveat text-[26px] text-wrap text-slate-800 leading-none">Experiencia con música</h4>
               <Image src={arrowRight} alt="Arrow Right" width={70} height={24} className="shrink-0 hidden md:block" style={{ height: '30px', width: 'auto' }} />
               <MusicPlayer></MusicPlayer>
             </div>
