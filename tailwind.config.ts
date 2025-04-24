@@ -1,3 +1,4 @@
+import { Caveat } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -28,6 +29,7 @@ const config: Config = {
       fontFamily: {
         inter: 'var(--font-inter)',
         kulim: 'var(--font-kulim)',
+        caveat: 'var(--font-caveat)'
       },
       screens:{
         lg: '1024px',

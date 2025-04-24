@@ -6,6 +6,7 @@ import purpePawsRight from "../../../assets/purplePawsRight.png";
 import blueEmphasis from "../../../assets/blueEmphasis.png";
 import bluePaws from "../../../assets/bluePaws.png";
 import catPhone from "../../../assets/catPhone.png";
+import arrowRight from "../../../assets/arrow-right.png"
 import { content } from "../../../assets/Content/content";
 import AdoptionSteps from "../AdoptionSteps/adoptionSteps";
 import emphasis from "../../../assets/emphasis1.png";
@@ -16,6 +17,7 @@ import BehindKuta from "../BehindKuta/behindKuta";
 import Link from "next/link";
 import SocialMedia from "../Social Media/socialMedia";
 import HappyEndings from "../Happy Endings/happyEndings";
+import MusicPlayer from "../Music Player/musicPlayer";
 
 export default function Landing() {
   return (
@@ -64,6 +66,15 @@ export default function Landing() {
               </div>
             </div>
           </section>
+          {/* music */}
+          <section className="px-5 pt-6 sm:px-7 md:px-12">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-x-6 gap-y-6">
+              <h4 className="font-caveat text-[26px] text-wrap text-slate-800">Experiencia con música</h4>
+              <Image src={arrowRight} alt="Arrow Right" width={70} height={24} className="shrink-0 hidden md:block" style={{ height: '30px', width: 'auto' }} />
+              <MusicPlayer></MusicPlayer>
+            </div>
+          </section>
+
           {/* section 1 */}
           <section
             id="mision"
