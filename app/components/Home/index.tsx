@@ -15,6 +15,7 @@ import Videos from "../Videos/videos";
 import BehindKuta from "../BehindKuta/behindKuta";
 import Link from "next/link";
 import SocialMedia from "../Social Media/socialMedia";
+import HappyEndings from "../Happy Endings/happyEndings";
 
 export default function Landing() {
   return (
@@ -211,6 +212,8 @@ export default function Landing() {
             </div>
           </section>
           {/* section 6 */}
+          <HappyEndings></HappyEndings>
+          {/* section 7 */}
           <section
             id="behindKuta"
             className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative"
