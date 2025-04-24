@@ -266,15 +266,14 @@ export default function Landing() {
               </div>
               <div className="max-w-7xl mx-auto">
                 <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-              <iframe
-                src="//lightwidget.com/widgets/01fcf8ec6f92559c9ce696951cb59318.html"
-                scrolling="no"
-                allowtransparency="true"
-                class="lightwidget-widget"
-                style={{ width: "100%", border: 0, overflow: "hidden" }}
-              ></iframe>
+                <iframe
+                  src="//lightwidget.com/widgets/5a32d206fa3b5b18ae6e2ad1f7755afb.html"
+                  scrolling="no"
+                  allowtransparency="true"
+                  class="lightwidget-widget"
+                  style={{width:"100%",border:0,overflow:"hidden",outline: "none"}}
+                ></iframe>
               </div>
-              
             </div>
           </section>
         </div>
