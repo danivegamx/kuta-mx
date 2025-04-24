@@ -6,8 +6,6 @@ import purpePawsRight from "../../../assets/purplePawsRight.png";
 import blueEmphasis from "../../../assets/blueEmphasis.png";
 import bluePaws from "../../../assets/bluePaws.png";
 import catPhone from "../../../assets/catPhone.png";
-import facebook from "../../../assets/facebook.png";
-import instagram from "../../../assets/instagram.png";
 import { content } from "../../../assets/Content/content";
 import AdoptionSteps from "../AdoptionSteps/adoptionSteps";
 import emphasis from "../../../assets/emphasis1.png";
@@ -16,6 +14,7 @@ import Process from "../Process/process";
 import Videos from "../Videos/videos";
 import BehindKuta from "../BehindKuta/behindKuta";
 import Link from "next/link";
+import SocialMedia from "../Social Media/socialMedia";
 
 export default function Landing() {
   return (
@@ -230,52 +229,7 @@ export default function Landing() {
             </div>
           </section>
           {/* section 7 */}
-          <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
-            <div className="max-w-7xl mx-auto">
-              <div className="flex flex-row justify-between mb-6">
-                <div>
-                  <h3 className="kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
-                    Siguenos en{" "}
-                    <span className="text-purple">Redes Sociales!</span>
-                  </h3>
-                </div>
-                <div className="flex flex-row gap-x-3 invisible md:visible">
-                  <a
-                    href="https://www.facebook.com/people/Kuta-Mx/61556841081748/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={facebook}
-                      alt="Facebook"
-                      style={{ width: "52px", height: "52px" }}
-                    />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/kutamx?igsh=MXNvb2V5ZGF1N3lpaQ%3D%3D"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={instagram}
-                      alt={"Instagram"}
-                      style={{ width: "52px", height: "52px" }}
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="max-w-7xl mx-auto">
-                <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
-                <iframe
-                  src="//lightwidget.com/widgets/5a32d206fa3b5b18ae6e2ad1f7755afb.html"
-                  scrolling="no"
-                  allowtransparency="true"
-                  class="lightwidget-widget"
-                  style={{width:"100%",border:0,overflow:"hidden",outline: "none"}}
-                ></iframe>
-              </div>
-            </div>
-          </section>
+          <SocialMedia></SocialMedia>
         </div>
       }
     </>
