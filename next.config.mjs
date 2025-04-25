@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 import path from 'path';
+import createNextIntlPlugin from 'next-intl/plugin';
+const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
   sassOptions: {
     includePaths: [path.join('/', 'styles')],
   },
-  output: 'export',
   images: {
     unoptimized: true,
     formats: ['image/avif', 'image/webp'],
@@ -13,4 +14,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

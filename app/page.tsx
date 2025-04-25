@@ -1,13 +1,13 @@
-import qs from "../assets/qs.svg";
-import Navigation from "./components/Navigation";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
+
+import Navigation from "../app/components/Navigation";
+import Footer from "../app/components/Footer";
 
 import "../styles/styles.sass";
-import { getHomePageData } from "./api";
-import Landing from "./components/Home";
+import { getHomePageData } from "../app/api";
+import Landing from "../app/components/Home";
 
 async function Home() {
+
   const data = (await getHomePageData()) || [];
   const { objects } = data;
   const { metadata } = objects[0];
@@ -23,14 +23,6 @@ async function Home() {
         <Navigation />
       </header>
       <Landing/>
-      {/* <Hero data={objects[0]?.metadata?.hero} /> */}
-      {/* {sections.map((section: any, index: number) => {
-        if (section) {
-          const { type } = section;
-          const Component = getContentType(type);
-          return <Component key={index} data={section} />;
-        }
-      })} */}
       <Footer isPurple/>
     </main>
   );

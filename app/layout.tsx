@@ -1,7 +1,12 @@
+export const dynamic = 'force-dynamic';
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Inter, Kulim_Park, Caveat } from "next/font/google";
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from "next-intl/server";
+
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const kulim = Kulim_Park({
@@ -36,18 +41,24 @@ export const metadata: Metadata = {
 
 const buildId = "b052424.1";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const messages = await getMessages();
+  const locale = await getLocale();
   return (
     <html
-      lang="en"
+      lang={locale}
       data-build-id={buildId}
       className={`${inter.variable} ${kulim.variable} ${caveat.variable} scroll-smooth`}
     >
-      <body className="font-inter">{children}</body>
+      <body className="font-inter">
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+        </body>
     </html>
   );
 }

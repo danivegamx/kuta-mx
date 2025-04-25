@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import "./styles.sass";
 
 type NavContactButtonProps = {
@@ -5,6 +6,7 @@ type NavContactButtonProps = {
 }
 
 export default function NavContactButton({isPurple = false}: NavContactButtonProps) {
+  const t = useTranslations("Navigation");
   return (
     <>
       {
@@ -13,10 +15,10 @@ export default function NavContactButton({isPurple = false}: NavContactButtonPro
             href="https://www.instagram.com/direct/t/17842540389169007"
             target="_blank"
             rel="noopener noreferrer"
-            className={`bg-transparent  font-normal  py-3 px-4 border hover:border-transparent rounded-full
+            className={`bg-transparent font-normal  py-3 px-4 border hover:border-transparent rounded-full
               ${isPurple ? "border-white text-white hover:bg-white hover:text-purple":"border-purple text-purple hover:bg-purple hover:text-white"}`} 
           >
-            Contáctanos
+            {t("contactUs")}
           </a>
         </div>
       }

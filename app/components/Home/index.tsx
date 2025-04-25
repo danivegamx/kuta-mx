@@ -20,6 +20,7 @@ import HappyEndings from "../Happy Endings/happyEndings";
 import MusicPlayer from "../Music Player/musicPlayer";
 
 export default function Landing() {
+
   return (
     <>
       {
