@@ -6,6 +6,7 @@ import moment from "moment";
 import Button from "../../components/Button";
 import "./styles.sass";
 import "moment/locale/es";
+import { useTranslations } from "next-intl";
 
 type PetProps = {
   isLanding?: boolean; // Optional, defaults to false (light background)
@@ -55,6 +56,7 @@ export default function Pet({ isLanding = false }: PetProps) {
   ? mascotas.slice(0, Math.min(visibleCount, mascotas.length))
   : mascotas;
 
+  const t = useTranslations("Adoptions");
   return (
     <>
       <div className={`${isLanding ? "md:flex md:flex-row md:flex-wrap" : 
@@ -146,7 +148,7 @@ export default function Pet({ isLanding = false }: PetProps) {
                 >
                   <Button
                     data={{
-                      title: "Aplicar",
+                      title: t("apply"),
                       type: "botones-primarios",
                       metadata: {
                         url: `/cuestionario?mascotId=${slug}`,

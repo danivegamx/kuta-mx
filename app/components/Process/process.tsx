@@ -1,24 +1,27 @@
+import { useTranslations } from "next-intl";
 import { content } from "../../../assets/Content/content";
 
-const processSteps = [
-  {
-    icon: "pets",
-    title: "Rescate",
-    text: content.process1,
-  },
-  {
-    icon: "health_and_safety",
-    title: "Rehabilitación",
-    text: content.process2,
-  },
-  {
-    icon: "sound_detection_dog_barking",
-    title: "Adopción",
-    text: content.process3,
-  },
-];
+
 
 export default function Process() {
+  const t = useTranslations("Process");
+  const processSteps = [
+    {
+      icon: "pets",
+      title: t("firstStep"),
+      text: t("firstStepDesc"),
+    },
+    {
+      icon: "health_and_safety",
+      title: t("secondStep"),
+      text: t("secondStepDesc"),
+    },
+    {
+      icon: "sound_detection_dog_barking",
+      title: t("thirdStep"),
+      text: t("thirdStepDesc"),
+    },
+  ];
   return (
     <div className="flex flex-col gap-y-5 justify-center md:flex-row md:gap-x-5">
       {processSteps.map((item, index) => (

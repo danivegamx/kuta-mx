@@ -3,21 +3,9 @@ import yellowPerson from "../../../assets/yellowPersonDog.png";
 import purplePerson from "../../../assets/purple-woman-dog.png"
 import Image from "next/image";
 import Requirements from "../Requirements/requirements";
+import { useTranslations } from "next-intl";
 
-const steps = [
-  {
-    title: content.step1Title,
-    content: content.step1Content,
-  },
-  {
-    title: content.step2Title,
-    content: content.step2Content,
-  },
-  {
-    title: content.step3Title,
-    content: content.step3Content,
-  },
-];
+
 
 type AdoptionProps = {
   isLanding?: boolean; 
@@ -25,6 +13,22 @@ type AdoptionProps = {
 };
 
 export default function AdoptionSteps({ isLanding = false, isAdoption = false }: AdoptionProps) {
+  const t = useTranslations("AdoptionSteps");
+
+const steps = [
+  {
+    title: t("firstStep"),
+    content: t("firstStepDesc"),
+  },
+  {
+    title: t("secondStep"),
+    content: t("secondStepDesc"),
+  },
+  {
+    title: t("thirdStep"),
+    content: t("thirdStepDesc"),
+  },
+];
   return (
     <>
       {

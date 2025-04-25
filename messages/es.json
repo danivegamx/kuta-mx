@@ -4,5 +4,51 @@
         "stories": "Historias",
         "adoptions": "Adopciones",
         "contactUs": "Contáctanos"
+    },
+    "Home" : {
+        "sloganP1": "Mi raza favorita es",
+        "sloganP2": "Adoptada",
+        "heroText": "Explore mascotas en busca de un hogar lleno de amor, como el tuyo.",
+        "adoptToday": "Adopta Hoy",
+        "musicExperience": "Experiencia con música",
+        "home4PawsDesc": "Creemos que cada mascota merece una segunda oportunidad y un hogar donde sea amada. Detrás de cada mirada hay una historia, y con tu ayuda, puede tener un nuevo comienzo.\nTrabajamos junto a refugios y rescatistas para conectar a perros y gatos con personas dispuestas a darles una vida llena de cariño. Adoptar no solo cambia la vida de una mascota, también transforma la tuya.\nNuestra misión es simple pero poderosa: ayudar a que más animales encuentren un hogar lleno de amor.",
+        "knowMore": "Conocer Más",
+        "petsInAdoption": "Explora perfiles de perros y gatos que esperan un hogar lleno de amor. Adoptar es fácil, ¡empieza aquí!",
+        "kutaProcess": "Somos un grupo de personas apasionadas por los animales, comprometidas con construir para ellos un mundo más justo, compasivo y lleno de amor.",
+        "successStories": "Cada mascota tiene una personalidad única, y encontrar a la persona adecuada puede marcar la diferencia entre una simple adopción y una conexión para toda la vida.\nNos aseguramos de que cada historia de adopción sea especial, buscando familias que entiendan, respeten y amen a cada animal tal como es. El verdadero éxito no es solo dar en adopción, sino crear la combinación perfecta entre mascota y humano.\nPorque cuando se encuentran, lo que empieza es mucho más que una compañía: es una historia de amor, de lealtad y de segundas oportunidades.",
+        "before": "Antes",
+        "after": "Despues",
+        "behindKuta": "Conoce a las personas y los roles que hacen posible esta misión. Cada integrante aporta su amor, tiempo y compromiso para cambiar vidas — una mascota a la vez."
+    },
+    "AdoptionSteps" : {
+        "firstStep" : "Llena el cuestionario de adopción",
+        "firstStepDesc": "Cuéntanos sobre ti y tu entorno para asegurarnos de que la mascota se adapte a tu estilo de vida.",
+        "secondStep" : "Primera cita con la mascota",
+        "secondStepDesc": "Organizamos un encuentro entre tú y la mascota para ver si hay conexión.",
+        "thirdStep": "Si hay química... ¡seguimos!",
+        "thirdStepDescription": "Procedemos con los siguientes requisitos:",
+        "requirement1": "Recuperación económica por esterilización y vacunación",
+        "requirement2": "Contar con una camita cómoda para su descanso",
+        "requirement3": "Tener una placa de identificación",
+        "requirement4": "Contar con una camita cómoda para su descanso"
+    },
+    "Adoptions":{
+        "apply": "Aplicar"
+    },
+    "Process":{
+        "firstStep": "Rescate",
+        "firstStepDesc": "Alejamos a los animales de situaciones de maltrato, abandono o condiciones inadecuadas, brindándoles una nueva oportunidad de vida.",
+        "secondStep": "Rehabilitación",
+        "secondStepDesc": "Ofrecemos atención médica, cuidado emocional y tratamientos especiales a los animales que lo necesitan, para que puedan sanar y volver a confiar.",
+        "thirdStep": "Adopcion",
+        "thirdStepDesc": "Acompañamos el proceso de adopción, conectando a cada mascota con una familia responsable que esté lista para darle un hogar lleno de amor."
+    },
+    "BehindKuta":{
+        "role1" : "Rescatistas",
+        "role1Desc": "Héroes valientes que están en el frente, salvando vidas y alejando a los animales del maltrato y el abandono.",
+        "role2": "Casa Puenta",
+        "role2Desc": "Voluntarios amorosos que ofrecen un hogar temporal, brindando cuidado y cariño mientras las mascotas esperan a su familia definitiva.",
+        "role3": "Voluntarios",
+        "role3Desc": "Personas comprometidas que apoyan en cada paso: desde el rescate hasta el cuidado y la adopción. Sin ellos, nada sería posible."
     }
 }

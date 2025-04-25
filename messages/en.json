@@ -4,5 +4,51 @@
         "stories": "Stories",
         "adoptions": "Adoptions",
         "contactUs": "Contact Us"
+    },
+    "Home" : {
+        "sloganP1": "My favorite breed is",
+        "sloganP2": "Adopted",
+        "heroText": "Explore pets looking for a loving home, just like yours.",
+        "adoptToday": "Adopt Today",
+        "musicExperience": "Experience with music",
+        "home4PawsDesc": "We believe that every pet deserves a second chance and a home where they are loved. Behind every gaze, there is a story, and with your help, they can have a new beginning.\nWe work alongside shelters and rescuers to connect dogs and cats with people willing to give them a life full of love. Adopting not only changes the life of a pet, but also transforms yours.\nOur mission is simple but powerful: to help more animals find a home full of love.",
+        "knowMore": "Know More",
+        "petsInAdoption": "Explore profiles of dogs and cats waiting for loving homes. Adopting is easy—start here!",
+        "kutaProcess": "We are a group of people passionate about animals, committed to building a more just, compassionate, and loving world for them.",
+        "successStories": "Each pet has a unique personality, and finding the right person can make the difference between a simple adoption and a lifelong connection.\n We make sure every adoption story is special, looking for families that understand, respect, and love each animal just as they are. True success isn't just about adoption — it's about creating the perfect match between pet and human.\n Because when they meet, what begins is much more than companionship: it's a story of love, loyalty, and second chances.",
+        "before": "Before",
+        "after": "After",
+        "behindKuta": "Meet the people and the roles that make this mission possible. Each member contributes their love, time, and commitment to changing lives—one pet at a time."
+    },
+    "AdoptionSteps" : {
+        "firstStep" : "Fill the adoption questionnare",
+        "firstStepDesc": "Tell us about yourself and your environment to make sure the pet fits your lifestyle.",
+        "secondStep" : "First date with the pet",
+        "secondStepDesc": "We arrange a meeting between you and your pet to see if there's a connection.",
+        "thirdStep": "If there's chemistry... Let's continue!",
+        "thirdStepDescription": "We proceed with the following requirements:",
+        "requirement1": "Economic recovery through sterilization and vaccination",
+        "requirement2": "Contar con una camita cómoda para su descanso",
+        "requirement3": "Have an identification plate",
+        "requirement4": "Have a comfortable bed for your rest"
+    },
+    "Adoptions":{
+        "apply": "Apply"
+    },
+    "Process":{
+        "firstStep": "Rescue",
+        "firstStepDesc": "We remove animals from situations of abuse, abandonment, or inadequate conditions, giving them a new chance at life.",
+        "secondStep": "Rehabilitation",
+        "secondStepDesc": "We provide medical care, emotional care, and specialty treatments to animals in need, so they can heal and regain their trust.",
+        "thirdStep": "Adoption",
+        "thirdStepDesc": "We accompany the adoption process, connecting each pet with a responsible family ready to give them a loving home."
+    },
+    "BehindKuta":{
+        "role1" : "Rescuers",
+        "role1Desc": "Brave heroes who are on the front lines, saving lives and keeping animals safe from abuse and abandonment.",
+        "role2": "Halfway house",
+        "role2Desc": "Loving volunteers offer a temporary home, providing care and affection while pets wait for their forever families.",
+        "role3": "Volunteers",
+        "role3Desc": "Dedicated people who support us every step of the way: from rescue to care and adoption. Without them, nothing would be possible."
     }
 }

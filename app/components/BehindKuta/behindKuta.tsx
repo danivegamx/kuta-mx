@@ -3,26 +3,29 @@ import rescue from "../../../assets/rescue.png";
 import halfwayHouse from "../../../assets/halfwayHouse.png";
 import volunteers from "../../../assets/volunteers.png";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
-const behindKutaContent = [
-  {
-    title: "Rescatistas",
-    content: content.rescue,
-    image: rescue,
-  },
-  {
-    title: "Casa Puente",
-    content: content.halfwayHouse,
-    image: halfwayHouse,
-  },
-  {
-    title: "Voluntarios",
-    content: content.volunteers,
-    image: volunteers,
-  },
-];
+
 
 export default function BehindKuta() {
+  const t = useTranslations("BehindKuta");
+  const behindKutaContent = [
+    {
+      title: t("role1"),
+      content: t("role1Desc"),
+      image: rescue,
+    },
+    {
+      title: t("role2"),
+      content: t("role2Desc"),
+      image: halfwayHouse,
+    },
+    {
+      title: t("role3"),
+      content: t("role3Desc"),
+      image: volunteers,
+    },
+  ];
   return (
     <>
       {

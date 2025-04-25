@@ -18,8 +18,10 @@ import Link from "next/link";
 import SocialMedia from "../Social Media/socialMedia";
 import HappyEndings from "../Happy Endings/happyEndings";
 import MusicPlayer from "../Music Player/musicPlayer";
+import { useTranslations } from "next-intl";
 
 export default function Landing() {
+  const t = useTranslations("Home");
 
   return (
     <>
@@ -46,18 +48,17 @@ export default function Landing() {
                   sm:text-6xl
                   md:text-7xl"
                   >
-                    Mi raza favorita es{" "}
-                    <span className="text-purple">adoptada</span>
+                    {t('sloganP1')}{" "}
+                    <span className="text-purple">{t("sloganP2")}</span>
                   </h3>
                 </div>
                 <p className="text-white font-medium text-base inter w-3/4 text-center md:text-start">
-                  Explora mascotas en busca de un hogar lleno de amor, como el
-                  tuyo.
+                  {t("heroText")}
                 </p>
                 <div>
                   <Link href={"/adopciones"}>
                     <button className="bg-purple text-white font-normal text-sm py-3 px-4 rounded-lg ">
-                      Adopta Hoy
+                      {t("adoptToday")}
                     </button>
                   </Link>
                 </div>
@@ -70,7 +71,7 @@ export default function Landing() {
           {/* music */}
           <section className="px-5 pt-6 sm:px-7 md:px-12">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-x-6 gap-y-6">
-              <h4 className="font-caveat text-[26px] text-wrap text-slate-800 leading-none">Experiencia con música</h4>
+              <h4 className="font-caveat text-[26px] text-wrap text-slate-800 leading-none">{t("musicExperience")}</h4>
               <Image src={arrowRight} alt="Arrow Right" width={70} height={24} className="shrink-0 hidden md:block" style={{ height: '30px', width: 'auto' }} />
               <MusicPlayer></MusicPlayer>
             </div>
@@ -92,7 +93,9 @@ export default function Landing() {
                 <p
                   className="inter text-base text-slate-800 font-regular"
                   style={{ whiteSpace: "pre-line" }}
-                  dangerouslySetInnerHTML={{ __html: content.landingS1Content }}
+                  dangerouslySetInnerHTML={{
+                    __html: t("home4PawsDesc").replace(/\n/g, "<br/><br/>"),
+                  }}
                 ></p>
                 <div>
                   <Link href={"/nosotros"}>
@@ -129,7 +132,7 @@ export default function Landing() {
                   />
                 </div>
                 <p className="flex justify-center inter text-slate-800 text-center">
-                  {content.adoptionDesc}
+                  {t("petsInAdoption")}
                 </p>
               </div>
               <div className="flex justify-center">
@@ -138,7 +141,7 @@ export default function Landing() {
               <div className="flex justify-center">
                 <Link href={"/adopciones"}>
                   <button className="bg-purple text-white font-medium text-sm py-3 px-4 rounded-lg ">
-                    Conocer Más
+                    {t('knowMore')}
                   </button>
                 </Link>
               </div>
@@ -178,7 +181,7 @@ export default function Landing() {
                 </div>
                 <div className="flex justify-center">
                   <p className="flex justify-center inter text-slate-800 text-center md:w-2/3">
-                    {content.btsDesc}
+                    {t("kutaProcess")}
                   </p>
                 </div>
               </div>
@@ -214,8 +217,10 @@ export default function Landing() {
                 <p
                   className="inter text-slate-800 font-normal"
                   style={{ whiteSpace: "pre-line" }}
+                  dangerouslySetInnerHTML={{
+                    __html: t("successStories").replace(/\n/g, "<br/><br/>"),
+                  }}
                 >
-                  {content.successStory}
                 </p>
                 <div>
                   <Videos></Videos>
