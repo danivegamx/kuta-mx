@@ -1,19 +1,29 @@
 import Image from "next/image";
 import startEmphasis from "../../../assets/star-emphasis.png";
-import emmaBefore from "../../../assets/emma-before.jpeg";
-import emmaAfter from "../../../assets/emma-after.jpeg";
-import freyaBefore from "../../../assets/freya-before.jpeg";
-import freyaAfter from "../../../assets/freya-after.jpeg";
-
-// const images = [
-//   "https://images.wagwalkingweb.com/media/daily_wag/blog_articles/hero/1722953201.3050609/fluffy-dogs-hero-1-1.jpg",
-//   "https://cdn.outsideonline.com/wp-content/uploads/2023/03/Funny_Dog_S.jpg",
-//   "https://www.rawmate.com/cdn/shop/articles/dogs_with_purpose_puppy_720x.jpg",
-//   "https://d2zp5xs5cp8zlg.cloudfront.net/image-66559-800.jpg",
-//   "https://www.dogstrust.ie/images/800x600/assets/2022-07/Buster_germanshepherd_outdoors_leeds_dogstrust.jpg",
-//   "https://www.rspcansw.org.au/wp-content/uploads/2025/01/Robbie-and-Coco-016-1-1024x1024.jpg",
-//   "https://pethelpful.com/.image/w_3840,q_auto:good,c_fill,ar_4:3/MTk2NTM5MzQxNzI2NTU4MTc1/five-ferocious-dog-breeds-your-family-must-be-afraid-of-2.jpg"
-// ];
+import emmaBefore from "../../../assets/Pets/emma-before.jpeg";
+import emmaAfter from "../../../assets/Pets/emma-after.jpeg";
+import freyaBefore from "../../../assets/Pets/freya-before.jpeg";
+import freyaAfter from "../../../assets/Pets/freya-after.jpeg";
+import ashBefore from "../../../assets/Pets/ash-before.jpeg";
+import ashAfter from "../../../assets/Pets/ash-after.jpeg";
+import canelaBefore from "../../../assets/Pets/canela-before.jpeg";
+import canelaAfter from "../../../assets/Pets/canela-after.jpeg";
+import cloeBefore from "../../../assets/Pets/cloe-before.jpeg";
+import cloeAfter from "../../../assets/Pets/cloe-after.jpeg";
+import gaiaBefore from "../../../assets/Pets/gaia-before.jpeg";
+import gaiaAfter from "../../../assets/Pets/gaia-after.jpeg";
+import gigiBefore from "../../../assets/Pets/gigi-before.jpeg";
+import gigiAfter from "../../../assets/Pets/gig-after.jpeg";
+import kiaraBefore from "../../../assets/Pets/kiara-before.jpeg";
+import kiaraAfter from "../../../assets/Pets/kiara-after.jpeg";
+import kikaBefore from "../../../assets/Pets/kika-before.jpeg";
+import kikaAfter from "../../../assets/Pets/kika-after.jpeg";
+import luaBefore from "../../../assets/Pets/lua-before.jpeg";
+import luaAfter from "../../../assets/Pets/lua-after.jpeg";
+import maggieBefore from "../../../assets/Pets/maggie-before.jpeg";
+import maggieAfter from "../../../assets/Pets/maggie-after.jpeg";
+import zeusBefore from "../../../assets/Pets/zeus-before.jpeg";
+import zeusAfter from "../../../assets/Pets/zeus-after.jpeg";
 
 const images = [
   {
@@ -25,6 +35,56 @@ const images = [
     name: "Freya",
     before: freyaBefore,
     after: freyaAfter,
+  },
+  {
+    name: "Ash",
+    before: ashBefore,
+    after: ashAfter,
+  },
+  {
+    name: "Canela",
+    before: canelaBefore,
+    after: canelaAfter,
+  },
+  {
+    name: "Cloe",
+    before: cloeBefore,
+    after: cloeAfter,
+  },
+  {
+    name: "Gaia",
+    before: gaiaBefore,
+    after: gaiaAfter,
+  },
+  {
+    name: "Gigi",
+    before: gigiBefore,
+    after: gigiAfter,
+  },
+  {
+    name: "Kiara",
+    before: kiaraBefore,
+    after: kiaraAfter,
+  },
+  {
+    name: "Kika",
+    before: kikaBefore,
+    after: kikaAfter,
+  },
+  {
+    name: "Lua",
+    before: luaBefore,
+    after: luaAfter,
+  },
+  {
+    name: "Maggie",
+    before: maggieBefore,
+    after: maggieAfter,
+  },
+  {
+    name: "Zeus",
+    before: zeusBefore,
+    after: zeusAfter,
   },
 ];
 
@@ -53,38 +113,47 @@ export default function HappyEndings() {
               return (
                 <div
                   key={index}
-                  className="rounded-lg p-6 bg-white border border-slate-300 flex flex-col justify-center gap-y-6 mx-4"
+                  className="rounded-lg bg-white flex flex-col justify-center gap-y-3 mx-4"
                 >
-                  <h4 className="font-caveat text-[22px] text-center text-slate-800">
-                    {image.name}
-                  </h4>
-                  <div className="flex flex-row gap-x-4">
-                    <div className="flex flex-col gap-y-4">
-                        <div className="w-48 h-[250px] relative overflow-hidden rounded-md">
-                          <Image
-                            src={image.before}
-                            alt="Before Image"
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <h5 className="font-caveat text-slate-800 text-xl text-center">Antes</h5>
+                  <div className="bg-slate-100 flex items-center justify-center p-3 rounded-lg">
+                    <h4 className="font-caveat text-[22px] text-center text-slate-800">
+                      {image.name}
+                    </h4>
+                  </div>
+
+                  <div className="flex flex-row gap-x-3">
+                    <div className="flex flex-col">
+                      <div className="w-48 h-[250px] relative overflow-hidden rounded-t-lg">
+                        <Image
+                          src={image.before}
+                          alt="Before Image"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="bg-lightBlue rounded-b-lg p-3 flex items-center justify-center">
+                        <h5 className="font-caveat text-slate-800 text-xl text-center">
+                          Antes
+                        </h5>
+                      </div>
                     </div>
-                    <div className="flex flex-col gap-y-4">
-                        <div className="w-48 h-[250px] relative overflow-hidden rounded-md">
-                          <Image
-                            src={image.after}
-                            alt="After Image"
-                            fill
-                            className="object-cover"
-                          />
-                        </div>
-                        <h5 className="font-caveat text-slate-800 text-xl text-center">Despues</h5>
+                    <div className="flex flex-col">
+                      <div className="w-48 h-[250px] relative overflow-hidden rounded-t-lg">
+                        <Image
+                          src={image.after}
+                          alt="After Image"
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="bg-lightBlue rounded-b-lg p-3 flex items-center justify-center">
+                        <h5 className="font-caveat text-slate-800 text-xl text-center">
+                          Despues
+                        </h5>
+                      </div>
                     </div>
                   </div>
                 </div>
-                // <div key={index} className="w-60 h-60 rounded-lg bg-cover bg-center bg-no-repeat shrink-0 mx-2" style={{backgroundImage: `url(${image})`}}>
-                // </div>
               );
             })}
           </div>
