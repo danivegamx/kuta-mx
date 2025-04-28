@@ -32,12 +32,12 @@ const steps = [
   return (
     <>
       {
-        <section id="adoptionSteps">
+        <section id="adoptionSteps" className={`${isAdoption?"md:w-3/4":""}`}>
           <div className={`${!isAdoption ? "px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20" : "h-full"}`}>
             <div className={`bg-gradient-to-br ${isLanding || isAdoption ? "from-lightYellow to-lightPink" : "from-gradientBlue to-gradientPurple"}  
             rounded-lg px-5 py-7 sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-7xl mx-auto ${isAdoption ? "h-full" : ""}`}>
-              <div className="flex flex-col justify-between  items-center gap-y-14
-              md:flex-row md:gap-x-20">
+              <div className={`flex flex-col justify-between  items-center gap-y-14
+              md:flex-row md:gap-x-20`}>
                 <div className={`sm:w-1/2 ${isAdoption ? "hidden" : ""}`}>
                   <Image src={isLanding ? yellowPerson : purplePerson} alt={"Person with dog"} />
                 </div>

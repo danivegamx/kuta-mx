@@ -61,7 +61,7 @@ export default function Pet({ isLanding = false }: PetProps) {
     <>
       <div className={`${isLanding ? "md:flex md:flex-row md:flex-wrap" : 
       "w-full md:grid-cols-3 lg:grid-cols-4"} 
-      overflow-hidden gap-5 grid grid-cols-1 sm:grid-cols-2 w-full sm:w-auto
+      overflow-hidden gap-5 grid grid-cols-1 sm:grid-cols-2 w-full sm:w-full
       ${!isLanding ? "items-center" :"justify-center"}`}>
         {mascotasToRender.map((mascota: any, index: number) => {
           const { title, metadata, slug } = mascota;
@@ -70,10 +70,10 @@ export default function Pet({ isLanding = false }: PetProps) {
           return (
             <div
               key={index}
-              className={`rounded-lg border border-1 border-slate-300 overflow-hidden shrink-0`}
+              className={`rounded-lg border border-1 border-slate-300 overflow-hidden shrink-0 sm:flex-1`}
             >
               <div
-                className={`rounded-t-lg h-[300px] w-full ${isLanding ? "md:w-[300px] md:h-[300px]" : ""} `}
+                className={`rounded-t-lg h-[300px] w-full ${isLanding ? "md:w-[400px] md:h-[300px]" : "md:w-[303px]"} `}
                 style={{
                   background: `url(${foto_mascota_1.imgix_url})`,
                   backgroundSize: "cover",
