@@ -5,6 +5,7 @@ import instagram from "../../../assets/instagram.png";
 import facebook from "../../../assets/facebook.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const footerElements = [
   {
@@ -38,6 +39,35 @@ type FooterProps = {
 };
 
 export default function Footer({ isPurple = false }: FooterProps) {
+  const t = useTranslations("Footer")
+
+  const footerElements = [
+    {
+      Title: "Kuta",
+      Links: [
+        { name: t("mission"), url: "/#mision" },
+        { name: t("behindKuta"), url: "/#behindKuta" },
+        { name: t("process"), url: "/#process" },
+      ],
+    },
+    {
+      Title: t("aboutUs"),
+      Links: [
+        { name: t("getToKnowKuta"), url: "/nosotros" },
+        { name: t("whoWeAre"), url: "/nosotros#whoWeAre" },
+        { name: t("whatWeDo"), url: "/nosotros#whatWeDo" },
+        { name: t("stories"), url: "/#stories" },
+      ],
+    },
+    {
+      Title: t("adoption"),
+      Links: [
+        { name: t("requirements"), url: "/#adoptionSteps" },
+        { name: t("adoptions"), url: "/adopciones" },
+      ],
+    },
+  ];
+
   const year = new Date().getFullYear();
   return (
     <footer>
@@ -70,7 +100,7 @@ export default function Footer({ isPurple = false }: FooterProps) {
               ))}
             </div>
             <div>
-              <p className={`md:text-lg kulim text-bold mb-3 ${isPurple ? "text-white" : "text-slate-800"}`}>Siguenos</p>
+              <p className={`md:text-lg kulim text-bold mb-3 ${isPurple ? "text-white" : "text-slate-800"}`}>{t("followUs")}</p>
               <div className="flex flex-row gap-x-2 mt-0 justify-start md:justify-end">
                 <a
                   href="https://www.facebook.com/people/Kuta-Mx/61556841081748/"

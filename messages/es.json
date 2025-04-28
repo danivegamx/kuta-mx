@@ -26,7 +26,7 @@
         "secondStep" : "Primera cita con la mascota",
         "secondStepDesc": "Organizamos un encuentro entre tú y la mascota para ver si hay conexión.",
         "thirdStep": "Si hay química... ¡seguimos!",
-        "thirdStepDescription": "Procedemos con los siguientes requisitos:",
+        "thirdStepDesc": "Procedemos con los siguientes requisitos:",
         "requirement1": "Recuperación económica por esterilización y vacunación",
         "requirement2": "Contar con una camita cómoda para su descanso",
         "requirement3": "Tener una placa de identificación",
@@ -82,5 +82,25 @@
         "adoptions": "Adopciones",
         "pageDesc": "¡Conoce a tu próximo mejor amigo! Explora las opciones de mascotas que están actualmente en rehabilitación y listas para un hogar lleno de amor.",
         "apply": "Aplicar"
+    },
+    "AdoptionProcess":{
+        "important": "Importante",
+        "importantContent": "Es importante mencionar que el periodo en el que fue rescatado el  perro/gato , se le proporcionaron atenciones de primer momento como  desparasitación, vacuna, baño y esterilización con la finalidad de  comenzar de manera inmediata el proceso de cuidado que merece. Es por  ello; que se requiere del apoyo de tales gastos, por nuestra parte  comprobando el costo de los mismos. Nuestra intención es entregar a la  mascota esterilizada, desparasitada y con cartilla de vacunación vigente.\nLos datos proporcionados en este cuestionario serán utilizados única y exclusivamente para la evaluación de adopción de la mascota solicitada y no se divulgarán o se hará mal uso de ellos.",
+        "start": "Comenzar",
+        "privacyPolicy": "Para más información, consulta nuestro aviso de privacidad y uso de datos."
+    },
+    "Footer":{
+        "mission": "Misión",
+        "behindKuta": "Detrás de Kuta",
+        "proceso": "Process",
+        "aboutUs": "Nosotros",
+        "getToKnowKuta": "Conoce Kuta",
+        "whoWeAre": "¿Quiénes somos?",
+        "whatWeDo": "¿Qué hacemos?",
+        "stories": "Historias",
+        "adoption": "Adopción",
+        "adoptions": "Adopciones",
+        "requirements": "Requerimientos",
+        "followUs": "Siguenos"
     }
 }

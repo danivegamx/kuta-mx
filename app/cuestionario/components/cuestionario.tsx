@@ -16,10 +16,12 @@ import { metadataInitialState, mascotdataInitialState } from "../../../utils";
 import { useLocalStorage } from "@/app/context/useLocalStorage";
 import AdoptionSteps from "@/app/components/AdoptionSteps/adoptionSteps";
 import Requirements from "@/app/components/Requirements/requirements";
+import { useTranslations } from "next-intl";
 
 const Questionnaire = () => {
+  const t = useTranslations("AdoptionProcess")
   const ref = useRef(null);
-  const searchParams = useSearchParams(); 
+  const searchParams = useSearchParams();
   const router = useRouter();
   const mascotId = searchParams.get("mascotId");
   // * State handling
@@ -306,9 +308,8 @@ const Questionnaire = () => {
       <div className={`questionnaire-wrapper mx-auto relative md:bg-[url('/assets/paw-pattern.png')] bg-repeat bg-top bg-white ${currentSection !== 0 ? "flex justify-center" : ""}`}>
         {/* <Journey sections={secciones} currentSection={currentSection} /> */}
         <section
-          className={`pt-[120px]  px-5 sm:px-7 md:px-12 ${
-            currentSection !== 0 ? "hidden" : "block"
-          }`}
+          className={`pt-[120px]  px-5 sm:px-7 md:px-12 ${currentSection !== 0 ? "hidden" : "block"
+            }`}
         >
           <article className="flex flex-col sm:flex-row gap-y-6 gap-x-6 max-w-7xl mx-auto">
             <AdoptionSteps isAdoption></AdoptionSteps>
@@ -336,11 +337,10 @@ const Questionnaire = () => {
                           {raza}
                         </div>
                         <div
-                          className={`w-10 h-10 rounded-full flex justify-center items-center ${
-                            genero?.value === "Hembra"
+                          className={`w-10 h-10 rounded-full flex justify-center items-center ${genero?.value === "Hembra"
                               ? "bg-rose-300"
                               : "bg-[#8EC5FF]"
-                          }`}
+                            }`}
                         >
                           <span
                             className="material-symbols-outlined text-white"
@@ -359,9 +359,8 @@ const Questionnaire = () => {
                         >
                           cake
                         </span>
-                        <p className="inter font-medium text-slate-600">{`${edad} ${
-                          edad !== 1 ? "años" : "año"
-                        }`}</p>
+                        <p className="inter font-medium text-slate-600">{`${edad} ${edad !== 1 ? "años" : "año"
+                          }`}</p>
                       </div>
                       <div className="flex items-center gap-x-2">
                         <span
@@ -383,7 +382,7 @@ const Questionnaire = () => {
                         className={`w-full bg-white bg-transparent border border-purple hover:bg-gradient-to-r from-purple to-violet-900 hover:text-white hover:border-transparent 
                       transition duration-300 ease-in-out flex flex-1 rounded-md py-2 justify-center font-inter text-purple font-normal`}
                       >
-                        Comenzar
+                        {t("start")}
                       </button>
                     </div>
                   </div>
@@ -392,26 +391,30 @@ const Questionnaire = () => {
             </div>
           </article>
         </section>
-        <section className={`px-5 py-6 sm:px-7 md:px-12 ${
-            currentSection !== 0 ? "hidden" : "block"
+        <section className={`px-5 py-6 sm:px-7 md:px-12 ${currentSection !== 0 ? "hidden" : "block"
           }`} >
           <div className="max-w-7xl mx-auto">
             <Requirements isAdoption></Requirements>
           </div>
         </section>
-        <section className={`px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 ${
-            currentSection !== 0 ? "hidden" : "block"
+        <section className={`px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 ${currentSection !== 0 ? "hidden" : "block"
           }`}>
           <div className="flex flex-col md:flex-row gap-x-20 gap-y-20 max-w-7xl mx-auto">
             <div className="flex flex-col w-full sm:flex-col gap-y-8 md:w-1/2">
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-kulim">
-                Importante
+                {t("important")}
               </h3>
-              <p style={{ whiteSpace: "pre-line" }} className="text-inter" dangerouslySetInnerHTML={{ __html: content.importantNote}}></p>
+              <div className="text-slate-700 whitespace-pre-line">
+                <p 
+                dangerouslySetInnerHTML={{ __html: t('importantContent').replace(/\n/g, "<br/><br/>") }}></p>
+                <br></br>
+                <a className="font-medium" href="https://www.quantumstudios.dev/privacy-policy">{t("privacyPolicy")}</a>
+              </div>
+              
             </div>
             <div className="md:w-1/2 flex items-center justify-end">
-                <Image src={benchDog} alt={"Dog on a bench"} />
-              </div>
+              <Image src={benchDog} alt={"Dog on a bench"} />
+            </div>
           </div>
         </section>
         {secciones.map((seccion, i) => {
@@ -425,9 +428,8 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${
-                  currentSection === index ? "current" : ""
-                }`}
+                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${currentSection === index ? "current" : ""
+                  }`}
               >
                 <h2>{title}</h2>
                 <p>{texto_opcional}</p>
@@ -457,9 +459,8 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${
-                  currentSection === index ? "current" : ""
-                }`}
+                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${currentSection === index ? "current" : ""
+                  }`}
               >
                 <h2>{title}</h2>
                 <p>{texto_opcional}</p>
@@ -486,9 +487,8 @@ const Questionnaire = () => {
             return (
               <section
                 key={index}
-                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${
-                  currentSection === index ? "current" : ""
-                }`}
+                className={`my-8 px-5 pb-10 sm:px-7 sm:pb-7 md:px-12 md:pb-20 w-full questionnaire-section ${currentSection === index ? "current" : ""
+                  }`}
               >
                 <h2>{title}</h2>
                 <div className="questions grid grid-cols-2 gap-4">
@@ -549,9 +549,8 @@ const Questionnaire = () => {
           }
         })}
         <section
-          className={`md:my-8 questionnaire-section ${
-            currentSection === 9 ? "current" : ""
-          }`}
+          className={`md:my-8 questionnaire-section ${currentSection === 9 ? "current" : ""
+            }`}
         >
           <p dangerouslySetInnerHTML={{ __html: gracias }} />
           <button onClick={() => router.push("/")} className="main-primary">

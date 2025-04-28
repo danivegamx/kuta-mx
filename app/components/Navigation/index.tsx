@@ -104,11 +104,12 @@ export default function Navigation({ isAdoption = false }: NavigationProps) {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="rounded-full border border-slate-600 bg-white flex items-center justify-between py-3 px-4 text-inter font-normal gap-x-2 text-slate-600"
+                className={`rounded-full border   flex items-center justify-between py-3 px-4 text-inter font-normal gap-x-2 
+                  ${isAdoption ? "bg-purple border-white text-white" : "border-slate-600 text-slate-600 bg-white"}`}
               >
                 {currentLabel}
                 <span
-                  className="material-symbols-outlined text-slate-600"
+                  className={`material-symbols-outlined ${isAdoption ? "text-white" : "text-slate-600"}`}
                   style={{ fontSize: "24px" }}
                 >
                   keyboard_arrow_down

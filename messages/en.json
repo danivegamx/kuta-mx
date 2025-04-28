@@ -26,7 +26,7 @@
         "secondStep": "First date with the pet",
         "secondStepDesc": "We arrange a meeting between you and your pet to see if there's a connection.",
         "thirdStep": "If there's chemistry... Let's continue!",
-        "thirdStepDescription": "We proceed with the following requirements:",
+        "thirdStepDesc": "We proceed with the following requirements:",
         "requirement1": "Economic recovery through sterilization and vaccination",
         "requirement2": "Contar con una camita cómoda para su descanso",
         "requirement3": "Have an identification plate",
@@ -82,5 +82,25 @@
         "adoptions": "Adoptions",
         "pageDesc": "Meet your next best friend! Explore the pets that are currently in rehabilitation and ready for a loving home.",
         "apply": "Apply"
+    },
+    "AdoptionProcess": {
+        "important": "Important",
+        "importantContent": "It is important to mention that during the period when the dog/cat was rescued, immediate care was provided, including deworming, vaccination, bathing, and sterilization, in order to begin the care process they deserve right away. Therefore, support for these expenses is required, and we will provide proof of the costs. Our intention is to deliver the pet sterilized, dewormed, and with an up-to-date vaccination record.\nThe information provided in this questionnaire will be used solely and exclusively for the evaluation of the adoption of the requested pet and will not be disclosed or misused.",
+        "start": "Start",
+        "privacyPolicy": "For more information, please consult our privacy notice and data usage policy."
+    },
+    "Footer": {
+        "mission": "Mission",
+        "behindKuta": "Behind Kuta",
+        "proceso": "Process",
+        "aboutUs": "About Us",
+        "getToKnowKuta": "Get to Know Kuta",
+        "whoWeAre": "Who We Are",
+        "whatWeDo": "What We Do",
+        "stories": "Stories",
+        "adoption": "Adoption",
+        "adoptions": "Adoptions",
+        "requirements": "Requirements",
+        "followUs": "Follow Us"
     }
 }
