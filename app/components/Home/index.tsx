@@ -101,7 +101,7 @@ export default function Landing() {
                 <div>
                   <Link href={"/nosotros"}>
                     <button className="bg-white text-blue border border-blue font-medium text-sm py-3 px-4 rounded-lg hover:bg-blue hover:text-white hover:border-transparent transition duration-300 ease-in-out">
-                      Conocer Más
+                      {t("knowMore")}
                     </button>
                   </Link>
                 </div>
