@@ -10,6 +10,7 @@ import Reasons from "../Reasons/reasons";
 import Help from "../Help/help";
 import SocialMedia from "../Social Media/socialMedia";
 import { useTranslations } from "next-intl";
+import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 
 export default function AboutUs() {
   const t = useTranslations("AboutUs");
@@ -65,9 +66,7 @@ export default function AboutUs() {
             md:flex-row md:gap-x-20"
         >
           <div className="gap-y-8 flex flex-col md:w-1/2">
-            <h3 className="font-kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
-              Quienes <span className="text-yellow">Somos</span>
-            </h3>
+            <DynamicTitle namespace={"AboutUs"} translationKey={"whoWeAre"}/>
             <p
               className="inter text-base text-slate-800 font-regular"
               style={{ whiteSpace: "pre-line" }}
@@ -106,9 +105,7 @@ export default function AboutUs() {
             />
           </div>
           <div className="gap-y-8 flex flex-col md:w-1/2">
-            <h3 className="font-kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
-              ¿Qué <span className="text-blue">Hacemos</span>?
-            </h3>
+          <DynamicTitle namespace={"AboutUs"} translationKey={"whatWeDo"}/>
             <p
               className="inter text-base text-slate-800 font-regular"
               style={{ whiteSpace: "pre-line" }}

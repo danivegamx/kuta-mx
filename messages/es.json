@@ -1,29 +1,87 @@
 {
-    "Navigation" :{
+    "Navigation": {
         "Nosotros": "Nosotros",
         "Historias": "Historias",
         "Adopciones": "Adopciones",
         "contactUs": "Contáctanos"
     },
-    "Home" : {
+    "Home": {
         "sloganP1": "Mi raza favorita es",
         "sloganP2": "Adoptada",
         "heroText": "Explore mascotas en busca de un hogar lleno de amor, como el tuyo.",
         "adoptToday": "Adopta Hoy",
         "musicExperience": "Experiencia con música",
+        "home4PawsTitle": {
+            "color": "text-blue",
+            "highlightPosition": 1,
+            "parts": [
+                "Un",
+                "Hogar",
+                "Para Cada Patita"
+            ]
+        },
         "home4PawsDesc": "Creemos que cada mascota merece una segunda oportunidad y un hogar donde sea amada. Detrás de cada mirada hay una historia, y con tu ayuda, puede tener un nuevo comienzo.\nTrabajamos junto a refugios y rescatistas para conectar a perros y gatos con personas dispuestas a darles una vida llena de cariño. Adoptar no solo cambia la vida de una mascota, también transforma la tuya.\nNuestra misión es simple pero poderosa: ayudar a que más animales encuentren un hogar lleno de amor.",
         "knowMore": "Conocer Más",
+        "adoptionTitle": {
+            "color": "text-purple",
+            "highlightPosition": 1,
+            "parts": [
+                "Mascotas En",
+                "Adopción"
+            ]
+        },
         "petsInAdoption": "Explora perfiles de perros y gatos que esperan un hogar lleno de amor. Adoptar es fácil, ¡empieza aquí!",
+        "processTitle": {
+            "color": "text-blue",
+            "highlightPosition": 1,
+            "parts": [
+                "Descubre Lo Que Hay",
+                "Detrás"
+            ]
+        },
         "kutaProcess": "Somos un grupo de personas apasionadas por los animales, comprometidas con construir para ellos un mundo más justo, compasivo y lleno de amor.",
+        "storiesTitle": {
+            "color": "text-purple",
+            "highlightPosition": 1,
+            "parts": [
+                "Historias de",
+                "Éxito"
+            ]
+        },
         "successStories": "Cada mascota tiene una personalidad única, y encontrar a la persona adecuada puede marcar la diferencia entre una simple adopción y una conexión para toda la vida.\nNos aseguramos de que cada historia de adopción sea especial, buscando familias que entiendan, respeten y amen a cada animal tal como es. El verdadero éxito no es solo dar en adopción, sino crear la combinación perfecta entre mascota y humano.\nPorque cuando se encuentran, lo que empieza es mucho más que una compañía: es una historia de amor, de lealtad y de segundas oportunidades.",
+        "happyEndings": {
+            "color": "text-blue",
+            "highlightPosition": 1,
+            "parts": [
+                "Finales",
+                "Felices"
+            ]
+        },
         "before": "Antes",
         "after": "Despues",
+        "behindTitle": {
+            "color": "text-yellow",
+            "highlightPosition": 1,
+            "parts": [
+                "¿Quiénes están detrás de",
+                "Kuta?"
+            ]
+        },
         "behindKuta": "Conoce a las personas y los roles que hacen posible esta misión. Cada integrante aporta su amor, tiempo y compromiso para cambiar vidas — una mascota a la vez."
     },
-    "AdoptionSteps" : {
-        "firstStep" : "Llena el cuestionario de adopción",
+    "AdoptionSteps": {
+        "title": {
+            "color": "text-yellow",
+            "highlightPosition": 1,
+            "parts": [
+                "Pasos Para",
+                "Adoptar",
+                "En Kuta"
+            ]
+        },
+        "firstStep": "Llena el cuestionario de adopción",
         "firstStepDesc": "Cuéntanos sobre ti y tu entorno para asegurarnos de que la mascota se adapte a tu estilo de vida.",
-        "secondStep" : "Primera cita con la mascota",
+        "secondStep": "Primera cita con la mascota",
         "secondStepDesc": "Organizamos un encuentro entre tú y la mascota para ver si hay conexión.",
         "thirdStep": "Si hay química... ¡seguimos!",
         "thirdStepDesc": "Procedemos con los siguientes requisitos:",
@@ -32,7 +90,7 @@
         "requirement3": "Tener una placa de identificación",
         "requirement4": "Contar con una camita cómoda para su descanso"
     },
-    "Process":{
+    "Process": {
         "firstStep": "Rescate",
         "firstStepDesc": "Alejamos a los animales de situaciones de maltrato, abandono o condiciones inadecuadas, brindándoles una nueva oportunidad de vida.",
         "secondStep": "Rehabilitación",
@@ -40,21 +98,45 @@
         "thirdStep": "Adopcion",
         "thirdStepDesc": "Acompañamos el proceso de adopción, conectando a cada mascota con una familia responsable que esté lista para darle un hogar lleno de amor."
     },
-    "BehindKuta":{
-        "role1" : "Rescatistas",
+    "BehindKuta": {
+        "role1": "Rescatistas",
         "role1Desc": "Héroes valientes que están en el frente, salvando vidas y alejando a los animales del maltrato y el abandono.",
         "role2": "Casa Puenta",
         "role2Desc": "Voluntarios amorosos que ofrecen un hogar temporal, brindando cuidado y cariño mientras las mascotas esperan a su familia definitiva.",
         "role3": "Voluntarios",
         "role3Desc": "Personas comprometidas que apoyan en cada paso: desde el rescate hasta el cuidado y la adopción. Sin ellos, nada sería posible."
     },
-    "AboutUs":{
+    "AboutUs": {
         "aboutUs": "Nosotros",
         "pageDesc": "Conoce más sobre Kuta!",
+        "whoWeAre": {
+            "color": "text-yellow",
+            "highlightPosition": 1,
+            "parts": [
+                "Quienes",
+                "Somos"
+            ]
+        },
         "whoWeAreDesc": "Somos Kuta, una comunidad de personas apasionadas por el bienestar animal. Nos mueve el amor, la empatía y el compromiso con cada vida que rescatamos.\nDesde nuestros inicios, hemos trabajado para ofrecer una segunda oportunidad a perros y gatos que han sido víctimas del abandono o el maltrato. Creemos que cada uno merece un hogar donde sea valorado, cuidado y amado.\nEn Kuta, rescatamos, rehabilitamos y acompañamos a cada mascota en su proceso de recuperación física y emocional, hasta encontrar la familia ideal que le brinde una nueva vida. No somos solo un puente entre animales y personas: somos una red de corazones unidos por una causa.",
+        "whatWeDo": {
+            "color": "text-blue",
+            "highlightPosition": 1,
+            "parts": [
+                "Que",
+                "Hacemos"
+            ]
+        },
         "whatWeDoDesc": "En Kuta trabajamos por el bienestar de perros y gatos en situación vulnerable. Nuestro proceso comienza con el rescate, brindando una segunda oportunidad a animales que han sido abandonados o maltratados.\nUna vez a salvo, los acompañamos en su rehabilitación, dándoles atención médica, cuidados especiales y mucho cariño para que recuperen su salud y confianza.\nCuando están listos, iniciamos el proceso de adopción, conectando a cada mascota con una familia responsable que les ofrezca un hogar seguro, lleno de amor y compromiso.\nCada etapa es un paso hacia una nueva vida. En Kuta, no solo rescatamos animales: construimos historias con finales felices."
     },
-    "WhyWeDoIt":{
+    "WhyWeDoIt": {
+        "title": {
+            "color": "text-purple",
+            "highlightPosition": 1,
+            "parts": [
+                "Por Que Lo",
+                "Hacemos"
+            ]
+        },
         "whyWeDoIt": "En Kuta, creemos que todos los animales merecen vivir con dignidad, seguridad y amor. Nuestra labor nace del corazón, pero también de una necesidad urgente. Estas son las razones que nos inspiran cada día:",
         "reason1": "Cada vida importa",
         "reason1Desc": "Cada perro o gato que rescatamos tiene una historia, un pasado difícil, pero también un futuro lleno de posibilidades. No vemos animales callejeros: vemos vidas que merecen ser respetadas.",
@@ -65,7 +147,15 @@
         "reason4": "Juntos cambiamos",
         "reason4Desc": "Ya sea adoptando, donando, siendo voluntario o simplemente compartiendo esta causa, cada acción cuenta. Creemos en una sociedad más consciente, solidaria y amorosa con los animales."
     },
-    "HowToHelp":{
+    "HowToHelp": {
+        "title": {
+            "color": "text-yellow",
+            "highlightPosition": 1,
+            "parts": [
+                "Como Puedes",
+                "Ayudar"
+            ]
+        },
         "howToHelp": "En Kuta, creemos que todos podemos ser parte del cambio. No importa si tienes mucho tiempo, poco espacio o recursos limitados: hay muchas formas de sumar.",
         "help1": "Adopta",
         "help1Desc": "Dale a un perro o gato rescatado la oportunidad de formar parte de tu familia. Adoptar es un acto de amor que cambia vidas.",
@@ -78,21 +168,29 @@
         "help5": "Difunde",
         "help5Desc": "Comparte nuestra labor en redes, habla con tus amigos, invita a otros a adoptar. Cuantas más personas se sumen, más lejos llegamos"
     },
-    "Adoptions":{
+    "Adoptions": {
         "adoptions": "Adopciones",
         "pageDesc": "¡Conoce a tu próximo mejor amigo! Explora las opciones de mascotas que están actualmente en rehabilitación y listas para un hogar lleno de amor.",
-        "apply": "Aplicar"
+        "apply": "Aplicar",
+        "petsTitle": {
+            "color": "text-purple",
+            "highlightPosition": 1,
+            "parts": [
+                "Mascotas en",
+                "Resguardo"
+            ]
+        }
     },
-    "AdoptionProcess":{
+    "AdoptionProcess": {
         "important": "Importante",
         "importantContent": "Es importante mencionar que el periodo en el que fue rescatado el  perro/gato , se le proporcionaron atenciones de primer momento como  desparasitación, vacuna, baño y esterilización con la finalidad de  comenzar de manera inmediata el proceso de cuidado que merece. Es por  ello; que se requiere del apoyo de tales gastos, por nuestra parte  comprobando el costo de los mismos. Nuestra intención es entregar a la  mascota esterilizada, desparasitada y con cartilla de vacunación vigente.\nLos datos proporcionados en este cuestionario serán utilizados única y exclusivamente para la evaluación de adopción de la mascota solicitada y no se divulgarán o se hará mal uso de ellos.",
         "start": "Comenzar",
         "privacyPolicy": "Para más información, consulta nuestro aviso de privacidad y uso de datos."
     },
-    "Footer":{
+    "Footer": {
         "mission": "Misión",
         "behindKuta": "Detrás de Kuta",
-        "proceso": "Process",
+        "process": "Process",
         "aboutUs": "Nosotros",
         "getToKnowKuta": "Conoce Kuta",
         "whoWeAre": "¿Quiénes somos?",
@@ -102,5 +200,15 @@
         "adoptions": "Adopciones",
         "requirements": "Requerimientos",
         "followUs": "Siguenos"
+    },
+    "SocialMedia": {
+        "title": {
+            "color": "text-purple",
+            "highlightPosition": 1,
+            "parts": [
+                "Siguenos en",
+                "Redes Sociales"
+            ]
+        }
     }
 }

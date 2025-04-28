@@ -2,6 +2,7 @@ import graySquiggle from "../../../assets/gray-squiggle.png";
 import { content } from "../../../assets/Content/content";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 
 const help = [
   {
@@ -77,9 +78,7 @@ export default function Help() {
       <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
         <div className="max-w-7xl mx-auto items-center flex flex-col gap-y-8 relative z-10">
           <div className="gap-y-3 flex flex-col items-center">
-            <h3 className="font-kulim font-semibold text-center text-2xl text-slate-800 md:text-4xl sm:text-3xl">
-              Cómo Puedes <span className="text-yellow">Ayudar</span>
-            </h3>
+            <DynamicTitle namespace={"HowToHelp"} translationKey={"title"}/>
             <p
               className="inter text-base text-slate-800 font-regular text-center md:w-[80%]"
               style={{ whiteSpace: "pre-line" }}

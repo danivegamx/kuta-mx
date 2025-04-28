@@ -8,6 +8,7 @@ import Image from "next/image";
 import Pet from "../Pet/pet";
 import AdoptionSteps from "../AdoptionSteps/adoptionSteps";
 import { useTranslations } from "next-intl";
+import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 
 export default function Adoptions() {
   const t = useTranslations("Adoptions");
@@ -81,9 +82,7 @@ export default function Adoptions() {
       {/* section 3 */}
       <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
         <div className="w-full flex flex-col items-start max-w-7xl mx-auto gap-y-8">
-          <h3 className="font-kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
-            Mascotas en <span className="text-purple">Resguardo</span>
-          </h3>
+          <DynamicTitle namespace={"Adoptions"} translationKey={"petsTitle"}/>
           <Pet></Pet>
         </div>
       </section>

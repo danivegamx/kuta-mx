@@ -1,6 +1,7 @@
 import { icon } from "@fortawesome/fontawesome-svg-core";
 import { content } from "../../../assets/Content/content";
 import { useTranslations } from "next-intl";
+import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 
 
 
@@ -40,9 +41,7 @@ export default function Reasons() {
         <div className="bg-gradient-to-br from-gradientBlue to-gradientPurple rounded-lg px-5 py-7 sm:px-10 sm:py-10 flex flex-col gap-y-10 max-w-7xl mx-auto">
         <div className="flex flex-col gap-y-14">
           <div className="flex flex-col gap-y-3 justify-center items-center">
-            <h3 className="font-kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl text-center">
-              ¿Por Qué Lo <span className="text-purple">Hacemos</span>?
-            </h3>
+            <DynamicTitle namespace={"WhyWeDoIt"} translationKey={"title"}/>
             <p
               className="inter text-base text-slate-800 font-regular text-center md:w-[80%]"
               style={{ whiteSpace: "pre-line" }}

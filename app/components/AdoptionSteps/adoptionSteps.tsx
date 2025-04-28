@@ -4,6 +4,7 @@ import purplePerson from "../../../assets/purple-woman-dog.png"
 import Image from "next/image";
 import Requirements from "../Requirements/requirements";
 import { useTranslations } from "next-intl";
+import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 
 
 
@@ -42,10 +43,7 @@ const steps = [
                   <Image src={isLanding ? yellowPerson : purplePerson} alt={"Person with dog"} />
                 </div>
                 <div className={`flex flex-col gap-y-11 ${isAdoption ? "":"md:w-1/2"}`}>
-                  <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl text-center md:text-left">
-                    Pasos Para <span className={`${isLanding || isAdoption  ? "text-yellow" : "text-purple"}`}>Adoptar</span> En
-                    Kuta
-                  </h3>
+                <DynamicTitle namespace={"AdoptionSteps"} translationKey={"title"} overrideColor={!isLanding  ? (isAdoption ? "text-yellow":"text-purple") : undefined}/>
                   <div className="relative">
                     {steps.map((step, index) => (
                       <div

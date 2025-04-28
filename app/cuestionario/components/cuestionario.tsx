@@ -324,7 +324,7 @@ const Questionnaire = () => {
                     style={{
                       background: `url(${foto_mascota_1.imgix_url})`,
                       backgroundSize: "cover",
-                      backgroundPosition: "center",
+                      backgroundPosition: "top",
                     }}
                   />
                   <div className="mascot-data p-5 gap-y-2 flex flex-col bg-white rounded-b-lg">

@@ -24,6 +24,8 @@ import maggieBefore from "../../../assets/Pets/maggie-before.jpeg";
 import maggieAfter from "../../../assets/Pets/maggie-after.jpeg";
 import zeusBefore from "../../../assets/Pets/zeus-before.jpeg";
 import zeusAfter from "../../../assets/Pets/zeus-after.jpeg";
+import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
+import { useTranslations } from "next-intl";
 
 const images = [
   {
@@ -89,6 +91,7 @@ const images = [
 ];
 
 export default function HappyEndings() {
+  const t = useTranslations("Home")
   return (
     <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-12">
       <div className="max-w-7xl mx-auto flex flex-col gap-y-6">
@@ -98,9 +101,7 @@ export default function HappyEndings() {
             alt={"Star emphasis"}
             className="w-8 h-12"
           ></Image>
-          <h3 className="text-nowrap font-kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
-            Finales <span className="text-blue">Felices</span>
-          </h3>
+          <DynamicTitle namespace={"Home"} translationKey={"happyEndings"}/>
           <Image
             src={startEmphasis}
             alt={"Star emphasis"}
@@ -133,7 +134,7 @@ export default function HappyEndings() {
                       </div>
                       <div className="bg-lightBlue rounded-b-lg p-3 flex items-center justify-center">
                         <h5 className="font-caveat text-slate-800 text-xl text-center">
-                          Antes
+                          {t("before")}
                         </h5>
                       </div>
                     </div>
@@ -148,7 +149,7 @@ export default function HappyEndings() {
                       </div>
                       <div className="bg-lightBlue rounded-b-lg p-3 flex items-center justify-center">
                         <h5 className="font-caveat text-slate-800 text-xl text-center">
-                          Despues
+                        {t("after")}
                         </h5>
                       </div>
                     </div>

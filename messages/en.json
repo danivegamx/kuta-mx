@@ -11,16 +11,74 @@
         "heroText": "Explore pets looking for a loving home, just like yours.",
         "adoptToday": "Adopt Today",
         "musicExperience": "Experience with music",
+        "home4PawsTitle": {
+            "color": "text-blue",
+            "highlightPosition": 1,
+            "parts": [
+                "A",
+                "Home",
+                "For Every Paw"
+            ]
+        },
         "home4PawsDesc": "We believe that every pet deserves a second chance and a home where they are loved. Behind every gaze, there is a story, and with your help, they can have a new beginning.\nWe work alongside shelters and rescuers to connect dogs and cats with people willing to give them a life full of love. Adopting not only changes the life of a pet, but also transforms yours.\nOur mission is simple but powerful: to help more animals find a home full of love.",
         "knowMore": "Know More",
+        "adoptionTitle": {
+            "color": "text-purple",
+            "highlightPosition": 1,
+            "parts": [
+                "Pets Up For",
+                "Adoption"
+            ]
+        },
         "petsInAdoption": "Explore profiles of dogs and cats waiting for loving homes. Adopting is easy—start here!",
+        "processTitle": {
+            "color": "text-blue",
+            "highlightPosition": 1,
+            "parts": [
+                "Discover What's",
+                "Behind"
+            ]
+        },
         "kutaProcess": "We are a group of people passionate about animals, committed to building a more just, compassionate, and loving world for them.",
+        "storiesTitle": {
+            "color": "text-purple",
+            "highlightPosition": 0,
+            "parts": [
+                "Success",
+                "Stories"
+            ]
+        },
         "successStories": "Each pet has a unique personality, and finding the right person can make the difference between a simple adoption and a lifelong connection.\n We make sure every adoption story is special, looking for families that understand, respect, and love each animal just as they are. True success isn't just about adoption — it's about creating the perfect match between pet and human.\n Because when they meet, what begins is much more than companionship: it's a story of love, loyalty, and second chances.",
+        "happyEndings": {
+            "color": "text-blue",
+            "highlightPosition": 0,
+            "parts": [
+                "Happy",
+                "Endings"
+            ]
+        },
         "before": "Before",
         "after": "After",
+        "behindTitle": {
+            "color": "text-yellow",
+            "highlightPosition": 1,
+            "parts": [
+                "Who Is Behind",
+                "Kuta?"
+            ]
+        },
         "behindKuta": "Meet the people and the roles that make this mission possible. Each member contributes their love, time, and commitment to changing lives—one pet at a time."
     },
     "AdoptionSteps": {
+        "title": {
+            "color": "text-yellow",
+            "highlightPosition": 1,
+            "parts": [
+                "Steps To",
+                "Adopt",
+                "In Kuta"
+            ]
+        },
         "firstStep": "Fill the adoption questionnare",
         "firstStepDesc": "Tell us about yourself and your environment to make sure the pet fits your lifestyle.",
         "secondStep": "First date with the pet",
@@ -51,10 +109,34 @@
     "AboutUs": {
         "aboutUs": "About Us",
         "pageDesc": "Learn more about Kuta!",
+        "whoWeAre": {
+            "color": "text-yellow",
+            "highlightPosition": 0,
+            "parts": [
+                "Who",
+                "We Are"
+            ]
+        },
         "whoWeAreDesc": "We are Kuta, a community of people passionate about animal welfare. We are driven by love, empathy, and a commitment to every life we rescue.\nSince our beginnings, we have worked to offer a second chance to dogs and cats who have been victims of abandonment or abuse. We believe that each one deserves a home where they are valued, cared for, and loved.\nAt Kuta, we rescue, rehabilitate, and support each pet through their physical and emotional recovery process until we find the ideal family to give them a new life. We are not just a bridge between animals and people: we are a network of hearts united by a cause.",
+        "whatWeDo": {
+            "color": "text-blue",
+            "highlightPosition": 0,
+            "parts": [
+                "What",
+                "We Do"
+            ]
+        },
         "whatWeDoDesc": "At Kuta, we work for the well-being of vulnerable dogs and cats. Our process begins with rescue, giving a second chance to animals who have been abandoned or mistreated.\nOnce safe, we accompany them through their rehabilitation, providing medical attention, special care, and lots of love so they can regain their health and trust.\nWhen they are ready, we start the adoption process, connecting each pet with a responsible family that offers them a safe home filled with love and commitment.\nEach stage is a step toward a new life. At Kuta, we don't just rescue animals: we build stories with happy endings."
     },
     "WhyWeDoIt": {
+        "title": {
+            "color": "text-purple",
+            "highlightPosition": 0,
+            "parts": [
+                "Why",
+                "We Do It"
+            ]
+        },
         "whyWeDoIt": "At Kuta, we believe that all animals deserve to live with dignity, safety, and love. Our work comes from the heart, but also from an urgent need. These are the reasons that inspire us every day:",
         "reason1": "Every Life Matters",
         "reason1Desc": "Every dog or cat we rescue has a story, a difficult past, but also a future full of possibilities. We don't see stray animals: we see lives that deserve respect.",
@@ -66,6 +148,14 @@
         "reason4Desc": "Whether by adopting, donating, volunteering, or simply sharing this cause, every action counts. We believe in a more conscious, supportive, and loving society toward animals."
     },
     "HowToHelp": {
+        "title": {
+            "color": "text-yellow",
+            "highlightPosition": 1,
+            "parts": [
+                "How You Can",
+                "Help"
+            ]
+        },
         "howToHelp": "At Kuta, we believe that everyone can be part of the change. It doesn't matter if you have a lot of time, little space, or limited resources: there are many ways to contribute.",
         "help1": "Adopt",
         "help1Desc": "Give a rescued dog or cat the chance to become part of your family. Adopting is an act of love that changes lives.",
@@ -81,7 +171,15 @@
     "Adoptions": {
         "adoptions": "Adoptions",
         "pageDesc": "Meet your next best friend! Explore the pets that are currently in rehabilitation and ready for a loving home.",
-        "apply": "Apply"
+        "apply": "Apply",
+        "petsTitle": {
+            "color": "text-purple",
+            "highlightPosition": 1,
+            "parts": [
+                "Pets in",
+                "Shelter"
+            ]
+        }
     },
     "AdoptionProcess": {
         "important": "Important",
@@ -92,7 +190,7 @@
     "Footer": {
         "mission": "Mission",
         "behindKuta": "Behind Kuta",
-        "proceso": "Process",
+        "process": "Process",
         "aboutUs": "About Us",
         "getToKnowKuta": "Get to Know Kuta",
         "whoWeAre": "Who We Are",
@@ -102,5 +200,15 @@
         "adoptions": "Adoptions",
         "requirements": "Requirements",
         "followUs": "Follow Us"
+    },
+    "SocialMedia":{
+        "title": {
+            "color": "text-purple",
+            "highlightPosition": 1,
+            "parts": [
+                "Follow Us On",
+                "Social Media"
+            ]
+        }
     }
 }

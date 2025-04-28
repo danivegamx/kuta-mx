@@ -1,6 +1,7 @@
 import facebook from "../../../assets/facebook.png";
 import instagram from "../../../assets/instagram.png";
 import Image from "next/image";
+import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 
 export default function SocialMedia() {
   return (
@@ -8,9 +9,7 @@ export default function SocialMedia() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-row justify-between mb-3 md:mb-6">
           <div>
-            <h3 className="text-nowrap font-kulim font-semibold text-2xl text-slate-800 sm:text-3xl md:text-4xl">
-              Siguenos en <span className="text-purple">Redes Sociales!</span>
-            </h3>
+            <DynamicTitle namespace={"SocialMedia"} translationKey={"title"}/>
           </div>
           <div className="flex flex-row gap-x-3 invisible md:visible">
             <a
