@@ -94,7 +94,7 @@ export default function Navigation({ isAdoption = false }: NavigationProps) {
                     }`}
                     href={item.link}
                   >
-                    {item.label}
+                    {t(item.label)}
                   </a>
                 </li>
               ))}

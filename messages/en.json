@@ -1,8 +1,8 @@
 {
     "Navigation": {
-        "aboutUs": "About Us",
-        "stories": "Stories",
-        "adoptions": "Adoptions",
+        "Nosotros": "About Us",
+        "Historias": "Stories",
+        "Adopciones": "Adoptions",
         "contactUs": "Contact Us"
     },
     "Home": {
@@ -31,9 +31,6 @@
         "requirement2": "Contar con una camita cómoda para su descanso",
         "requirement3": "Have an identification plate",
         "requirement4": "Have a comfortable bed for your rest"
-    },
-    "Adoptions": {
-        "apply": "Apply"
     },
     "Process": {
         "firstStep": "Rescue",
@@ -80,5 +77,10 @@
         "help4Desc": "Join our team and help us with rescues, care, events, or outreach. There's always something you can do for them.",
         "help5": "Spread the Word",
         "help5Desc": "Share our work on social media, talk to your friends, and invite others to adopt. The more people join, the farther we go."
+    },
+    "Adoptions": {
+        "adoptions": "Adoptions",
+        "pageDesc": "Meet your next best friend! Explore the pets that are currently in rehabilitation and ready for a loving home.",
+        "apply": "Apply"
     }
 }

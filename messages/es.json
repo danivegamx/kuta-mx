@@ -1,8 +1,8 @@
 {
     "Navigation" :{
-        "aboutUs": "Nosotros",
-        "stories": "Historias",
-        "adoptions": "Adopciones",
+        "Nosotros": "Nosotros",
+        "Historias": "Historias",
+        "Adopciones": "Adopciones",
         "contactUs": "Contáctanos"
     },
     "Home" : {
@@ -31,9 +31,6 @@
         "requirement2": "Contar con una camita cómoda para su descanso",
         "requirement3": "Tener una placa de identificación",
         "requirement4": "Contar con una camita cómoda para su descanso"
-    },
-    "Adoptions":{
-        "apply": "Aplicar"
     },
     "Process":{
         "firstStep": "Rescate",
@@ -80,5 +77,10 @@
         "help4Desc": "Únete a nuestro equipo y apóyanos en rescates, cuidados, eventos o difusión. Siempre hay algo que puedes hacer por ellos.",
         "help5": "Difunde",
         "help5Desc": "Comparte nuestra labor en redes, habla con tus amigos, invita a otros a adoptar. Cuantas más personas se sumen, más lejos llegamos"
+    },
+    "Adoptions":{
+        "adoptions": "Adopciones",
+        "pageDesc": "¡Conoce a tu próximo mejor amigo! Explora las opciones de mascotas que están actualmente en rehabilitación y listas para un hogar lleno de amor.",
+        "apply": "Aplicar"
     }
 }

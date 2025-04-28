@@ -13,7 +13,7 @@ export default function Button({ data }: any) {
           className={`${
             sin_borde
               ? ` text-white`
-              : "bg-transparent border hover:bg-gradient-to-r from-purple to-violet-900 hover:text-white hover:border-transparent transition duration-300 ease-in-out"
+              : "bg-transparent border hover:bg-gradient-to-r from-purple to-violet-900 hover:text-white hover:border-transparent transition duration-300 ease-in-out text-purple"
           } flex flex-1 rounded-md py-2 justify-center`}
           style={
             sin_borde ? { backgroundColor: color } : { borderColor: color }

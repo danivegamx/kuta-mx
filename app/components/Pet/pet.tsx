@@ -81,7 +81,7 @@ export default function Pet({ isLanding = false }: PetProps) {
                 }}
               />
               <div className="mascot-data p-5 gap-y-2 flex flex-col bg-white rounded-lg">
-                <div className="flex flex-row items-center justify-between">
+                <div className="flex flex-row items-center justify-between gap-x-4">
                   <h2 className="inter font-medium text-xl text-slate-800">
                     {title}
                   </h2>

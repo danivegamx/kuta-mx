@@ -7,8 +7,11 @@ import stepsLine from "../../../assets/steps-line.png";
 import Image from "next/image";
 import Pet from "../Pet/pet";
 import AdoptionSteps from "../AdoptionSteps/adoptionSteps";
+import { useTranslations } from "next-intl";
 
 export default function Adoptions() {
+  const t = useTranslations("Adoptions");
+
   return (
     <>
       <section className="w-full overflow-hidden relative bg-bgPurple relative">
@@ -25,10 +28,10 @@ export default function Adoptions() {
                   sm:text-4xl
                   md:text-5xl"
               >
-                Adopciones
+                {t("adoptions")}
               </h3>
               <p className="text-slate-800 font-medium text-base inter text-center font-inter sm:w-[70%]">
-                {content.adoptions}
+                {t("pageDesc")}
               </p>
             </div>
             <Image
