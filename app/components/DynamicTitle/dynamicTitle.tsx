@@ -23,7 +23,7 @@ export function DynamicTitle({ namespace, translationKey, overrideColor }: Dynam
   }
 
   return (
-    <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl text-center md:text-left">
+    <h3 className="font-kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl text-center md:text-left">
       {titleKey.parts.map((part, index) => (
         <span
           key={index}
