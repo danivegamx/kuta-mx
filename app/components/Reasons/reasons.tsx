@@ -1,34 +1,39 @@
 import { icon } from "@fortawesome/fontawesome-svg-core";
 import { content } from "../../../assets/Content/content";
+import { useTranslations } from "next-intl";
 
-const reasons = [
-  {
-    title: "Cada vida importa",
-    content: content.reasons1,
-    icon: "pets",
-    bg: "#6993E2"
-  },
-  {
-    title: "Contra el abandono",
-    content: content.reasons2,
-    icon: "sentiment_sad",
-    bg: "#6981E2"
-  },
-  {
-    title: "Adopción responsable",
-    content: content.reasons3,
-    icon: "lightbulb",
-    bg: "#6973E2"
-  },
-  {
-    title: "Juntos cambiamos",
-    content: content.reasons4,
-    icon: "diversity_1",
-    bg: "#B07CE7"
-  },
-];
+
 
 export default function Reasons() {
+  const t = useTranslations("WhyWeDoIt");
+
+  const reasons = [
+    {
+      title: t("reason1"),
+      content: t("reason1Desc"),
+      icon: "pets",
+      bg: "#6993E2"
+    },
+    {
+      title: t("reason2"),
+      content: t("reason2Desc"),
+      icon: "sentiment_sad",
+      bg: "#6981E2"
+    },
+    {
+      title: t("reason3"),
+      content: t("reason3Desc"),
+      icon: "lightbulb",
+      bg: "#6973E2"
+    },
+    {
+      title: t("reason4"),
+      content: t("reason4Desc"),
+      icon: "diversity_1",
+      bg: "#B07CE7"
+    },
+  ]
+
   return (
     <>
     <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20">
@@ -41,8 +46,10 @@ export default function Reasons() {
             <p
               className="inter text-base text-slate-800 font-regular text-center md:w-[80%]"
               style={{ whiteSpace: "pre-line" }}
+              dangerouslySetInnerHTML={{
+                __html: t("whyWeDoIt").replace(/\n/g, "<br/><br/>"),
+              }}
             >
-              {content.reasonsDesc}
             </p>
           </div>
           <div className="flex flex-col gap-y-5 gap-x-5 sm:grid sm:grid-cols-2 md:flex md:flex-row">

@@ -1,6 +1,7 @@
 import graySquiggle from "../../../assets/gray-squiggle.png";
 import { content } from "../../../assets/Content/content";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const help = [
   {
@@ -36,6 +37,41 @@ const help = [
 ];
 
 export default function Help() {
+  const t = useTranslations("HowToHelp")
+
+  const help = [
+    {
+      title: t("help1"),
+      content: t("help1Desc"),
+      color: "#F7DEBA",
+      icon: "pets",
+    },
+    {
+      title: t("help2"),
+      content: t("help2Desc"),
+      color: "#D4CFE3",
+      icon: "cottage",
+    },
+    {
+      title: t("help3"),
+      content: t("help3Desc"),
+      color: "#C4E3EE",
+      icon: "attach_money",
+    },
+    {
+      title: t("help4"),
+      content: t("help4Desc"),
+      color: "#ADD3FF",
+      icon: "person_raised_hand",
+    },
+    {
+      title: t("help5"),
+      content: t("help5Desc"),
+      color: "#FFB2B4",
+      icon: "share",
+    },
+  ];
+
   return (
     <>
       <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
@@ -48,7 +84,7 @@ export default function Help() {
               className="inter text-base text-slate-800 font-regular text-center md:w-[80%]"
               style={{ whiteSpace: "pre-line" }}
             >
-              {content.howToHelpDec}
+              {t("howToHelp")}
             </p>
           </div>
           <div className="flex flex-col gap-y-5 gap-x-5 sm:flex-row sm:flex-wrap md:flex-nowrap justify-center">

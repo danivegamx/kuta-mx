@@ -9,8 +9,11 @@ import { content } from "../../../assets/Content/content";
 import Reasons from "../Reasons/reasons";
 import Help from "../Help/help";
 import SocialMedia from "../Social Media/socialMedia";
+import { useTranslations } from "next-intl";
 
 export default function AboutUs() {
+  const t = useTranslations("AboutUs");
+
   return (
     <main>
       <section className="w-full overflow-hidden relative bg-bgYellow relative">
@@ -30,7 +33,7 @@ export default function AboutUs() {
                   sm:text-4xl
                   md:text-5xl"
               >
-                Nosotros
+                {t("aboutUs")}
               </h3>
               <Image
                 src={starEmphasis}
@@ -39,7 +42,7 @@ export default function AboutUs() {
               />
             </div>
             <p className="text-slate-800 font-medium text-base inter w-3/4 text-center">
-              Conoce más sobre Kuta!
+            {t("pageDesc")}
             </p>
           </div>
         </div>
@@ -68,8 +71,10 @@ export default function AboutUs() {
             <p
               className="inter text-base text-slate-800 font-regular"
               style={{ whiteSpace: "pre-line" }}
+              dangerouslySetInnerHTML={{
+                __html: t("whoWeAreDesc").replace(/\n/g, "<br/><br/>"),
+              }}
             >
-              {content.whoWeAre}
             </p>
           </div>
           <div className="md:w-1/2">
@@ -107,8 +112,10 @@ export default function AboutUs() {
             <p
               className="inter text-base text-slate-800 font-regular"
               style={{ whiteSpace: "pre-line" }}
+              dangerouslySetInnerHTML={{
+                __html: t("whatWeDoDesc").replace(/\n/g, "<br/><br/>"),
+              }}
             >
-              {content.whatWeDo}
             </p>
           </div>
         </div>

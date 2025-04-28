@@ -50,5 +50,35 @@
         "role2Desc": "Voluntarios amorosos que ofrecen un hogar temporal, brindando cuidado y cariño mientras las mascotas esperan a su familia definitiva.",
         "role3": "Voluntarios",
         "role3Desc": "Personas comprometidas que apoyan en cada paso: desde el rescate hasta el cuidado y la adopción. Sin ellos, nada sería posible."
+    },
+    "AboutUs":{
+        "aboutUs": "Nosotros",
+        "pageDesc": "Conoce más sobre Kuta!",
+        "whoWeAreDesc": "Somos Kuta, una comunidad de personas apasionadas por el bienestar animal. Nos mueve el amor, la empatía y el compromiso con cada vida que rescatamos.\nDesde nuestros inicios, hemos trabajado para ofrecer una segunda oportunidad a perros y gatos que han sido víctimas del abandono o el maltrato. Creemos que cada uno merece un hogar donde sea valorado, cuidado y amado.\nEn Kuta, rescatamos, rehabilitamos y acompañamos a cada mascota en su proceso de recuperación física y emocional, hasta encontrar la familia ideal que le brinde una nueva vida. No somos solo un puente entre animales y personas: somos una red de corazones unidos por una causa.",
+        "whatWeDoDesc": "En Kuta trabajamos por el bienestar de perros y gatos en situación vulnerable. Nuestro proceso comienza con el rescate, brindando una segunda oportunidad a animales que han sido abandonados o maltratados.\nUna vez a salvo, los acompañamos en su rehabilitación, dándoles atención médica, cuidados especiales y mucho cariño para que recuperen su salud y confianza.\nCuando están listos, iniciamos el proceso de adopción, conectando a cada mascota con una familia responsable que les ofrezca un hogar seguro, lleno de amor y compromiso.\nCada etapa es un paso hacia una nueva vida. En Kuta, no solo rescatamos animales: construimos historias con finales felices."
+    },
+    "WhyWeDoIt":{
+        "whyWeDoIt": "En Kuta, creemos que todos los animales merecen vivir con dignidad, seguridad y amor. Nuestra labor nace del corazón, pero también de una necesidad urgente. Estas son las razones que nos inspiran cada día:",
+        "reason1": "Cada vida importa",
+        "reason1Desc": "Cada perro o gato que rescatamos tiene una historia, un pasado difícil, pero también un futuro lleno de posibilidades. No vemos animales callejeros: vemos vidas que merecen ser respetadas.",
+        "reason2": "Contra el abandono",
+        "reason2Desc": "Miles de animales viven en condiciones de maltrato, negligencia o abandono. Trabajamos para cambiar esa realidad, ofreciendo segundas oportunidades y generando conciencia en nuestra comunidad.",
+        "reason3": "Adopción responsable",
+        "reason3Desc": "Adoptar no es solo llevar una mascota a casa, es comprometerse con una vida. Promovemos adopciones responsables, donde el bienestar del animal y la preparación de la familia van de la mano.",
+        "reason4": "Juntos cambiamos",
+        "reason4Desc": "Ya sea adoptando, donando, siendo voluntario o simplemente compartiendo esta causa, cada acción cuenta. Creemos en una sociedad más consciente, solidaria y amorosa con los animales."
+    },
+    "HowToHelp":{
+        "howToHelp": "En Kuta, creemos que todos podemos ser parte del cambio. No importa si tienes mucho tiempo, poco espacio o recursos limitados: hay muchas formas de sumar.",
+        "help1": "Adopta",
+        "help1Desc": "Dale a un perro o gato rescatado la oportunidad de formar parte de tu familia. Adoptar es un acto de amor que cambia vidas.",
+        "help2": "Sé casa puente",
+        "help2Desc": "Brinda un hogar temporal a una mascota mientras encuentra a su familia definitiva. Tu apoyo puede marcar la diferencia en su proceso de recuperación.",
+        "help3": "Dona",
+        "help3Desc": "Tu contribución nos ayuda a cubrir gastos médicos, alimento, esterilizaciones y más. Cada peso cuenta para seguir salvando vidas.",
+        "help4": "Sé voluntario",
+        "help4Desc": "Únete a nuestro equipo y apóyanos en rescates, cuidados, eventos o difusión. Siempre hay algo que puedes hacer por ellos.",
+        "help5": "Difunde",
+        "help5Desc": "Comparte nuestra labor en redes, habla con tus amigos, invita a otros a adoptar. Cuantas más personas se sumen, más lejos llegamos"
     }
 }

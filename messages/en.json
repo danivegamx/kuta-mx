@@ -1,11 +1,11 @@
 {
-    "Navigation" :{
+    "Navigation": {
         "aboutUs": "About Us",
         "stories": "Stories",
         "adoptions": "Adoptions",
         "contactUs": "Contact Us"
     },
-    "Home" : {
+    "Home": {
         "sloganP1": "My favorite breed is",
         "sloganP2": "Adopted",
         "heroText": "Explore pets looking for a loving home, just like yours.",
@@ -20,10 +20,10 @@
         "after": "After",
         "behindKuta": "Meet the people and the roles that make this mission possible. Each member contributes their love, time, and commitment to changing lives—one pet at a time."
     },
-    "AdoptionSteps" : {
-        "firstStep" : "Fill the adoption questionnare",
+    "AdoptionSteps": {
+        "firstStep": "Fill the adoption questionnare",
         "firstStepDesc": "Tell us about yourself and your environment to make sure the pet fits your lifestyle.",
-        "secondStep" : "First date with the pet",
+        "secondStep": "First date with the pet",
         "secondStepDesc": "We arrange a meeting between you and your pet to see if there's a connection.",
         "thirdStep": "If there's chemistry... Let's continue!",
         "thirdStepDescription": "We proceed with the following requirements:",
@@ -32,10 +32,10 @@
         "requirement3": "Have an identification plate",
         "requirement4": "Have a comfortable bed for your rest"
     },
-    "Adoptions":{
+    "Adoptions": {
         "apply": "Apply"
     },
-    "Process":{
+    "Process": {
         "firstStep": "Rescue",
         "firstStepDesc": "We remove animals from situations of abuse, abandonment, or inadequate conditions, giving them a new chance at life.",
         "secondStep": "Rehabilitation",
@@ -43,12 +43,42 @@
         "thirdStep": "Adoption",
         "thirdStepDesc": "We accompany the adoption process, connecting each pet with a responsible family ready to give them a loving home."
     },
-    "BehindKuta":{
-        "role1" : "Rescuers",
+    "BehindKuta": {
+        "role1": "Rescuers",
         "role1Desc": "Brave heroes who are on the front lines, saving lives and keeping animals safe from abuse and abandonment.",
         "role2": "Halfway house",
         "role2Desc": "Loving volunteers offer a temporary home, providing care and affection while pets wait for their forever families.",
         "role3": "Volunteers",
         "role3Desc": "Dedicated people who support us every step of the way: from rescue to care and adoption. Without them, nothing would be possible."
+    },
+    "AboutUs": {
+        "aboutUs": "About Us",
+        "pageDesc": "Learn more about Kuta!",
+        "whoWeAreDesc": "We are Kuta, a community of people passionate about animal welfare. We are driven by love, empathy, and a commitment to every life we rescue.\nSince our beginnings, we have worked to offer a second chance to dogs and cats who have been victims of abandonment or abuse. We believe that each one deserves a home where they are valued, cared for, and loved.\nAt Kuta, we rescue, rehabilitate, and support each pet through their physical and emotional recovery process until we find the ideal family to give them a new life. We are not just a bridge between animals and people: we are a network of hearts united by a cause.",
+        "whatWeDoDesc": "At Kuta, we work for the well-being of vulnerable dogs and cats. Our process begins with rescue, giving a second chance to animals who have been abandoned or mistreated.\nOnce safe, we accompany them through their rehabilitation, providing medical attention, special care, and lots of love so they can regain their health and trust.\nWhen they are ready, we start the adoption process, connecting each pet with a responsible family that offers them a safe home filled with love and commitment.\nEach stage is a step toward a new life. At Kuta, we don't just rescue animals: we build stories with happy endings."
+    },
+    "WhyWeDoIt": {
+        "whyWeDoIt": "At Kuta, we believe that all animals deserve to live with dignity, safety, and love. Our work comes from the heart, but also from an urgent need. These are the reasons that inspire us every day:",
+        "reason1": "Every Life Matters",
+        "reason1Desc": "Every dog or cat we rescue has a story, a difficult past, but also a future full of possibilities. We don't see stray animals: we see lives that deserve respect.",
+        "reason2": "Against Abandonment",
+        "reason2Desc": "Thousands of animals live in conditions of abuse, neglect, or abandonment. We work to change that reality by offering second chances and raising awareness in our community.",
+        "reason3": "Responsible Adoption",
+        "reason3Desc": "Adopting is not just about bringing a pet home, it's about committing to a life. We promote responsible adoptions where the well-being of the animal and the family's preparation go hand in hand.",
+        "reason4": "Together We Change",
+        "reason4Desc": "Whether by adopting, donating, volunteering, or simply sharing this cause, every action counts. We believe in a more conscious, supportive, and loving society toward animals."
+    },
+    "HowToHelp": {
+        "howToHelp": "At Kuta, we believe that everyone can be part of the change. It doesn't matter if you have a lot of time, little space, or limited resources: there are many ways to contribute.",
+        "help1": "Adopt",
+        "help1Desc": "Give a rescued dog or cat the chance to become part of your family. Adopting is an act of love that changes lives.",
+        "help2": "Be a Foster Home",
+        "help2Desc": "Provide a temporary home to a pet while they find their forever family. Your support can make a difference in their recovery process.",
+        "help3": "Donate",
+        "help3Desc": "Your contribution helps us cover medical expenses, food, spaying/neutering, and more. Every peso counts toward saving more lives.",
+        "help4": "Volunteer",
+        "help4Desc": "Join our team and help us with rescues, care, events, or outreach. There's always something you can do for them.",
+        "help5": "Spread the Word",
+        "help5Desc": "Share our work on social media, talk to your friends, and invite others to adopt. The more people join, the farther we go."
     }
 }
