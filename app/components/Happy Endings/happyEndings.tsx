@@ -13,7 +13,7 @@ import cloeAfter from "../../../assets/Pets/cloe-after.jpeg";
 import gaiaBefore from "../../../assets/Pets/gaia-before.jpeg";
 import gaiaAfter from "../../../assets/Pets/gaia-after.jpeg";
 import gigiBefore from "../../../assets/Pets/gigi-before.jpeg";
-import gigiAfter from "../../../assets/Pets/gig-after.jpeg";
+import gigiAfter from "../../../assets/Pets/gigi-after.jpeg";
 import kiaraBefore from "../../../assets/Pets/kiara-before.jpeg";
 import kiaraAfter from "../../../assets/Pets/kiara-after.jpeg";
 import kikaBefore from "../../../assets/Pets/kika-before.jpeg";
