@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
-import songCover from "../../../assets/song-cover.png"
+import songCover from "../../../assets/better-together.jpg"
 
 const MusicPlayer = () => {
   const audioRef = useRef(null);
@@ -39,8 +39,8 @@ const MusicPlayer = () => {
         <div className="flex flex-row gap-x-4 items-center">
             <Image src={songCover} alt="Song cover" width={52} height={52} className="rounded"/>
             <div>
-                <p className="font-inter font-medium text-[16px] text-slate-800">Unbreakable Resolve</p>
-                <p className="font-inter font-normal text-[16px] text-slate-800">Lunar Years</p>
+                <p className="font-inter font-medium text-[16px] text-slate-800">Better Together</p>
+                <p className="font-inter font-normal text-[16px] text-slate-800">Jack Johnson</p>
             </div>
         </div>
       <button
@@ -61,7 +61,7 @@ const MusicPlayer = () => {
         />
       </div>
       <audio ref={audioRef} loop>
-        <source src="/assets/Audio/unbreakableresolve.mp3" type="audio/mpeg" />
+        <source src="/assets/Audio/betterTogether.mp3" type="audio/mpeg" />
         Your browser does not support the audio element.
       </audio>
     </div>
