@@ -12,7 +12,7 @@ const Cuestionario = () => {
     <Suspense>
       <main className="questionnaire-main">
         <header>
-          <Navigation />
+          <Navigation isAdoption/>
         </header>
         <Questionnaire />
         <Footer />

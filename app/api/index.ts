@@ -25,12 +25,19 @@ const cosmic = createBucketClient({
   bucketSlug: process.env.COSMIC_BUCKET_SLUG || 'kuta-mx-production',
   readKey: process.env.COSMIC_READ_KEY || 'YTN3z9QH5U4vjkkiDBFTe7D0CzoKTzT0P1IEEtILP5p6tpyRYv',
 });
+const getHomePageData = async () => {
+  const response = await cosmic.objects.find({
+    type: 'homepage',
+    slug: "homepage"
+  }).depth(2);
+  return response;
+};
 
-const getHomePageData = async () => await cosmic.objects
-.find({
-  type: 'homepage',
-  slug: "homepage"
-}).depth(2);
+// const getHomePageData = async () => await cosmic.objects
+// .find({
+//   type: 'homepage',
+//   slug: "homepage"
+// }).depth(2);
 
 const getAdoptionsData = async () => await cosmic.objects
 .find({
