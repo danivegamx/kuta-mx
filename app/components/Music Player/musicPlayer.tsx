@@ -5,7 +5,7 @@ import Image from "next/image";
 import songCover from "../../../assets/better-together.jpg"
 
 const MusicPlayer = () => {
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
 

@@ -23,7 +23,7 @@ export default function Navigation({ isAdoption = false }: NavigationProps) {
   const [locale, setLocale] = useState<string>("es");
   const [openMenu, setOpenMenu] = React.useState<boolean>(false);
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
 
   useEffect(() => {

@@ -337,7 +337,7 @@ const Questionnaire = () => {
                           {raza}
                         </div>
                         <div
-                          className={`w-10 h-10 rounded-full flex justify-center items-center ${genero?.value === "Hembra"
+                          className={`w-10 h-10 rounded-full flex justify-center items-center ${genero === "Hembra"
                               ? "bg-rose-300"
                               : "bg-[#8EC5FF]"
                             }`}
@@ -346,7 +346,7 @@ const Questionnaire = () => {
                             className="material-symbols-outlined text-white"
                             style={{ fontSize: "24px" }}
                           >
-                            {genero?.value === "Hembra" ? "female" : "male"}
+                            {genero === "Hembra" ? "female" : "male"}
                           </span>
                         </div>
                       </div>
@@ -359,7 +359,7 @@ const Questionnaire = () => {
                         >
                           cake
                         </span>
-                        <p className="inter font-medium text-slate-600">{`${edad} ${edad !== 1 ? "años" : "año"
+                        <p className="inter font-medium text-slate-600">{`${edad} ${Number(edad) !== 1 ? "años" : "año"
                           }`}</p>
                       </div>
                       <div className="flex items-center gap-x-2">

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import facebook from "../../../assets/facebook.png";
 import instagram from "../../../assets/instagram.png";
 import Image from "next/image";
@@ -41,7 +42,7 @@ export default function SocialMedia() {
           <iframe
             src="//lightwidget.com/widgets/f84cca06d4fa57ca880793933996c1a5.html"
             scrolling="no"
-            allowtransparency="true"
+            allowTransparency
             className="lightwidget-widget"
             style={{width:"100%",border:0,overflow:"hidden", outline: "none"}}
           ></iframe>
