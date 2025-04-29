@@ -32,6 +32,8 @@ export default function Pet({ isLanding = false }: PetProps) {
     fetchMetadata();
   }, []);
 
+  console.log(metadata);
+
   useEffect(() => {
     const updateVisibleCount = () => {
       const width = window.innerWidth;
