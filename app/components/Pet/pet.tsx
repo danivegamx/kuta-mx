@@ -71,7 +71,7 @@ export default function Pet({ isLanding = false }: PetProps) {
     <>
       <div className={`${isLanding ? "md:flex md:flex-row md:flex-wrap md:w-full" :
         "w-full md:grid-cols-3 lg:grid-cols-4"} 
-      overflow-hidden gap-5 grid grid-cols-1 sm:grid-cols-2 sm:w-full
+      overflow-hidden gap-5 grid grid-cols-1 sm:grid-cols-2 w-full
       ${!isLanding ? "items-center" : "justify-center"}`}>
         {mascotasToRender.map((mascota: any, index: number) => {
           const { title, metadata, slug } = mascota;
