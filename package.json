@@ -19,6 +19,7 @@
     "@headlessui/react": "^1.7.19",
     "@nextui-org/react": "^2.4.0",
     "@types/react-slick": "^0.23.13",
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.7.2",
     "cosmicjs": "^5.0.2",
     "framer-motion": "^11.2.9",
