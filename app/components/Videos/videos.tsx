@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from "react";
-import matilde from "../../../assets/matilde.png";
-import gaia from "../../../assets/gaia.png";
-import lia from "../../../assets/lia.png";
+import matilde from "../../../assets/Matilde.png";
+import gaia from "../../../assets/Gaia.png";
+import lia from "../../../assets/Lia.png";
 
 const videos = [
   {
