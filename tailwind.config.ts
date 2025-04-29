@@ -1,3 +1,4 @@
+import { Caveat } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -13,6 +14,26 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        purple: '#594C81',
+        yellow: '#DFA43E',
+        blue:'#338EAF',
+        lightYellow: '#FFEAC4',
+        bgYellow: '#FFE7A7',
+        bgPurple: '#CEC8DF',
+        lightPink: '#FCF3F3',
+        lightBlue: '#D0E8F1',
+        gradientBlue: '#D5EBF3',
+        gradientPurple: '#D2C5F9',
+      },
+      fontFamily: {
+        inter: 'var(--font-inter)',
+        kulim: 'var(--font-kulim)',
+        caveat: 'var(--font-caveat)'
+      },
+      screens:{
+        lg: '1024px',
+      }
     },
   },
   plugins: [],
