@@ -104,7 +104,7 @@ const Questionnaire = () => {
   }, [mascotId]);
 
   const { titulo, introduccion, secciones, gracias } = metadata;
-  const { edad, raza, title, genero, fecha_de_resguardo, foto_mascota_1 } =
+  const { edad, raza, title, genero, fecha_de_resguardo, foto_mascota_1, talla } =
     mascotData;
 
   const createValidationLayer = (sections: any) => {
@@ -192,6 +192,13 @@ const Questionnaire = () => {
         });
       }
     }
+  };
+
+  const sizeMap: Record<string, string> = {
+    Pequeña: 'SM',
+    Mini: 'XS',
+    Mediana: 'MD',
+    Grande: 'LG',
   };
 
   const sendForm = async () => {
@@ -319,27 +326,35 @@ const Questionnaire = () => {
                 <div
                   className={`rounded-lg border border-1 border-slate-300 overflow-hidden shrink-0`}
                 >
-                  <div
-                    className={`rounded-t-lg h-[300px] md:w-[300px] lg:w-full`}
-                    style={{
-                      background: `url(${foto_mascota_1.imgix_url})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "top",
-                    }}
-                  />
+                  <div className="relative">
+                    <div
+                      className={`rounded-t-lg h-[300px] md:w-[300px] lg:w-full`}
+                      style={{
+                        background: `url(${foto_mascota_1.imgix_url})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "top",
+                      }}
+                    />
+                    <div className="w-11 h-8 bg-white rounded-b-lg border border-slate-400 absolute top-0 right-3 border-t-0">
+                      <div className="w-full h-full flex justify-center items-center">
+                        <p className="font-inter text-slate-600">{sizeMap[talla?.value as string] || talla?.value}</p>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="mascot-data p-5 gap-y-2 flex flex-col bg-white rounded-b-lg">
                     <div className="flex flex-row items-center justify-between">
                       <h2 className="inter font-medium text-xl text-slate-800">
                         {title}
                       </h2>
                       <div className="flex flex-row gap-x-2">
-                        <div className="px-3 py-1 bg-slate-200 rounded-full flex justify-center text-slate-800 inter items-center">
+                        <div className="px-3 py-1 bg-slate-200 rounded-full flex justify-center text-slate-800 inter items-center capitalize">
                           {raza}
                         </div>
                         <div
                           className={`w-10 h-10 rounded-full flex justify-center items-center ${genero === "Hembra"
-                              ? "bg-rose-300"
-                              : "bg-[#8EC5FF]"
+                            ? "bg-rose-300"
+                            : "bg-[#8EC5FF]"
                             }`}
                         >
                           <span
@@ -405,12 +420,12 @@ const Questionnaire = () => {
                 {t("important")}
               </h3>
               <div className="text-slate-700 whitespace-pre-line">
-                <p 
-                dangerouslySetInnerHTML={{ __html: t('importantContent').replace(/\n/g, "<br/><br/>") }}></p>
+                <p
+                  dangerouslySetInnerHTML={{ __html: t('importantContent').replace(/\n/g, "<br/><br/>") }}></p>
                 <br></br>
                 <a className="font-medium" href="https://www.quantumstudios.dev/privacy-policy">{t("privacyPolicy")}</a>
               </div>
-              
+
             </div>
             <div className="md:w-1/2 flex items-center justify-end">
               <Image src={benchDog} alt={"Dog on a bench"} />

@@ -60,5 +60,8 @@ export const mascotdataInitialState = {
   edad: '',
   raza: '',
   fecha_de_resguardo: '',
-  genero: ''
+  genero: '',
+  talla: {
+    value: ''
+  }
 };

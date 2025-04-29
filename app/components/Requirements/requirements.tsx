@@ -1,28 +1,4 @@
 import { useTranslations } from "next-intl";
-import { content } from "../../../assets/Content/content";
-
-const requirements = [
-    {
-      icon: "attach_money",
-      bgColor: "#6993E2",
-      text: content.requirement1,
-    },
-    {
-      icon: "moon_stars",
-      bgColor: "#E27769",
-      text: content.requirement2,
-    },
-    {
-      icon: "card_membership",
-      bgColor: "#E2A669",
-      text: content.requirement3,
-    },
-    {
-      icon: "favorite",
-      bgColor: "#977CE7",
-      text: content.requirement2,
-    },
-  ];
 
 type RequirementsProps = {
     isAdoption?: boolean;
