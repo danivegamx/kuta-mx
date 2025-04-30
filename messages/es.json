@@ -179,7 +179,8 @@
                 "Mascotas en",
                 "Resguardo"
             ]
-        }
+        },
+        "quickView": "Vista Rápida"
     },
     "AdoptionProcess": {
         "important": "Importante",

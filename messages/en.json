@@ -179,7 +179,8 @@
                 "Pets in",
                 "Shelter"
             ]
-        }
+        },
+        "quickView": "Quick View"
     },
     "AdoptionProcess": {
         "important": "Important",
