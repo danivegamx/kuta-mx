@@ -1,4 +1,3 @@
-"use client"
 /* eslint-disable @next/next/no-sync-scripts */
 import facebook from "../../../assets/facebook.png";
 import instagram from "../../../assets/instagram.png";

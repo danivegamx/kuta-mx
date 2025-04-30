@@ -87,6 +87,7 @@ export default function Pet({ isLanding = false }: PetProps) {
       }
     }
   }
+  
 
   return (
     <>
@@ -104,7 +105,7 @@ export default function Pet({ isLanding = false }: PetProps) {
               className={`rounded-lg border border-1 border-slate-300 overflow-hidden shrink-0 ${isLanding ? "sm:w-auto" : "sm:flex-1"}`}
             >
               <div className="relative group w-full overflow-hidden rounded-t-lg">
-                <div className="relative transition duration-300 group-hover:brightness-50">
+                <div className="relative transition duration-300 md:group-hover:brightness-50">
                   <div
                     className={`rounded-t-lg h-[300px] w-full ${isLanding ? "md:w-[300px] md:h-[300px]" : "md:w-[303px]"} `}
                     style={{
@@ -119,7 +120,7 @@ export default function Pet({ isLanding = false }: PetProps) {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                <div className="absolute hidden inset-0 md:flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
                   <button onClick={() => {setQuickViewOpen(true); setSelectedIndex(index)}} className="text-white font-medium px-4 py-2 rounded-lg flex items-center gap-2 ">
                     <span
                       className="material-symbols-outlined"

@@ -2,7 +2,7 @@
 import moment from "moment";
 import Button from "../Button";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type QuickViewModalProps = {
     isOpen: boolean;
@@ -40,6 +40,13 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
     const t = useTranslations("Adoptions");
     const [selectedImage, setSelectedImage] = useState(metadata.foto_mascota_1.imgix_url)
     if (!isOpen) return null;
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => {
+          document.body.style.overflow = "";
+        };
+      }, []);
 
     const sizeMap: Record<string, string> = {
         Pequeña: 'SM - Pequeño',
