@@ -67,8 +67,9 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
     ]   
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-800/15">
-            <div className="bg-white rounded-lg w-full md:w-[920px] h-full md:h-auto py-10 px-7 sm:p-10 relative shadow-xl overflow-y-auto max-h-screen">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-800/15 "  onClick={onClose}>
+            <div className="bg-white rounded-lg w-full md:w-[920px] h-full md:h-auto py-10 px-7 sm:p-10 relative shadow-xl overflow-y-auto max-h-screen"
+            onClick={(e) => e.stopPropagation()}>
                 {/* Close Button */}
                 <button
                     onClick={onClose}
