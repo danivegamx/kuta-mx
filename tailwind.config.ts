@@ -23,6 +23,7 @@ const config: Config = {
         bgPurple: '#CEC8DF',
         lightPink: '#FCF3F3',
         lightBlue: '#D0E8F1',
+        lightPurple: "#A69CC4",
         gradientBlue: '#D5EBF3',
         gradientPurple: '#D2C5F9',
       },

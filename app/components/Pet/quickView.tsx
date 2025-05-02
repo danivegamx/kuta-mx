@@ -40,13 +40,14 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
     const t = useTranslations("Adoptions");
     const [selectedImage, setSelectedImage] = useState(metadata.foto_mascota_1.imgix_url)
     if (!isOpen) return null;
+    console.log(metadata);
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
         return () => {
-          document.body.style.overflow = "";
+            document.body.style.overflow = "";
         };
-      }, []);
+    }, []);
 
     const sizeMap: Record<string, string> = {
         Pequeña: 'SM - Pequeño',
@@ -62,12 +63,12 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
     // ]
     const images = [
         metadata.foto_mascota_1.imgix_url,
-        ...(metadata.fotos_mascota || []),
+        ...(metadata.fotos_mascota || []).map((item: any) => item.foto.imgix_url),
     ]   
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-800/15">
-            <div className="bg-white rounded-lg w-[920px] p-10 relative shadow-xl">
+            <div className="bg-white rounded-lg w-full md:w-[920px] h-full md:h-auto py-10 px-4 sm:p-10 relative shadow-xl overflow-y-auto max-h-screen">
                 {/* Close Button */}
                 <button
                     onClick={onClose}
@@ -81,39 +82,38 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                     </span>
                 </button>
 
-                <div className="flex flex-row gap-x-10">
-                    <div className="flex flex-row gap-x-5">
+                <div className="flex flex-col md:flex-row gap-x-10 gap-y-8">
+                    <div className="flex flex-col-reverse gap-y-2 sm:flex-row gap-x-5">
                         {metadata.fotos_mascota.length !== 0 ?
-                            <div className="flex flex-col gap-y-3 h-[400px] overflow-auto">
+                            <div className="flex flex-row sm:flex-col gap-y-3 gap-x-2 sm:h-[400px] overflow-auto justify-center sm:justify-start">
                                 {images.map((image: any, index: number) => {
                                     return (
                                         <div
                                             key={index}
                                             onClick={() => setSelectedImage(image)}
-                                            className={`rounded-md h-[150px] w-[120px] shrink-0 cursor-pointer ${selectedImage !== image ? 'opacity-50' : ''}`}
+                                            className={`rounded-md w-[70px] h-[70px] sm:h-[150px] sm:w-[120px] shrink-0 cursor-pointer ${selectedImage !== image ? 'opacity-50' : ''}`}
                                             style={{
                                                 background: `url(${image})`,
                                                 backgroundSize: "cover",
                                                 backgroundPosition: "center",
                                             }}
-                                        /> 
+                                        />
                                     )
                                 })}
                             </div> : ''
                         }
 
-                        <div
-                            key={selectedImage}
-                            className={`rounded-md h-[400px] w-[300px] shrink-0`}
-                            style={{
-                                background: `url(${selectedImage})`,
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                            }}
-                        />
+                        <div className="rounded-md h-[340px] w-full sm:flex-1 md:w-[300px] sm:h-[400px] overflow-auto">
+                            <img
+                                src={selectedImage}
+                                alt="Selected pet"
+                                className="w-auto h-auto min-h-full min-w-full"
+                                style={{ objectFit: 'cover' }}
+                            />
+                        </div>
                     </div>
 
-                    <div className="w-full flex flex-col justify-between">
+                    <div className="w-full flex flex-col justify-between gap-y-4">
                         <div className="flex flex-row justify-between items-center">
                             <h4 className="font-inter font-medium text-3xl text-slate-800">{pet.title}</h4>
                             <div

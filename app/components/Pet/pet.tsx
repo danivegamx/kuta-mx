@@ -87,7 +87,7 @@ export default function Pet({ isLanding = false }: PetProps) {
       }
     }
   }
-  
+
 
   return (
     <>
@@ -121,7 +121,7 @@ export default function Pet({ isLanding = false }: PetProps) {
                   </div>
                 </div>
                 <div className="absolute hidden inset-0 md:flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-                  <button onClick={() => {setQuickViewOpen(true); setSelectedIndex(index)}} className="text-white font-medium px-4 py-2 rounded-lg flex items-center gap-2 ">
+                  <button onClick={() => { setQuickViewOpen(true); setSelectedIndex(index) }} className="text-white font-medium px-4 py-2 rounded-lg flex items-center gap-2 ">
                     <span
                       className="material-symbols-outlined"
                       style={{ fontSize: "24px" }}
@@ -190,31 +190,37 @@ export default function Pet({ isLanding = false }: PetProps) {
                     </p>
                   </div>
                 </div>
-
-                <div
-                  onClick={() => {
-                    if (
-                      localStorage.getItem("mascot-id")?.replace(/"/g, "") !==
-                      slug
-                    ) {
-                      localStorage.removeItem("adoption-answers");
-                      localStorage.removeItem("yes-no");
-                    }
-                  }}
-                  className="buttons w-full"
-                >
-                  <Button
-                    data={{
-                      title: t("apply"),
-                      type: "botones-primarios",
-                      metadata: {
-                        url: `/cuestionario?mascotId=${slug}`,
-                        color: "#594C81",
-                        sin_borde: false,
-                      },
+                <div className="flex flex-row gap-x-2">
+                  <button className="bg-purple rounded-lg text-white py-2 px-4 w-1/2 md:hidden font-inter font-medium hover:bg-purple"
+                  onClick={() => { setQuickViewOpen(true); setSelectedIndex(index) }}>
+                    {t("details")}
+                  </button>
+                  <div
+                    onClick={() => {
+                      if (
+                        localStorage.getItem("mascot-id")?.replace(/"/g, "") !==
+                        slug
+                      ) {
+                        localStorage.removeItem("adoption-answers");
+                        localStorage.removeItem("yes-no");
+                      }
                     }}
-                  />
+                    className="buttons md:w-full w-1/2"
+                  >
+                    <Button
+                      data={{
+                        title: t("apply"),
+                        type: "botones-primarios",
+                        metadata: {
+                          url: `/cuestionario?mascotId=${slug}`,
+                          color: "#594C81",
+                          sin_borde: false,
+                        },
+                      }}
+                    />
+                  </div>
                 </div>
+
               </div>
             </div>
           );
