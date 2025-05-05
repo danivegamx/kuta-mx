@@ -166,7 +166,7 @@ export default function Landing() {
             className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative"
           >
             <div className="bg-lightBlue rounded-lg p-5 flex flex-col max-w-7xl mx-auto gap-y-5 relative overflow-hidden sm:p-12 md:p-20 md:gap-y-16">
-              <div className="flex flex-col gap-y-2 z-10 md:gap-y-4">
+              <div className="flex flex-col gap-y-2 md:z-10 md:gap-y-4">
                 <div className="flex flex-row justify-center items-center">
                   <DynamicTitle namespace={"Home"} translationKey={"processTitle"}/>
                   <Image
@@ -181,7 +181,7 @@ export default function Landing() {
                   </p>
                 </div>
               </div>
-              <div className="z-10">
+              <div className="md:z-10">
                 <Process></Process>
               </div>
 

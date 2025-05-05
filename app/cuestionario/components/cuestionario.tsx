@@ -17,6 +17,7 @@ import { useLocalStorage } from "@/app/context/useLocalStorage";
 import AdoptionSteps from "@/app/components/AdoptionSteps/adoptionSteps";
 import Requirements from "@/app/components/Requirements/requirements";
 import { useTranslations } from "next-intl";
+import dayjs from "dayjs";
 
 const Questionnaire = () => {
   const t = useTranslations("AdoptionProcess")
@@ -201,6 +202,27 @@ const Questionnaire = () => {
     Grande: 'LG',
   };
 
+  moment.locale("es");
+
+  function getAge(dateString: string): string {
+      const birthDate = dayjs(dateString);
+      const now = dayjs();
+  
+      const years = now.diff(birthDate, 'year');
+  
+      if (years >= 1) {
+        return `${years} ${years === 1 ? 'año' : 'años'}`;
+      } else {
+        if(years === 0){
+          return 'N/A'
+        }
+        else{
+          const months = now.diff(birthDate, 'month');
+        return `${months} ${months === 1 ? 'mes' : 'meses'}`;
+        }
+      }
+    }
+
   const sendForm = async () => {
     setSent(true);
     const ok = await postForm(answers, title, secciones);
@@ -374,8 +396,7 @@ const Questionnaire = () => {
                         >
                           cake
                         </span>
-                        <p className="inter font-medium text-slate-600">{`${edad} ${Number(edad) !== 1 ? "años" : "año"
-                          }`}</p>
+                        <p className="inter font-medium text-slate-600">{getAge(edad)}</p>
                       </div>
                       <div className="flex items-center gap-x-2">
                         <span

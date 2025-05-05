@@ -54,7 +54,6 @@ export default function Navigation({ isAdoption = false }: NavigationProps) {
   }, []);
 
   const changeLocale = (newLocale: string) => {
-    console.log(newLocale);
     setLocale(newLocale);
     setIsOpen(false);
     document.cookie = `KUTAAPP_LOCALE=${newLocale};`;

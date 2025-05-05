@@ -7,12 +7,16 @@ import Button from "../../components/Button";
 import "./styles.sass";
 import "moment/locale/es";
 import { useTranslations } from "next-intl";
+import dayjs from 'dayjs';
+import { QuickView } from "./quickView";
 
 type PetProps = {
   isLanding?: boolean; // Optional, defaults to false (light background)
 };
 
 export default function Pet({ isLanding = false }: PetProps) {
+  const [isQuickViewOpen, setQuickViewOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(0);
   const [metadata, setMetadata] = useState({
     titulo: "",
@@ -31,8 +35,6 @@ export default function Pet({ isLanding = false }: PetProps) {
     };
     fetchMetadata();
   }, []);
-
-  console.log(metadata);
 
   useEffect(() => {
     const updateVisibleCount = () => {
@@ -66,7 +68,27 @@ export default function Pet({ isLanding = false }: PetProps) {
     Mediana: 'MD',
     Grande: 'LG',
   };
-  
+
+  function getAge(dateString: string): string {
+    const birthDate = dayjs(dateString);
+    const now = dayjs();
+
+    const years = now.diff(birthDate, 'year');
+
+    if (years >= 1) {
+      return `${years} ${years === 1 ? 'año' : 'años'}`;
+    } else {
+      if (years === 0) {
+        return 'N/A'
+      }
+      else {
+        const months = now.diff(birthDate, 'month');
+        return `${months} ${months === 1 ? 'mes' : 'meses'}`;
+      }
+    }
+  }
+
+
   return (
     <>
       <div className={`${isLanding ? "md:flex md:flex-row md:flex-wrap md:w-full" :
@@ -74,7 +96,7 @@ export default function Pet({ isLanding = false }: PetProps) {
       overflow-hidden gap-5 grid grid-cols-1 sm:grid-cols-2 w-full
       ${!isLanding ? "items-center" : "justify-center"}`}>
         {mascotasToRender.map((mascota: any, index: number) => {
-          const { title, metadata, slug } = mascota;
+          const { title, metadata, slug, descripcion_mascota } = mascota;
           const { raza, foto_mascota_1, fecha_de_resguardo, edad } = metadata;
 
           return (
@@ -82,21 +104,41 @@ export default function Pet({ isLanding = false }: PetProps) {
               key={index}
               className={`rounded-lg border border-1 border-slate-300 overflow-hidden shrink-0 ${isLanding ? "sm:w-auto" : "sm:flex-1"}`}
             >
-              <div className="relative">
-                <div
-                  className={`rounded-t-lg h-[300px] w-full ${isLanding ? "md:w-[300px] md:h-[300px]" : "md:w-[303px]"} `}
-                  style={{
-                    background: `url(${foto_mascota_1.imgix_url})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "top",
-                  }}
-                />
-                <div className="w-11 h-8 bg-white rounded-b-lg border border-slate-400 absolute top-0 right-3 border-t-0">
-                  <div className="w-full h-full flex justify-center items-center">
-                    <p className="font-inter text-slate-600">{sizeMap[metadata.talla?.value as string] || metadata.talla?.value}</p>
+              <div className="relative group w-full overflow-hidden rounded-t-lg">
+                <div className="relative transition duration-300 md:group-hover:brightness-50">
+                  <div
+                    className={`rounded-t-lg h-[300px] w-full ${isLanding ? "md:w-[300px] md:h-[300px]" : "md:w-[303px]"} `}
+                    style={{
+                      background: `url(${foto_mascota_1.imgix_url})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "top",
+                    }}
+                  />
+                  <div className="w-11 h-8 bg-white rounded-b-lg border border-slate-400 absolute top-0 right-3 border-t-0">
+                    <div className="w-full h-full flex justify-center items-center">
+                      <p className="font-inter text-slate-600">{sizeMap[metadata.talla?.value as string] || metadata.talla?.value}</p>
+                    </div>
                   </div>
                 </div>
+                <div className="absolute hidden inset-0 md:flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                  <button onClick={() => { setQuickViewOpen(true); setSelectedIndex(index) }} className="text-white font-medium px-4 py-2 rounded-lg flex items-center gap-2 ">
+                    <span
+                      className="material-symbols-outlined"
+                      style={{ fontSize: "24px" }}
+                    >
+                      visibility
+                    </span>
+                    <p>{t("quickView")}</p>
+                  </button>
+                </div>
               </div>
+
+              {isQuickViewOpen && index === selectedIndex ?
+                <QuickView isOpen={isQuickViewOpen} onClose={() => setQuickViewOpen(false)} pet={mascota} metadata={metadata}>
+                </QuickView> : ''
+              }
+
+
 
               <div className="mascot-data p-5 gap-y-2 flex flex-col bg-white rounded-lg">
                 <div className="flex flex-row items-center justify-between gap-x-4">
@@ -132,8 +174,7 @@ export default function Pet({ isLanding = false }: PetProps) {
                     >
                       cake
                     </span>
-                    <p className="inter font-medium text-slate-600">{`${edad} ${edad !== 1 ? "años" : "año"
-                      }`}</p>
+                    <p className="inter font-medium text-slate-600">{`${getAge(edad)}`}</p>
                   </div>
                   <div className="flex items-center gap-x-2">
                     <span
@@ -149,31 +190,37 @@ export default function Pet({ isLanding = false }: PetProps) {
                     </p>
                   </div>
                 </div>
-
-                <div
-                  onClick={() => {
-                    if (
-                      localStorage.getItem("mascot-id")?.replace(/"/g, "") !==
-                      slug
-                    ) {
-                      localStorage.removeItem("adoption-answers");
-                      localStorage.removeItem("yes-no");
-                    }
-                  }}
-                  className="buttons w-full"
-                >
-                  <Button
-                    data={{
-                      title: t("apply"),
-                      type: "botones-primarios",
-                      metadata: {
-                        url: `/cuestionario?mascotId=${slug}`,
-                        color: "#594C81",
-                        sin_borde: false,
-                      },
+                <div className="flex flex-row gap-x-2">
+                  <button className="bg-purple rounded-lg text-white py-2 px-4 w-1/2 md:hidden font-inter font-medium hover:bg-purple"
+                  onClick={() => { setQuickViewOpen(true); setSelectedIndex(index) }}>
+                    {t("details")}
+                  </button>
+                  <div
+                    onClick={() => {
+                      if (
+                        localStorage.getItem("mascot-id")?.replace(/"/g, "") !==
+                        slug
+                      ) {
+                        localStorage.removeItem("adoption-answers");
+                        localStorage.removeItem("yes-no");
+                      }
                     }}
-                  />
+                    className="buttons md:w-full w-1/2"
+                  >
+                    <Button
+                      data={{
+                        title: t("apply"),
+                        type: "botones-primarios",
+                        metadata: {
+                          url: `/cuestionario?mascotId=${slug}`,
+                          color: "#594C81",
+                          sin_borde: false,
+                        },
+                      }}
+                    />
+                  </div>
                 </div>
+
               </div>
             </div>
           );
