@@ -28,6 +28,7 @@ type QuickViewModalProps = {
         },
         descripcion_mascota: string,
         fecha_de_resguardo: string,
+        edad: string,
         "edad-numero": number,
         raza: string,
         talla: {
@@ -148,7 +149,7 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                                 >
                                     cake
                                 </span>
-                                <p className="inter font-medium text-slate-600">{metadata["edad-numero"]} {metadata["edad-numero"] != 1 ? 'años' : 'año'}</p>
+                                <p className="inter font-medium text-slate-600">{moment().diff(metadata.edad, 'years')} {moment().diff(metadata.edad, 'years') !== 1 ? 'años' : 'año'}</p>
                             </div>
                             <div className="flex justify-center items-center gap-x-2 p-3">
                                 <span
