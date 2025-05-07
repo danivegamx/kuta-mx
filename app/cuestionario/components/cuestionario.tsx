@@ -204,25 +204,6 @@ const Questionnaire = () => {
 
   moment.locale("es");
 
-  function getAge(dateString: string): string {
-      const birthDate = dayjs(dateString);
-      const now = dayjs();
-  
-      const years = now.diff(birthDate, 'year');
-  
-      if (years >= 1) {
-        return `${years} ${years === 1 ? 'año' : 'años'}`;
-      } else {
-        if(years === 0){
-          return 'N/A'
-        }
-        else{
-          const months = now.diff(birthDate, 'month');
-        return `${months} ${months === 1 ? 'mes' : 'meses'}`;
-        }
-      }
-    }
-
   const sendForm = async () => {
     setSent(true);
     const ok = await postForm(answers, title, secciones);
