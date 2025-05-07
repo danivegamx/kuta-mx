@@ -28,6 +28,7 @@ type QuickViewModalProps = {
         },
         descripcion_mascota: string,
         fecha_de_resguardo: string,
+        edad: string,
         "edad-numero": number,
         raza: string,
         talla: {
@@ -39,7 +40,7 @@ type QuickViewModalProps = {
 export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProps) {
     const t = useTranslations("Adoptions");
     const [selectedImage, setSelectedImage] = useState(metadata.foto_mascota_1.imgix_url)
-    if (!isOpen) return null;
+
     console.log(metadata);
 
     useEffect(() => {
@@ -48,7 +49,9 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
             document.body.style.overflow = "";
         };
     }, []);
-
+    
+    if (!isOpen) return null;
+    
     const sizeMap: Record<string, string> = {
         Pequeña: 'SM - Pequeño',
         Mini: 'XS - Mini',
@@ -56,20 +59,15 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
         Grande: 'LG - Grande',
     };
 
-    // const images = [
-    //     metadata.foto_mascota_1.imgix_url,
-    //     'https://brooklinelabrescue.org/wp-content/uploads/2023/09/image_67162625.jpg',
-    //     'https://www.thelabradorsite.com/wp-content/uploads/2017/05/english-lab.jpg'
-    // ]
     const images = [
         metadata.foto_mascota_1.imgix_url,
         ...(metadata.fotos_mascota || []).map((item: any) => item.foto.imgix_url),
-    ]   
+    ]
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-800/15 "  onClick={onClose}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-800/15 " onClick={onClose}>
             <div className="bg-white rounded-lg w-full md:w-[920px] h-full md:h-auto py-10 px-7 sm:p-10 relative shadow-xl overflow-y-auto max-h-screen"
-            onClick={(e) => e.stopPropagation()}>
+                onClick={(e) => e.stopPropagation()}>
                 {/* Close Button */}
                 <button
                     onClick={onClose}
@@ -148,7 +146,7 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                                 >
                                     cake
                                 </span>
-                                <p className="inter font-medium text-slate-600">{metadata["edad-numero"]} {metadata["edad-numero"] != 1 ? 'años' : 'año'}</p>
+                                <p className="inter font-medium text-slate-600">{moment().diff(metadata.edad, 'years')} {moment().diff(metadata.edad, 'years') !== 1 ? 'años' : 'año'}</p>
                             </div>
                             <div className="flex justify-center items-center gap-x-2 p-3">
                                 <span
