@@ -396,7 +396,7 @@ const Questionnaire = () => {
                         >
                           cake
                         </span>
-                        <p className="inter font-medium text-slate-600">{getAge(edad)}</p>
+                        <p className="inter font-medium text-slate-600">{moment().diff(edad, 'years')} {moment().diff(edad, 'years') !== 1 ? 'años' : 'año'}</p>
                       </div>
                       <div className="flex items-center gap-x-2">
                         <span
