@@ -97,7 +97,7 @@ export default function Pet({ isLanding = false }: PetProps) {
                   />
                   <div className="w-11 h-8 bg-white rounded-b-lg border border-slate-400 absolute top-0 right-3 border-t-0">
                     <div className="w-full h-full flex justify-center items-center">
-                      <p className="font-inter text-slate-600">{sizeMap[metadata.talla?.value as string] || metadata.talla?.value}</p>
+                      <p className="font-inter text-slate-600">{sizeMap[metadata.talla?.value as string] || "XL"}</p>
                     </div>
                   </div>
                 </div>

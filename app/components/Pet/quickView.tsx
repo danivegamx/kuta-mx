@@ -1,8 +1,9 @@
 "use client"
 import moment from "moment";
 import Button from "../Button";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useEffect, useState } from "react";
+import 'moment/locale/es';
 
 type QuickViewModalProps = {
     isOpen: boolean;
@@ -41,7 +42,8 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
     const t = useTranslations("Adoptions");
     const [selectedImage, setSelectedImage] = useState(metadata.foto_mascota_1.imgix_url)
 
-    console.log(metadata);
+    const locale = useLocale();
+    moment.locale(locale);
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -172,7 +174,7 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                             <div className="flex flex-col gap-y-2">
                                 <h5 className="font-inter text-slate-500 font-medium">{t('size')}</h5>
                                 <div className="px-4 py-2 bg-slate-200 rounded-full flex justify-center text-slate-800 inter items-center capitalize">
-                                    {sizeMap[metadata.talla?.value as string] || metadata.talla?.value}
+                                    {sizeMap[metadata.talla?.value as string] || "XL - Extra Grande"}
                                 </div>
                             </div>
                         </div>
