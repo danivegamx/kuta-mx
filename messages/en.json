@@ -181,7 +181,12 @@
             ]
         },
         "details": "Details",
-        "quickView": "Quick View"
+        "quickView": "Quick View",
+        "personality": "Personality",
+        "breed": "Breed",
+        "size": "Size",
+        "year": "Year",
+        "years": "Years"
     },
     "AdoptionProcess": {
         "important": "Important",

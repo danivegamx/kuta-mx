@@ -58,7 +58,7 @@
             ]
         },
         "before": "Antes",
-        "after": "Despues",
+        "after": "Después",
         "behindTitle": {
             "color": "text-yellow",
             "highlightPosition": 1,
@@ -95,26 +95,26 @@
         "firstStepDesc": "Alejamos a los animales de situaciones de maltrato, abandono o condiciones inadecuadas, brindándoles una nueva oportunidad de vida.",
         "secondStep": "Rehabilitación",
         "secondStepDesc": "Ofrecemos atención médica, cuidado emocional y tratamientos especiales a los animales que lo necesitan, para que puedan sanar y volver a confiar.",
-        "thirdStep": "Adopcion",
+        "thirdStep": "Adopción",
         "thirdStepDesc": "Acompañamos el proceso de adopción, conectando a cada mascota con una familia responsable que esté lista para darle un hogar lleno de amor."
     },
     "BehindKuta": {
         "role1": "Rescatistas",
         "role1Desc": "Héroes valientes que están en el frente, salvando vidas y alejando a los animales del maltrato y el abandono.",
-        "role2": "Casa Puenta",
+        "role2": "Casa Puente",
         "role2Desc": "Voluntarios amorosos que ofrecen un hogar temporal, brindando cuidado y cariño mientras las mascotas esperan a su familia definitiva.",
         "role3": "Voluntarios",
         "role3Desc": "Personas comprometidas que apoyan en cada paso: desde el rescate hasta el cuidado y la adopción. Sin ellos, nada sería posible."
     },
     "AboutUs": {
         "aboutUs": "Nosotros",
-        "pageDesc": "Conoce más sobre Kuta!",
+        "pageDesc": "¡Conoce más sobre Kuta!",
         "whoWeAre": {
             "color": "text-yellow",
             "highlightPosition": 1,
             "parts": [
-                "Quienes",
-                "Somos"
+                "¿Quiénes",
+                "Somos?"
             ]
         },
         "whoWeAreDesc": "Somos Kuta, una comunidad de personas apasionadas por el bienestar animal. Nos mueve el amor, la empatía y el compromiso con cada vida que rescatamos.\nDesde nuestros inicios, hemos trabajado para ofrecer una segunda oportunidad a perros y gatos que han sido víctimas del abandono o el maltrato. Creemos que cada uno merece un hogar donde sea valorado, cuidado y amado.\nEn Kuta, rescatamos, rehabilitamos y acompañamos a cada mascota en su proceso de recuperación física y emocional, hasta encontrar la familia ideal que le brinde una nueva vida. No somos solo un puente entre animales y personas: somos una red de corazones unidos por una causa.",
@@ -122,7 +122,7 @@
             "color": "text-blue",
             "highlightPosition": 1,
             "parts": [
-                "Que",
+                "Qué",
                 "Hacemos"
             ]
         },
@@ -133,7 +133,7 @@
             "color": "text-purple",
             "highlightPosition": 1,
             "parts": [
-                "Por Que Lo",
+                "Por Qué Lo",
                 "Hacemos"
             ]
         },
@@ -152,7 +152,7 @@
             "color": "text-yellow",
             "highlightPosition": 1,
             "parts": [
-                "Como Puedes",
+                "Cómo Puedes",
                 "Ayudar"
             ]
         },
@@ -181,7 +181,12 @@
             ]
         },
         "details": "Detalles",
-        "quickView": "Vista Rápida"
+        "quickView": "Vista Rápida",
+        "personality": "Personalidad",
+        "breed": "Raza",
+        "size": "Tamaño",
+        "year": "Año",
+        "years": "Años"
     },
     "AdoptionProcess": {
         "important": "Importante",
@@ -201,14 +206,14 @@
         "adoption": "Adopción",
         "adoptions": "Adopciones",
         "requirements": "Requerimientos",
-        "followUs": "Siguenos"
+        "followUs": "síguenos"
     },
     "SocialMedia": {
         "title": {
             "color": "text-purple",
             "highlightPosition": 1,
             "parts": [
-                "Siguenos en",
+                "síguenos en",
                 "Redes Sociales"
             ]
         }
