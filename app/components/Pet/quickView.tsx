@@ -28,6 +28,7 @@ type QuickViewModalProps = {
             value: string
         },
         descripcion_mascota: string,
+        descripcion_ingles: string,
         fecha_de_resguardo: string,
         edad: string,
         "edad-numero": number,
@@ -51,15 +52,26 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
             document.body.style.overflow = "";
         };
     }, []);
-    
+
     if (!isOpen) return null;
-    
+
     const sizeMap: Record<string, string> = {
         Pequeña: 'SM - Pequeño',
         Mini: 'XS - Mini',
         Mediana: 'MD - Mediano',
         Grande: 'LG - Grande',
     };
+
+    const language = locale.split('-')[0] as 'en' | 'es';
+    const personalityMap: Record<'en' | 'es', string> = {
+        es: metadata.descripcion_mascota,
+        en: metadata.descripcion_ingles
+    }
+
+    const personality =
+        language === 'en' && !metadata.descripcion_ingles
+            ? metadata.descripcion_mascota
+            : personalityMap[language];
 
     const images = [
         metadata.foto_mascota_1.imgix_url,
@@ -137,7 +149,7 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                             <div className="flex flex-col">
                                 <h5 className="font-inter font-medium text-lg text-slate-500">{t('personality')}</h5>
                                 <p className="font-inter text-slate-800" dangerouslySetInnerHTML={{
-                                    __html: metadata.descripcion_mascota,
+                                    __html: personality,
                                 }}></p>
                             </div> : ''}
                         <div className="w-full rounded-md border border-slate-300 grid grid-cols-2 divide-solid divide-x divide-slate-300">
