@@ -181,7 +181,17 @@
             ]
         },
         "details": "Details",
-        "quickView": "Quick View"
+        "quickView": "Quick View",
+        "personality": "Personality",
+        "breed": "Breed",
+        "size": "Size",
+        "year": "Year",
+        "years": "Years",
+        "pequeña": "SM - Small",
+        "mini": "XS - Extra Small",
+        "mediana": "MD - Medium",
+        "grande": "LG - Large",
+        "extragrande": "XL - Extra Large"
     },
     "AdoptionProcess": {
         "important": "Important",

@@ -6,7 +6,7 @@ import moment from "moment";
 import Button from "../../components/Button";
 import "./styles.sass";
 import "moment/locale/es";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import dayjs from 'dayjs';
 import { QuickView } from "./quickView";
 
@@ -24,7 +24,8 @@ export default function Pet({ isLanding = false }: PetProps) {
     mascotas: [],
   });
 
-  moment.locale("es");
+  const locale = useLocale();
+  moment.locale(locale);
 
   useEffect(() => {
     const fetchMetadata = async () => {
@@ -97,7 +98,7 @@ export default function Pet({ isLanding = false }: PetProps) {
                   />
                   <div className="w-11 h-8 bg-white rounded-b-lg border border-slate-400 absolute top-0 right-3 border-t-0">
                     <div className="w-full h-full flex justify-center items-center">
-                      <p className="font-inter text-slate-600">{sizeMap[metadata.talla?.value as string] || metadata.talla?.value}</p>
+                      <p className="font-inter text-slate-600">{sizeMap[metadata.talla?.value as string] || "XL"}</p>
                     </div>
                   </div>
                 </div>
@@ -155,7 +156,7 @@ export default function Pet({ isLanding = false }: PetProps) {
                     >
                       cake
                     </span>
-                    <p className="inter font-medium text-slate-600">{moment().diff(edad, 'years')} {moment().diff(edad, 'years') !== 1 ? 'años' : 'año'}</p>
+                    <p className="inter font-medium text-slate-600">{moment().diff(edad, 'years')} {moment().diff(edad, 'years') !== 1 ? t('years') : t('year')}</p>
                   </div>
                   <div className="flex items-center gap-x-2">
                     <span

@@ -1,8 +1,9 @@
 "use client"
 import moment from "moment";
 import Button from "../Button";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useEffect, useState } from "react";
+import 'moment/locale/es';
 
 type QuickViewModalProps = {
     isOpen: boolean;
@@ -27,6 +28,7 @@ type QuickViewModalProps = {
             value: string
         },
         descripcion_mascota: string,
+        descripcion_ingles: string,
         fecha_de_resguardo: string,
         edad: string,
         "edad-numero": number,
@@ -41,7 +43,8 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
     const t = useTranslations("Adoptions");
     const [selectedImage, setSelectedImage] = useState(metadata.foto_mascota_1.imgix_url)
 
-    console.log(metadata);
+    const locale = useLocale();
+    moment.locale(locale);
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -49,15 +52,19 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
             document.body.style.overflow = "";
         };
     }, []);
-    
+
     if (!isOpen) return null;
-    
-    const sizeMap: Record<string, string> = {
-        Pequeña: 'SM - Pequeño',
-        Mini: 'XS - Mini',
-        Mediana: 'MD - Mediano',
-        Grande: 'LG - Grande',
-    };
+
+    const language = locale.split('-')[0] as 'en' | 'es';
+    const personalityMap: Record<'en' | 'es', string> = {
+        es: metadata.descripcion_mascota,
+        en: metadata.descripcion_ingles
+    }
+
+    const personality =
+        language === 'en' && !metadata.descripcion_ingles
+            ? metadata.descripcion_mascota
+            : personalityMap[language];
 
     const images = [
         metadata.foto_mascota_1.imgix_url,
@@ -133,9 +140,9 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                         </div>
                         {metadata.descripcion_mascota ?
                             <div className="flex flex-col">
-                                <h5 className="font-inter font-medium text-lg text-slate-500">Personalidad</h5>
+                                <h5 className="font-inter font-medium text-lg text-slate-500">{t('personality')}</h5>
                                 <p className="font-inter text-slate-800" dangerouslySetInnerHTML={{
-                                    __html: metadata.descripcion_mascota,
+                                    __html: personality,
                                 }}></p>
                             </div> : ''}
                         <div className="w-full rounded-md border border-slate-300 grid grid-cols-2 divide-solid divide-x divide-slate-300">
@@ -146,7 +153,7 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                                 >
                                     cake
                                 </span>
-                                <p className="inter font-medium text-slate-600">{moment().diff(metadata.edad, 'years')} {moment().diff(metadata.edad, 'years') !== 1 ? 'años' : 'año'}</p>
+                                <p className="inter font-medium text-slate-600">{moment().diff(metadata.edad, 'years')} {moment().diff(metadata.edad, 'years') !== 1 ? t('years') : t('year')}</p>
                             </div>
                             <div className="flex justify-center items-center gap-x-2 p-3">
                                 <span
@@ -164,15 +171,15 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                         </div>
                         <div className="flex flex-row gap-x-5">
                             <div className="flex flex-col gap-y-2">
-                                <h5 className="font-inter text-slate-500 font-medium">Raza</h5>
+                                <h5 className="font-inter text-slate-500 font-medium">{t('breed')}</h5>
                                 <div className="px-4 py-2 bg-slate-200 rounded-full flex justify-center text-slate-800 inter items-center capitalize">
                                     {metadata.raza}
                                 </div>
                             </div>
                             <div className="flex flex-col gap-y-2">
-                                <h5 className="font-inter text-slate-500 font-medium">Tamaño</h5>
+                                <h5 className="font-inter text-slate-500 font-medium">{t('size')}</h5>
                                 <div className="px-4 py-2 bg-slate-200 rounded-full flex justify-center text-slate-800 inter items-center capitalize">
-                                    {sizeMap[metadata.talla?.value as string] || metadata.talla?.value}
+                                    {t(metadata.talla?.value.toLowerCase().replace(/\s+/g, ''))}
                                 </div>
                             </div>
                         </div>
@@ -190,7 +197,7 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                         >
                             <Button
                                 data={{
-                                    title: "Aplicar",
+                                    title: t('apply'),
                                     type: "botones-primarios",
                                     metadata: {
                                         url: `/cuestionario?mascotId=${pet.slug}`,
