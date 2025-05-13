@@ -186,7 +186,12 @@
         "breed": "Raza",
         "size": "Tamaño",
         "year": "Año",
-        "years": "Años"
+        "years": "Años",
+        "pequeña": "SM - Pequeño",
+        "mini": "XS - Mini",
+        "mediana": "MD - Mediano",
+        "grande": "LG - Grande",
+        "extragrande": "XL - Extra Grande"
     },
     "AdoptionProcess": {
         "important": "Importante",

@@ -55,23 +55,6 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
 
     if (!isOpen) return null;
 
-    const sizeMap: Record<'es' | 'en', Record<string, string>> = {
-        es: {
-            pequeña: 'SM - Pequeño',
-            mini: 'XS - Mini',
-            mediana: 'MD - Mediano',
-            grande: 'LG - Grande',
-            extragrande: 'XL - Extra Grande'
-        },
-        en: {
-            pequeña: 'SM - Small',
-            mini: 'XS - Extra Small',
-            mediana: 'MD - Medium',
-            grande: 'LG - Large',
-            extragrande: 'XL - Extra Large'
-        },
-    };
-
     const language = locale.split('-')[0] as 'en' | 'es';
     const personalityMap: Record<'en' | 'es', string> = {
         es: metadata.descripcion_mascota,
@@ -196,7 +179,7 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                             <div className="flex flex-col gap-y-2">
                                 <h5 className="font-inter text-slate-500 font-medium">{t('size')}</h5>
                                 <div className="px-4 py-2 bg-slate-200 rounded-full flex justify-center text-slate-800 inter items-center capitalize">
-                                    {sizeMap[language][metadata.talla?.value.toLowerCase().replace(/\s+/g, '') as string]}
+                                    {t(metadata.talla?.value.toLowerCase().replace(/\s+/g, ''))}
                                 </div>
                             </div>
                         </div>
