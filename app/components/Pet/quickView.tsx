@@ -55,11 +55,21 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
 
     if (!isOpen) return null;
 
-    const sizeMap: Record<string, string> = {
-        Pequeña: 'SM - Pequeño',
-        Mini: 'XS - Mini',
-        Mediana: 'MD - Mediano',
-        Grande: 'LG - Grande',
+    const sizeMap: Record<'es' | 'en', Record<string, string>> = {
+        es: {
+            pequeña: 'SM - Pequeño',
+            mini: 'XS - Mini',
+            mediana: 'MD - Mediano',
+            grande: 'LG - Grande',
+            extragrande: 'XL - Extra Grande'
+        },
+        en: {
+            pequeña: 'SM - Small',
+            mini: 'XS - Extra Small',
+            mediana: 'MD - Medium',
+            grande: 'LG - Large',
+            extragrande: 'XL - Extra Large'
+        },
     };
 
     const language = locale.split('-')[0] as 'en' | 'es';
@@ -186,7 +196,7 @@ export function QuickView({ isOpen, onClose, pet, metadata }: QuickViewModalProp
                             <div className="flex flex-col gap-y-2">
                                 <h5 className="font-inter text-slate-500 font-medium">{t('size')}</h5>
                                 <div className="px-4 py-2 bg-slate-200 rounded-full flex justify-center text-slate-800 inter items-center capitalize">
-                                    {sizeMap[metadata.talla?.value as string] || "XL - Extra Grande"}
+                                    {sizeMap[language][metadata.talla?.value.toLowerCase().replace(/\s+/g, '') as string]}
                                 </div>
                             </div>
                         </div>
