@@ -3,7 +3,11 @@ import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 import Image from "next/image";
 import mexicoGraphic from '@/assets/mexico-graphic.png'
 
-export default function Statistics() {
+interface StatisticsProps {
+  petCount: number;
+}
+
+export default function Statistics({petCount}: StatisticsProps) {
     const t = useTranslations("Statistics")
 
     const colab = [
@@ -41,7 +45,7 @@ export default function Statistics() {
             border: false
         },
         {
-            number: '1',
+            number: petCount,
             desc: t("petsClick"),
             color: '#ffffff',
             border: true

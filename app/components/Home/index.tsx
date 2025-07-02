@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import dog from "../../../assets/three-step-dog.png";
 import golden from "../../../assets/goldenRetriever.png";
@@ -21,10 +22,20 @@ import MusicPlayer from "../Music Player/musicPlayer";
 import { useTranslations } from "next-intl";
 import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 import Statistics from "../Statistics";
+import { useEffect, useState } from "react";
+
 
 export default function Landing() {
   const t = useTranslations("Home");
-  const s = useTranslations("Statistics");
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 2 * 60 * 1000); // 2 minutes in milliseconds
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
 
   return (
     <>
@@ -199,7 +210,7 @@ export default function Landing() {
           </section>
           {/* Statistics */}
           <section id="statistics" className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
-            <Statistics/>
+            <Statistics petCount={count}/>
           </section>
           {/* section 5 */}
           <section
