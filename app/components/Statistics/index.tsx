@@ -99,9 +99,9 @@ export default function Statistics({petCount}: StatisticsProps) {
                     </div>
                 ))}
             </div>
-            <div className="flex flex-row justify-between">
-                <p className="text-slate-800 inter text-sm">{t("stats")}</p>
-                <p className="text-slate-800 inter text-sm font-bold inter">{t("dailyRate")}</p>
+            <div className="flex flex-col md:flex-row flex-col-reverse md:justify-between justify-center">
+                <p className="text-slate-800 inter text-sm text-center md:text-start">{t("stats")}</p>
+                <p className="text-slate-800 inter text-sm font-bold inter text-center md:text-start">{t("dailyRate")}</p>
                 
             </div>
             
