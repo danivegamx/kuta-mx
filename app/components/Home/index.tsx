@@ -8,7 +8,6 @@ import blueEmphasis from "../../../assets/blueEmphasis.png";
 import bluePaws from "../../../assets/bluePaws.png";
 import catPhone from "../../../assets/catPhone.png";
 import arrowRight from "../../../assets/arrow-right.png"
-import { content } from "../../../assets/Content/content";
 import AdoptionSteps from "../AdoptionSteps/adoptionSteps";
 import emphasis from "../../../assets/emphasis1.png";
 import Pet from "../Pet/pet";

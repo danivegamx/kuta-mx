@@ -53,7 +53,7 @@ export default function Statistics({petCount}: StatisticsProps) {
     ]
 
     return (
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 max-w-7xl mx-auto">
             <div className="flex flex-col gap-6 md:flex-row">
                 <div className="flex flex-col gap-6 md:flex-1">
                     <DynamicTitle namespace={"Statistics"} translationKey={"statisticsTitle"} />
