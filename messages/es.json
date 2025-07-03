@@ -219,7 +219,8 @@
         "petsYear": "Perros y gatos abandonados por año",
         "petsDay": "Animales abandonados por día",
         "petsClick": "Mascota abandonada desde que hiciste clic en este enlace",
-        "stats": "*Las estadísticas anteriores son para México."
+        "stats": "*Las estadísticas anteriores son para México.",
+        "dailyRate": "Una mascota es abandonada aproximadamente cada 2 minutos en México."
     },
     "Footer": {
         "mission": "Misión",

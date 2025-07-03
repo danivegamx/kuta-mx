@@ -219,7 +219,8 @@
         "petsYear": "Cats and dogs abandonded per year",
         "petsDay": "Cats and dogs abandonded per day",
         "petsClick": "Pets abandonded since you entered the site",
-        "stats": "*These statistics are for Mexico."
+        "stats": "*These statistics are for Mexico.",
+        "dailyRate": "A pet is abandonded aproximately every 2 minutes in Mexico."
     },
     "Footer": {
         "mission": "Mission",
