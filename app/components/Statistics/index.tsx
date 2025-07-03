@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
 import Image from "next/image";
 import mexicoGraphic from '@/assets/mexico-graphic.png'
+import Link from "next/link";
 
 interface StatisticsProps {
   petCount: number;
@@ -77,7 +78,7 @@ export default function Statistics({petCount}: StatisticsProps) {
                                 <p className="inter text-sm font-medium text-slate-800 text-center text-nowrap">{item.title}</p>
                             </div>
                         ))}
-                        <h4 className="font-caveat text-[26px] text-wrap text-slate-800 leading-none">{t("howToBePart")} <span className="text-blue cursor-pointer">{t("here")}</span>
+                        <h4 className="font-caveat text-[26px] text-wrap text-slate-800 leading-none">{t("howToBePart")} <Link href="/nosotros#howToHelp" scroll={true}><span className="text-blue cursor-pointer">{t("here")}</span></Link> 
                         </h4>
                     </div>
                 </div>
