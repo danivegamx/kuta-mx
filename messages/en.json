@@ -199,6 +199,29 @@
         "start": "Start",
         "privacyPolicy": "For more information, please consult our privacy notice and data usage policy."
     },
+    "Statistics":{
+        "statisticsTitle":{
+            "color": "text-blue",
+            "highlightPosition": 1,
+            "parts":[
+                "Be Apart of the",
+                "Change"
+            ]
+        },
+        "statisticsText": "Thanks to the support of our incredible collaborators and people like you—committed to the well-being of our furry friends—we’ve helped many animals find a forever home. Each adoption represents a new opportunity, a transformed life, and a story with a happy ending.\nAt Kuta, we remain steadfast in our mission to fight these heartbreaking statistics, one adoption at a time. Because behind every number, there is a face, a gaze waiting to be seen, and a heart that just needs a chance to love.",
+        "collaborators": "Collaborators",
+        "volunteers": "Volunteers",
+        "fosterHomes": "Foster Homes",
+        "howToBePart": "Learn how to be part of Kuta",
+        "here": "here",
+        "mapKey": "States where our pets have found a home with Kuta",
+        "strays": "Stray dogs",
+        "petsYear": "Cats and dogs abandonded per year",
+        "petsDay": "Cats and dogs abandonded per day",
+        "petsClick": "Pets abandonded since you entered the site",
+        "stats": "*These statistics are for Mexico.",
+        "dailyRate": "A pet is abandonded aproximately every 2 minutes in Mexico."
+    },
     "Footer": {
         "mission": "Mission",
         "behindKuta": "Behind Kuta",

@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import dog from "../../../assets/three-step-dog.png";
 import golden from "../../../assets/goldenRetriever.png";
@@ -7,7 +8,6 @@ import blueEmphasis from "../../../assets/blueEmphasis.png";
 import bluePaws from "../../../assets/bluePaws.png";
 import catPhone from "../../../assets/catPhone.png";
 import arrowRight from "../../../assets/arrow-right.png"
-import { content } from "../../../assets/Content/content";
 import AdoptionSteps from "../AdoptionSteps/adoptionSteps";
 import emphasis from "../../../assets/emphasis1.png";
 import Pet from "../Pet/pet";
@@ -20,9 +20,21 @@ import HappyEndings from "../Happy Endings/happyEndings";
 import MusicPlayer from "../Music Player/musicPlayer";
 import { useTranslations } from "next-intl";
 import { DynamicTitle } from "../DynamicTitle/dynamicTitle";
+import Statistics from "../Statistics";
+import { useEffect, useState } from "react";
+
 
 export default function Landing() {
   const t = useTranslations("Home");
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCount((prev) => prev + 1);
+    }, 2 * 60 * 1000); // 2 minutes in milliseconds
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
 
   return (
     <>
@@ -90,7 +102,7 @@ export default function Landing() {
                 {/* <h3 className="kulim font-semibold text-2xl text-slate-800 md:text-4xl sm:text-3xl">
                   Un <span className="text-blue">Hogar</span> Para Cada Patita
                 </h3> */}
-                <DynamicTitle translationKey="home4PawsTitle" namespace="Home"/>
+                <DynamicTitle translationKey="home4PawsTitle" namespace="Home" />
                 <p
                   className="inter text-base text-slate-800 font-regular"
                   style={{ whiteSpace: "pre-line" }}
@@ -123,7 +135,7 @@ export default function Landing() {
                     alt={"Emphasis"}
                     className="w-7 h-7 mr-3 hidden sm:block"
                   />
-                  <DynamicTitle namespace={"Home"} translationKey={"adoptionTitle"}/>
+                  <DynamicTitle namespace={"Home"} translationKey={"adoptionTitle"} />
                   <Image
                     src={emphasis}
                     alt={"Emphasis"}
@@ -168,7 +180,7 @@ export default function Landing() {
             <div className="bg-lightBlue rounded-lg p-5 flex flex-col max-w-7xl mx-auto gap-y-5 relative overflow-hidden sm:p-12 md:p-20 md:gap-y-16">
               <div className="flex flex-col gap-y-2 md:z-10 md:gap-y-4">
                 <div className="flex flex-row justify-center items-center">
-                  <DynamicTitle namespace={"Home"} translationKey={"processTitle"}/>
+                  <DynamicTitle namespace={"Home"} translationKey={"processTitle"} />
                   <Image
                     src={blueEmphasis}
                     alt={"blue emphasis"}
@@ -195,6 +207,10 @@ export default function Landing() {
               </div>
             </div>
           </section>
+          {/* Statistics */}
+          <section id="statistics" className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
+            <Statistics petCount={count}/>
+          </section>
           {/* section 5 */}
           <section
             id="stories"
@@ -207,7 +223,7 @@ export default function Landing() {
                 className="hidden md:w-1/2 md:block h-auto shrink-0"
               />
               <div className="flex flex-col gap-y-5 md:w-1/2">
-                <DynamicTitle namespace={"Home"} translationKey={"storiesTitle"}/>
+                <DynamicTitle namespace={"Home"} translationKey={"storiesTitle"} />
                 <p
                   className="inter text-slate-800 font-normal"
                   style={{ whiteSpace: "pre-line" }}

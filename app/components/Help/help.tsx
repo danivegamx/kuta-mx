@@ -75,7 +75,7 @@ export default function Help() {
 
   return (
     <>
-      <section className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
+      <section id="howToHelp" className="px-5 py-10 sm:px-7 sm:py-7 md:px-12 md:py-20 relative">
         <div className="max-w-7xl mx-auto items-center flex flex-col gap-y-8 relative z-10">
           <div className="gap-y-3 flex flex-col items-center">
             <DynamicTitle namespace={"HowToHelp"} translationKey={"title"}/>
