@@ -199,6 +199,29 @@
         "start": "Comenzar",
         "privacyPolicy": "Para más información, consulta nuestro aviso de privacidad y uso de datos."
     },
+    "Statistics":{
+        "statisticsTitle":{
+            "color": "text-blue",
+            "highlightPosition": 1,
+            "parts":[
+                "Sé Parte del",
+                "Cambio"
+            ]
+        },
+        "statisticsText" : "Gracias al apoyo de nuestros increíbles colaboradores y de personas como tú—comprometidas con el bienestar de nuestros amigos peludos—hemos logrado que muchos animales encuentren un hogar para siempre. Cada adopción representa una nueva oportunidad, una vida transformada y una historia con un final feliz.\nEn Kuta, seguimos firmes en nuestra misión de combatir estas desgarradoras estadísticas, una adopción a la vez. Porque detrás de cada número hay un rostro, una mirada que espera ser vista, y un corazón que solo necesita una oportunidad para amar.",
+        "collaborators": "Colaboradores",
+        "volunteers": "Voluntarios",
+        "fosterHomes": "Casas Puente",
+        "howToBePart": "Aprende como ser parte de Kuta",
+        "here": "aqui",
+        "mapKey": "Estados donde nuestras mascotas han encontrado un hogar con Kuta",
+        "strays": "Perros en situación de calle",
+        "petsYear": "Perros y gatos abandonados por año",
+        "petsDay": "Animales abandonados por día",
+        "petsClick": "Mascota abandonada desde que hiciste clic en este enlace",
+        "stats": "*Las estadísticas anteriores son para México.",
+        "dailyRate": "Una mascota es abandonada aproximadamente cada 2 minutos en México."
+    },
     "Footer": {
         "mission": "Misión",
         "behindKuta": "Detrás de Kuta",
